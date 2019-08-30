@@ -5,6 +5,7 @@ export const NavContainter = styled.nav`
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  background: black;
 `
 
 export const Logo = styled.div`

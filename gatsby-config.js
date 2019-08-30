@@ -16,6 +16,7 @@ module.exports = {
         components: path.resolve(__dirname, "src/components"),
         utils: path.resolve(__dirname, "src/components/utils"),
         theme: path.resolve(__dirname, "src/components/theme"),
+        images: path.resolve(__dirname, "src/images"),
       },
     },
   ],

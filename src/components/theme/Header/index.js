@@ -1,7 +1,13 @@
 import React from "react"
+import { Wrapper } from "./styles"
+import Navbar from "./Navbar"
 
 const Header = () => {
-  return <div></div>
+  return (
+    <Wrapper>
+      <Navbar />
+    </Wrapper>
+  )
 }
 
 export default Header
