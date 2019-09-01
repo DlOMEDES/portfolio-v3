@@ -12,8 +12,15 @@ export const colors = {
   white: "#ffffff",
 }
 
+export const gradient = `linear-gradient(115.84deg, rgba(176, 244, 227, 0.9) 0%, rgba(136, 146, 176, 0.9) 100%)`,
+
 export const GlobalStyle = createGlobalStyle`
-  
+  *,
+  *:before,
+  *:after {
+      box-sizing: inherit;
+    }
+
   body {
     @import url('https://fonts.googleapis.com/css?family=Poppins:700,400,300"');
     font-family: 'Poppins', sans-serif;
