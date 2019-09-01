@@ -1,18 +1,21 @@
 import React from "react"
-import { Wrapper } from "./theme/Header/styles"
-import Navbar from "./NavBar"
+import Navbar from "./Navbar"
 import styled from "styled-components"
+// import theme from "../utils/theme"
+// const { colors } = theme
 
-export const Wrapper = styled.div`
-  background: transparent;
-  width: 100%;
+export const HeaderContainer = styled.header`
+  padding: 0 50px;
+  height: 100px;
+  display: flex;
+  align-items: center;
 `
 
 const Header = () => {
   return (
-    <Wrapper>
+    <HeaderContainer>
       <Navbar />
-    </Wrapper>
+    </HeaderContainer>
   )
 }
 

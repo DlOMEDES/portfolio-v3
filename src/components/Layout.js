@@ -1,15 +1,26 @@
 import React from "react"
-import { GlobalStyle } from "./styles"
-import Header from "theme/Header"
-import Footer from "theme/Footer"
+import { GlobalStyle } from "../utils/GlobalStyle"
+import styled from "styled-components"
+import Header from "./Header"
+import Footer from "./Footer"
+import theme from "../utils/theme"
+const { colors } = theme
+
+const Main = styled.div`
+  color: ${colors.ashblueManatee};
+  line-height: 1.3;
+  font-family: "Poppins", Helvetica Neue, sans-serif;
+`
 
 const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <Header />
-      {children}
-      <Footer />
+      <Main>
+        <Header />
+        {children}
+        <Footer />
+      </Main>
     </>
   )
 }

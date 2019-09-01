@@ -1,14 +1,14 @@
 import React from "react"
-import logo from "images/logo.png"
-import { NavContainter, NavList, Logo } from "./styles"
+import logo from "../images/logo.png"
 import styled from "styled-components"
+import theme from "../utils/theme"
+const { colors } = theme
 
 export const NavContainter = styled.nav`
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  background: black;
 `
 
 export const Logo = styled.div`
@@ -23,13 +23,9 @@ export const NavList = styled.ol`
   li {
     margin: 0 10px;
   }
-  li:before {
-    content: "0" counter(item) ".";
-    color: white;
-    font-size: 12px;
-  }
-  a {
-    padding: 12px 10px;
+
+  li a {
+    color: ${colors.roseRed};
   }
 `
 
@@ -44,7 +40,7 @@ const Nav = () => {
 
       <NavList>
         <li>
-          <a href="#abut">About</a>
+          <a href="#about">About</a>
         </li>
         <li>
           <a href="#work">Work</a>
