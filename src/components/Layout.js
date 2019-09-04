@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Header from "./Header"
 import Footer from "./Footer"
 import theme from "../utils/theme"
+import Social from "../components/Social"
 const { colors } = theme
 
 const Main = styled.div`
@@ -18,6 +19,8 @@ const Layout = ({ children }) => {
       <GlobalStyle />
       <Main>
         <Header />
+        <Social />
+        {/* <Email /> */}
         {children}
         <Footer />
       </Main>
