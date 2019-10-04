@@ -17,5 +17,17 @@ module.exports = {
         utils: path.join(__dirname, "src/utils"),
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Diomedes Lajara",
+        short_name: "dlomedes",
+        start_url: "/",
+        // background_color: config.darkNavyColor,
+        // theme_color: config.navyColor,
+        // display: "minimal-ui",
+        icon: "src/images/logo.png",
+      },
+    },
   ],
 }

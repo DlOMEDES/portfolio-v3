@@ -13,15 +13,18 @@ export const NavContainter = styled.nav`
 
 export const Logo = styled.div`
   img {
-    width: 45px;
+    width: 50px;
+    height: 40px;
   }
 `
 
 export const NavList = styled.ol`
+  list-style-type: decimal-leading-zero;
+  color: white;
   display: flex;
 
   li {
-    margin: 0 10px;
+    margin: 0 20px;
   }
 
   li a {

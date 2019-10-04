@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components"
+import theme from "../utils/theme"
+const { colors } = theme
 
 export const GlobalStyle = createGlobalStyle`
   *,
@@ -8,10 +10,11 @@ export const GlobalStyle = createGlobalStyle`
     }
 
   body {
-    @import url('https://fonts.googleapis.com/css?family=Poppins:700,400,300"');
+    @import url('https://fonts.googleapis.com/css?family=Poppins:900,700,400,300"');
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    color: ${colors.blueJaguar};
   }
 
   h1,
@@ -20,7 +23,6 @@ export const GlobalStyle = createGlobalStyle`
   h4,
   h5 {
   font-weight: 600;
-  color: #e54054;
   margin: 0 0 10px 0;
   }
 

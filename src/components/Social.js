@@ -8,7 +8,7 @@ const SocialContainer = styled.div`
   width: 40px;
   position: fixed;
   bottom: 20px;
-  left: 50px;
+  left: 40px;
 `
 const SocialList = styled.ul`
   display: flex;
@@ -32,13 +32,10 @@ const ListItem = styled.li`
 
 const HyperLink = styled.a`
   padding: 10px;
-  &:hover,
-  &:focus {
-    transform: translateY(-3px);
-  }
   img {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
+    margin: 10px;
   }
 `
 

@@ -10,6 +10,7 @@ const theme = {
     ashblueManatee: "#8892B0",
     blueMadison: "#2F3D4C",
     blueFountain: "#57B9B7",
+    blueQueen: "#4a6a88",
     white: "#ffffff",
   },
 }

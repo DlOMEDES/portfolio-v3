@@ -3,12 +3,11 @@ import { GlobalStyle } from "../utils/GlobalStyle"
 import styled from "styled-components"
 import Header from "./Header"
 import Footer from "./Footer"
-import theme from "../utils/theme"
+// import theme from "../utils/theme"
 import Social from "../components/Social"
-const { colors } = theme
+// const { colors } = theme
 
-const Main = styled.div`
-  color: ${colors.ashblueManatee};
+const LayoutContent = styled.div`
   line-height: 1.3;
   font-family: "Poppins", Helvetica Neue, sans-serif;
 `
@@ -17,13 +16,13 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <Main>
+      <LayoutContent>
         <Header />
-        <Social />
         {/* <Email /> */}
         {children}
+        <Social />
         <Footer />
-      </Main>
+      </LayoutContent>
     </>
   )
 }
