@@ -20,15 +20,20 @@ export const Logo = styled.div`
 
 export const NavList = styled.ol`
   list-style-type: decimal-leading-zero;
-  color: white;
+  color: ${colors.white};
   display: flex;
-
+  &:hover {
+    color: ${colors.roseRed};
+  }
   li {
     margin: 0 20px;
   }
 
   li a {
     color: ${colors.roseRed};
+    &:hover {
+      color: ${colors.white};
+    }
   }
 `
 

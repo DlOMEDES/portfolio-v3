@@ -4,6 +4,9 @@ import codepenIcon from "../utils/icons/codepen-icon.png"
 import linkedinIcon from "../utils/icons/linkedin-icon.png"
 import githubIcon from "../utils/icons/github-icon.png"
 import twitterIcon from "../utils/icons/twitter-icon.png"
+import theme from "../utils/theme"
+const { colors } = theme
+
 const SocialContainer = styled.div`
   width: 40px;
   position: fixed;
@@ -33,9 +36,11 @@ const ListItem = styled.li`
 const HyperLink = styled.a`
   padding: 10px;
   img {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     margin: 10px;
+    /* border: 2px solid ${colors.white};
+    border-radius: 50px; */
   }
 `
 
