@@ -2,9 +2,41 @@ import React from "react"
 import styled from "styled-components"
 import codepenIcon from "../utils/icons/codepen-icon.png"
 import linkedinIcon from "../utils/icons/linkedin-icon.png"
-import githubIcon from "../utils/icons/github-icon.png"
 import twitterIcon from "../utils/icons/twitter-icon.png"
 import theme from "../utils/theme"
+
+const Social = () => {
+  return (
+    <SocialContainer>
+      <SocialList>
+        <ListItem>
+          <HyperLink href="http://github.com">
+            <FontAwesomeIcon icon={} color="red" />
+          </HyperLink>
+        </ListItem>
+        <ListItem>
+          <HyperLink href="http://linkedin.com">
+            <img src={linkedinIcon} alt="" />
+          </HyperLink>
+        </ListItem>
+        <ListItem>
+          <HyperLink href="http://twitter.com">
+            <img src={twitterIcon} alt="" />
+          </HyperLink>
+        </ListItem>
+        <ListItem>
+          <HyperLink href="http://codepen.io">
+            <img src={codepenIcon} alt="" />
+          </HyperLink>
+        </ListItem>
+      </SocialList>
+    </SocialContainer>
+  )
+}
+
+export default Social
+
+// styling
 const { colors } = theme
 
 const SocialContainer = styled.div`
@@ -43,34 +75,3 @@ const HyperLink = styled.a`
     border-radius: 50px; */
   }
 `
-
-const Social = () => {
-  return (
-    <SocialContainer>
-      <SocialList>
-        <ListItem>
-          <HyperLink href="http://github.com">
-            <img src={githubIcon} alt="" />
-          </HyperLink>
-        </ListItem>
-        <ListItem>
-          <HyperLink href="http://linkedin.com">
-            <img src={linkedinIcon} alt="" />
-          </HyperLink>
-        </ListItem>
-        <ListItem>
-          <HyperLink href="http://twitter.com">
-            <img src={twitterIcon} alt="" />
-          </HyperLink>
-        </ListItem>
-        <ListItem>
-          <HyperLink href="http://codepen.io">
-            <img src={codepenIcon} alt="" />
-          </HyperLink>
-        </ListItem>
-      </SocialList>
-    </SocialContainer>
-  )
-}
-
-export default Social
