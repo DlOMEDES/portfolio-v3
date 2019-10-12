@@ -8,6 +8,7 @@ const theme = {
     cyanLeaf: "#B0F4E3",
     blueJaguar: "#171524",
     ashblueManatee: "#8892B0",
+    charcoalBlue: "#363948",
     blueMadison: "#2F3D4C",
     blueFountain: "#57B9B7",
     blueQueen: "#4a6a88",

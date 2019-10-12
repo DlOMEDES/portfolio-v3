@@ -3,18 +3,18 @@ import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import styled from "styled-components"
 import theme from "../utils/theme"
-// font awesome icons
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { fab } from "@fortawesome/free-brands-svg-icons"
-import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons"
-// icon library
-library.add(fab, faCheckSquare, faCoffee)
+import Work from "../components/Work"
+import About from "../components/About"
+import Blog from "../components/Blog"
 
 const index = () => {
   return (
     <Layout>
       <MainContainer>
         <Hero />
+        <Work />
+        <About />
+        <Blog />
       </MainContainer>
     </Layout>
   )
@@ -26,7 +26,7 @@ export default index
 const { colors } = theme
 
 const MainContainer = styled.main`
-  padding: 15px 175px;
+  padding: 70px 275px;
   font-size: 20px;
   line-height: 1.3;
   background: ${colors.blueMadison};

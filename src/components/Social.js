@@ -4,6 +4,8 @@ import codepenIcon from "../utils/icons/codepen-icon.png"
 import linkedinIcon from "../utils/icons/linkedin-icon.png"
 import twitterIcon from "../utils/icons/twitter-icon.png"
 import theme from "../utils/theme"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCheckSquare } from "@fortawesome/free-solid-svg-icons"
 
 const Social = () => {
   return (
@@ -11,7 +13,7 @@ const Social = () => {
       <SocialList>
         <ListItem>
           <HyperLink href="http://github.com">
-            <FontAwesomeIcon icon={} color="red" />
+            <FontAwesomeIcon icon={faCheckSquare} color="red" />
           </HyperLink>
         </ListItem>
         <ListItem>

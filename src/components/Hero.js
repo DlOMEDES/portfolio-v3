@@ -4,8 +4,30 @@ import theme from "../utils/theme"
 import config from "../config/index"
 import selfImage from "../images/self-bg.png"
 
-const { colors } = theme
+const Hero = () => {
+  return (
+    <>
+      <HeroContainer>
+        <HeroDetails>
+          <Hi>Hi, my name is</Hi>
+          <Name>{config.name}</Name>
+          <Subtitle>{config.iDO}</Subtitle>
+          <ContactBtn>
+            <a href="/">Contact me</a>
+          </ContactBtn>
+        </HeroDetails>
+        <HeroImage>
+          <img src={selfImage} alt="" />
+        </HeroImage>
+      </HeroContainer>
+    </>
+  )
+}
 
+export default Hero
+
+// styles
+const { colors } = theme
 const HeroContainer = styled.section`
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -14,13 +36,13 @@ const HeroContainer = styled.section`
 `
 
 const HeroDetails = styled.div`
-  padding-top: 80px;
+  padding-top: 150px;
 `
 const HeroImage = styled.div`
-  padding-top: 80px;
+  padding-top: 150px;
 
   img {
-    width: 350px;
+    width: 275px;
     border-radius: 100px;
   }
 `
@@ -43,14 +65,6 @@ const Subtitle = styled.h3`
   font-size: 60px;
   font-weight: 900;
 `
-const Blurb = styled.div`
-  max-width: 700px;
-  p {
-    color: ${colors.blueQueen};
-    font-size: 24px;
-    margin: 0px;
-  }
-`
 
 const ContactBtn = styled.div`
   margin: 60px 0;
@@ -61,35 +75,10 @@ const ContactBtn = styled.div`
     padding: 13px 35px;
     font-size: 16px;
     border: 1px solid ${colors.roseRed};
+    transition: all 0.4s ease-in-out;
     &:hover {
-      transition: ease-in-out 0.3s;
       background: ${colors.roseRed};
       color: ${colors.white};
     }
   }
 `
-
-const Hero = () => {
-  return (
-    <>
-      <HeroContainer>
-        <HeroDetails>
-          <Hi>Hi, my name is</Hi>
-          <Name>{config.name}</Name>
-          <Subtitle>{config.iDO}</Subtitle>
-          <Blurb>
-            <p>{config.siteDescription}</p>
-          </Blurb>
-          <ContactBtn>
-            <a href="/">Contact me</a>
-          </ContactBtn>
-        </HeroDetails>
-        <HeroImage>
-          <img src={selfImage} alt="" />
-        </HeroImage>
-      </HeroContainer>
-    </>
-  )
-}
-
-export default Hero
