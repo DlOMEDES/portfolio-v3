@@ -12,12 +12,36 @@ const Work = () => {
         <WorkRectangle></WorkRectangle>
       </WorkHead>
       <WorkGrid>
-        <Project href="work/#">Ecommerce</Project>
-        <Project href="work/#"></Project>
-        <Project href="work/#"></Project>
-        <Project href="work/#"></Project>
-        <Project href="work/#"></Project>
-        <Project href="work/#"></Project>
+        <Card href="work/#">
+          <CardOverlay>
+            <h3>Ecommerce</h3>
+          </CardOverlay>
+        </Card>
+        <Card href="work/#">
+          <CardOverlay>
+            <h3>Real Estate</h3>
+          </CardOverlay>
+        </Card>
+        <Card href="work/#">
+          <CardOverlay>
+            <h3>Responsive Email</h3>
+          </CardOverlay>
+        </Card>
+        <Card href="work/#">
+          <CardOverlay>
+            <h3>Landing Page</h3>
+          </CardOverlay>
+        </Card>
+        <Card href="work/#">
+          <CardOverlay>
+            <h3>Restaurant</h3>
+          </CardOverlay>
+        </Card>
+        <Card href="work/#">
+          <CardOverlay>
+            <h3>Github Profiles</h3>
+          </CardOverlay>
+        </Card>
       </WorkGrid>
     </WorkContainer>
   )
@@ -65,17 +89,33 @@ const WorkTitle = styled.h2`
   z-index: 1;
   color: ${colors.white};
 `
+const CardOverlay = styled.div`
+  width: 100%;
+  height: 100%;
+  background: coral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: all 0.3s ease-in-out;
+`
+const Card = styled.a`
+  grid-column: 1/3;
+  grid-row: 1/1;
+  position: relative;
 
-const Project = styled.a`
   padding: 40px;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
+  overflow: hidden;
 
   &:hover {
-    background: rgba(255, 255, 255, 1);
-    /* box-shadow: 0px 40px 74px 24px rgba(0, 0, 0, 0.08); */
+    ${CardOverlay} {
+      left: 0;
+    }
   }
-
   &:nth-child(1) {
     background: url("https://cdn.dribbble.com/users/374494/screenshots/7185085/media/6c22c6a8a2427c9dd8e8cc2bde5cb571.png")
       center center no-repeat;
@@ -114,15 +154,5 @@ const Project = styled.a`
     background-size: 100%;
     grid-column: 3/4;
     grid-row: 4/5;
-  }
-  &:nth-child(1),
-  &:nth-child(2),
-  &:nth-child(3),
-  &:nth-child(4),
-  &:nth-child(5),
-  &:nth-child(6) {
-    &:hover {
-      background: rbga(255, 255, 255, 0.8);
-    }
   }
 `
