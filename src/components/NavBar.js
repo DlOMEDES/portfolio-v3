@@ -26,11 +26,13 @@ export const NavList = styled.ol`
     color: ${colors.roseRed};
   }
   li {
-    margin: 0 20px;
+    margin: 0 30px;
   }
 
   li a {
     color: ${colors.roseRed};
+    font-size: 20px;
+    font-weight: 600;
     &:hover {
       color: ${colors.white};
     }

@@ -13,6 +13,8 @@ const theme = {
     blueFountain: "#57B9B7",
     blueQueen: "#4a6a88",
     white: "#ffffff",
+    violet: "#BD93F2",
+    pink: "#CD67A0",
   },
 }
 

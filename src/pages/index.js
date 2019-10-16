@@ -6,12 +6,14 @@ import theme from "../utils/theme"
 import Work from "../components/Work"
 import About from "../components/About"
 import Blog from "../components/Blog"
+import Services from "../components/Services"
 
 const index = () => {
   return (
     <Layout>
       <MainContainer>
         <Hero />
+        <Services />
         <Work />
         <About />
         <Blog />

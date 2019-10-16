@@ -32,11 +32,13 @@ const HeroContainer = styled.section`
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-gap: 10px;
-  min-height: 100vh;
+  min-height: 95vh;
 `
 
 const HeroDetails = styled.div`
   padding-top: 150px;
+  line-height: 1.5;
+  letter-spacing: 1px;
 `
 const HeroImage = styled.div`
   padding-top: 150px;
@@ -55,7 +57,7 @@ const Hi = styled.h4`
 `
 const Name = styled.h2`
   color: ${colors.white};
-  font-weight: 700;
+
   margin: 0;
   font-size: 60px;
   font-weight: 900;
@@ -72,8 +74,9 @@ const ContactBtn = styled.div`
     border-radius: 100px;
     background: transparent;
     color: ${colors.roseRed};
-    padding: 13px 35px;
-    font-size: 16px;
+    padding: 20px 40px;
+    font-size: 20px;
+
     border: 1px solid ${colors.roseRed};
     transition: all 0.4s ease-in-out;
     &:hover {
