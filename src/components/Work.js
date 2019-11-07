@@ -19,22 +19,22 @@ const Work = () => {
         </WorkArrow>
       </WorkHead>
       <WorkGrid>
-        <Card href="work/#">
+        <Card href="https://r-estate.netlify.com/">
           <CardOverlay>
             <h4>Real Estate App</h4>
           </CardOverlay>
         </Card>
-        <Card href="work/#">
+        <Card href="http://www.diomedes.site/lr-html-email/">
           <CardOverlay>
             <h4>Responsive Email</h4>
           </CardOverlay>
         </Card>
-        <Card href="work/#">
+        <Card href="http://nice-things.surge.sh/">
           <CardOverlay>
-            <h4>Page Template</h4>
+            <h4>Travler Template</h4>
           </CardOverlay>
         </Card>
-        <Card href="work/#">
+        <Card href="http://goodandhealthy.surge.sh/">
           <CardOverlay>
             <h4>Eats Landing Page</h4>
           </CardOverlay>
@@ -125,7 +125,7 @@ const Card = styled.a`
 const WorkGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 250px);
+  grid-template-rows: repeat(5, 200px);
   grid-gap: 20px;
 `
 const WorkTitle = styled.h2`
@@ -143,7 +143,7 @@ const Rectangle = styled.span`
   height: 55px;
   background: ${colors.roseRed};
   top: -20px;
-  left: 24px;
+  left: 25px;
 `
 const Triangle = styled.span`
   position: absolute;
