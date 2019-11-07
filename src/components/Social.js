@@ -1,34 +1,35 @@
 import React from "react"
 import styled from "styled-components"
-import codepenIcon from "../utils/icons/codepen-icon.png"
-import linkedinIcon from "../utils/icons/linkedin-icon.png"
-import twitterIcon from "../utils/icons/twitter-icon.png"
 import theme from "../utils/theme"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCheckSquare } from "@fortawesome/free-solid-svg-icons"
+import {
+  AiFillGithub,
+  AiOutlineTwitter,
+  AiFillCodepenCircle,
+} from "react-icons/ai"
+import { TiSocialLinkedinCircular } from "react-icons/ti"
 
 const Social = () => {
   return (
     <SocialContainer>
       <SocialList>
         <ListItem>
-          <HyperLink href="http://github.com">
-            <FontAwesomeIcon icon={faCheckSquare} color="red" />
+          <HyperLink href="https://github.com/DlOMEDES">
+            <AiFillGithub size="30px" color={colors.roseRed} />
           </HyperLink>
         </ListItem>
         <ListItem>
-          <HyperLink href="http://linkedin.com">
-            <img src={linkedinIcon} alt="" />
+          <HyperLink href="https://www.linkedin.com/in/diomedeslajara/">
+            <TiSocialLinkedinCircular size="30px" color={colors.roseRed} />
           </HyperLink>
         </ListItem>
         <ListItem>
-          <HyperLink href="http://twitter.com">
-            <img src={twitterIcon} alt="" />
+          <HyperLink href="https://twitter.com/dl_ajara">
+            <AiOutlineTwitter size="30px" color={colors.roseRed} />
           </HyperLink>
         </ListItem>
         <ListItem>
-          <HyperLink href="http://codepen.io">
-            <img src={codepenIcon} alt="" />
+          <HyperLink href="https://codepen.io/DlOMEDES">
+            <AiFillCodepenCircle size="30px" color={colors.roseRed} />
           </HyperLink>
         </ListItem>
       </SocialList>
@@ -62,6 +63,8 @@ const SocialList = styled.ul`
 `
 
 const ListItem = styled.li`
+  margin-bottom: 10px;
+
   &:last-of-type {
     margin-bottom: 20px;
   }

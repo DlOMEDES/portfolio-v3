@@ -1,9 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import theme from "../utils/theme"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faWordpress } from "@fortawesome/free-brands-svg-icons"
-import { faMobile, faFileCode } from "@fortawesome/free-solid-svg-icons"
+import { FaFileAlt, FaWordpress, FaMobile } from "react-icons/fa"
 const Service = () => {
   return (
     <ServiceContainer>
@@ -16,11 +14,7 @@ const Service = () => {
       <ServiceContent>
         <ServiceBox>
           <Icon>
-            <FontAwesomeIcon
-              icon={faFileCode}
-              color={colors.roseRed}
-              size="3x"
-            />
+            <FaFileAlt size="50px" color={colors.roseRed} />
           </Icon>
 
           <h3>Design to Code</h3>
@@ -35,11 +29,7 @@ const Service = () => {
         </ServiceBox>
         <ServiceBox>
           <Icon>
-            <FontAwesomeIcon
-              icon={faWordpress}
-              color={colors.roseRed}
-              size="3x"
-            />
+            <FaWordpress size="50px" color={colors.roseRed} />
           </Icon>
           <h3>CMS Ready</h3>
           <h5>Tailored to your needs</h5>
@@ -53,7 +43,7 @@ const Service = () => {
         </ServiceBox>
         <ServiceBox>
           <Icon>
-            <FontAwesomeIcon icon={faMobile} color={colors.roseRed} size="3x" />
+            <FaMobile size="50px" color={colors.roseRed} />
           </Icon>
           <h3>Fully Responsive</h3>
           <h5>Smartphones & other devices</h5>

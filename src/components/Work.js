@@ -1,6 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import theme from "../utils/theme"
+import estate from "../images/estate.png"
+import heats from "../images/heats.png"
+import lenses from "../images/lenses.png"
+import travler from "../images/travler.png"
+
 const { colors } = theme
 
 const Work = () => {
@@ -16,12 +21,7 @@ const Work = () => {
       <WorkGrid>
         <Card href="work/#">
           <CardOverlay>
-            <h4>Ecommerce</h4>
-          </CardOverlay>
-        </Card>
-        <Card href="work/#">
-          <CardOverlay>
-            <h4>Real Estate</h4>
+            <h4>Real Estate App</h4>
           </CardOverlay>
         </Card>
         <Card href="work/#">
@@ -31,17 +31,22 @@ const Work = () => {
         </Card>
         <Card href="work/#">
           <CardOverlay>
-            <h4>Landing Page</h4>
+            <h4>Page Template</h4>
           </CardOverlay>
         </Card>
         <Card href="work/#">
           <CardOverlay>
-            <h4>Restaurant</h4>
+            <h4>Eats Landing Page</h4>
           </CardOverlay>
         </Card>
         <Card href="work/#">
           <CardOverlay>
-            <h4>Github Profiles</h4>
+            <h4>App</h4>
+          </CardOverlay>
+        </Card>
+        <Card href="work/#">
+          <CardOverlay>
+            <h4>Real Estate App</h4>
           </CardOverlay>
         </Card>
       </WorkGrid>
@@ -85,50 +90,42 @@ const Card = styled.a`
     }
   }
   &:nth-child(1) {
-    background: url("https://cdn.dribbble.com/users/374494/screenshots/7185085/media/6c22c6a8a2427c9dd8e8cc2bde5cb571.png")
-      center center no-repeat;
-    background-size: 100%;
+    background: url(${estate});
+    background-size: cover;
     grid-column: 1/3;
     grid-row: 1/1;
   }
   &:nth-child(2) {
-    background: url("https://cdn.dribbble.com/users/14268/screenshots/5418845/northface-2.gif")
-      center center no-repeat;
+    background: url(${lenses}) center center no-repeat;
     grid-column: 3/3;
-    grid-row: 1/4;
+    grid-row: 1/5;
+    background-size: cover;
   }
   &:nth-child(3) {
-    background: url("https://cdn.dribbble.com/users/1200964/screenshots/3812962/todo_concept_iphonex_30fps.gif")
-      center center no-repeat;
+    background: url(${travler}) center center no-repeat;
     grid-column: 1/2;
     grid-row: 2/5;
+    background-size: cover;
   }
   &:nth-child(4) {
-    background: url("https://cdn.dribbble.com/users/757683/screenshots/7158635/media/24fc328a425d7925e1fc7bdb59ef69b6.jpg")
-      center center no-repeat;
+    background: url(${heats}) center center no-repeat;
     grid-column: 2/3;
     grid-row: 2/3;
+    background-size: cover;
   }
   &:nth-child(5) {
-    background: url("https://cdn.dribbble.com/users/14268/screenshots/5367995/grabient_2x.png")
-      center center no-repeat;
+    background: url(${estate}) center center no-repeat;
     background-size: 100%;
     grid-column: 2/3;
     grid-row: 3/5;
-  }
-  &:nth-child(6) {
-    background: url("https://cdn.dribbble.com/users/32512/screenshots/6599222/icon_dark_green_by_milkinside.gif")
-      center center no-repeat;
-    background-size: 100%;
-    grid-column: 3/4;
-    grid-row: 4/5;
+    background-size: cover;
   }
 `
 
 const WorkGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 150px);
+  grid-template-rows: repeat(5, 250px);
   grid-gap: 20px;
 `
 const WorkTitle = styled.h2`
@@ -136,7 +133,8 @@ const WorkTitle = styled.h2`
   z-index: 1;
   color: ${colors.white};
   text-transform: uppercase;
-  margin-left: 7px;
+  letter-spacing: 2px;
+  margin-left: -10px;
 `
 const WorkArrow = styled.div``
 const Rectangle = styled.span`
