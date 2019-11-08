@@ -136,7 +136,10 @@ const WorkTitle = styled.h2`
   letter-spacing: 2px;
   margin-left: -10px;
 `
-const WorkArrow = styled.div``
+const WorkArrow = styled.div`
+  position: relative;
+  margin-bottom: 100px;
+`
 const Rectangle = styled.span`
   position: absolute;
   width: 35px;
@@ -157,7 +160,7 @@ const Triangle = styled.span`
 `
 
 const WorkHead = styled.div`
-  padding-bottom: 145px;
+  padding-bottom: 150px;
 `
 const WorkContainer = styled.section`
   position: relative;

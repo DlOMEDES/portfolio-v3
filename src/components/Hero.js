@@ -67,7 +67,6 @@ const Subtitle = styled.h3`
   font-size: 60px;
   font-weight: 900;
 `
-
 const ContactBtn = styled.div`
   margin: 60px 0;
   a {
@@ -82,6 +81,7 @@ const ContactBtn = styled.div`
     &:hover {
       background: ${colors.roseRed};
       color: ${colors.white};
+      border: 1px solid transparent;
     }
   }
 `

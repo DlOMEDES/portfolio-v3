@@ -5,6 +5,7 @@ import Header from "./Header"
 import Footer from "./Footer"
 // import theme from "../utils/theme"
 import Social from "../components/Social"
+import MyEmail from "../components/MyEmail"
 // const { colors } = theme
 
 const LayoutContent = styled.div`
@@ -21,6 +22,7 @@ const Layout = ({ children }) => {
         {/* <Email /> */}
         {children}
         <Social />
+        <MyEmail />
         <Footer />
       </LayoutContent>
     </>

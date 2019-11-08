@@ -6,11 +6,12 @@ import theme from "../utils/theme"
 const About = () => {
   return (
     <section>
-      <h1>About</h1>
-      <h4>More about me, this websites and tech stacks</h4>
+      <h4>More about me and skills</h4>
       <Blurb>
         <p>{config.siteDescription}</p>
       </Blurb>
+
+      <p>Tools and Technologies</p>
     </section>
   )
 }

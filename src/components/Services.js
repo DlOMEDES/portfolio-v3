@@ -7,14 +7,14 @@ const Service = () => {
     <ServiceContainer>
       <ServiceHead>
         <ServiceTitle>Services</ServiceTitle>
-        <ServiceCircle>
-          <CircleBackground />
-        </ServiceCircle>
+        <ServiceSquare>
+          <SquareSpan />
+        </ServiceSquare>
       </ServiceHead>
       <ServiceContent>
         <ServiceBox>
           <Icon>
-            <FaFileAlt size="50px" color={colors.roseRed} />
+            <FaFileAlt size="50px" color={colors.blueQueen} />
           </Icon>
 
           <h3>Design to Code</h3>
@@ -29,7 +29,7 @@ const Service = () => {
         </ServiceBox>
         <ServiceBox>
           <Icon>
-            <FaWordpress size="50px" color={colors.roseRed} />
+            <FaWordpress size="50px" color={colors.blueQueen} />
           </Icon>
           <h3>CMS Ready</h3>
           <h5>Tailored to your needs</h5>
@@ -43,7 +43,7 @@ const Service = () => {
         </ServiceBox>
         <ServiceBox>
           <Icon>
-            <FaMobile size="50px" color={colors.roseRed} />
+            <FaMobile size="50px" color={colors.blueQueen} />
           </Icon>
           <h3>Fully Responsive</h3>
           <h5>Smartphones & other devices</h5>
@@ -76,12 +76,12 @@ const ServiceBox = styled.div`
   }
 
   h5 {
-    color: ${colors.ashblueManatee};
+    color: ${colors.roseRed};
   }
 
   &:hover {
-    background-color: ${colors.blueQueen};
-    box-shadow: 0px 33px 55px 11px rgba(0, 0, 0, 0.2);
+    background-color: ${colors.blueMadison};
+    box-shadow: rgba(2, 12, 27, 0.7) 0px 0px 30px -10px;
   }
 `
 const ServiceContent = styled.div`
@@ -92,7 +92,7 @@ const ServiceContent = styled.div`
   letter-spacing: 1px;
 `
 const ServiceHead = styled.div`
-  padding-bottom: 100px;
+  margin-bottom: 150px;
   display: flex;
   align-items: center;
 `
@@ -102,7 +102,7 @@ const ServiceTitle = styled.h2`
   text-transform: uppercase;
   letter-spacing: 2px;
 `
-const CircleBackground = styled.span`
+const SquareSpan = styled.span`
   border: 5px solid ${colors.blueQueen};
   width: 120px;
   height: 120px;
@@ -110,8 +110,7 @@ const CircleBackground = styled.span`
   top: -45px;
   left: -18px;
 `
-const ServiceCircle = styled.div``
+const ServiceSquare = styled.div``
 const ServiceContainer = styled.section`
   position: relative;
-  padding-bottom: 200px;
 `

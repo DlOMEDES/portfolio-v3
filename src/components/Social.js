@@ -14,22 +14,25 @@ const Social = () => {
       <SocialList>
         <ListItem>
           <HyperLink href="https://github.com/DlOMEDES">
-            <AiFillGithub size="30px" color={colors.roseRed} />
+            <AiFillGithub size="30px" color={colors.ashblueManatee} />
           </HyperLink>
         </ListItem>
         <ListItem>
           <HyperLink href="https://www.linkedin.com/in/diomedeslajara/">
-            <TiSocialLinkedinCircular size="30px" color={colors.roseRed} />
+            <TiSocialLinkedinCircular
+              size="30px"
+              color={colors.ashblueManatee}
+            />
           </HyperLink>
         </ListItem>
         <ListItem>
           <HyperLink href="https://twitter.com/dl_ajara">
-            <AiOutlineTwitter size="30px" color={colors.roseRed} />
+            <AiOutlineTwitter size="30px" color={colors.ashblueManatee} />
           </HyperLink>
         </ListItem>
         <ListItem>
           <HyperLink href="https://codepen.io/DlOMEDES">
-            <AiFillCodepenCircle size="30px" color={colors.roseRed} />
+            <AiFillCodepenCircle size="30px" color={colors.ashblueManatee} />
           </HyperLink>
         </ListItem>
       </SocialList>
@@ -52,14 +55,14 @@ const SocialList = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* &:after {
-    content: '';
+  &:after {
+    content: "";
     display: block;
     width: 1px;
     height: 90px;
-    margin: 0 auto;
-    
-  } */
+    background-color: rgb(168, 178, 209);
+    margin: 0px auto;
+  }
 `
 
 const ListItem = styled.li`
