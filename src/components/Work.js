@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../utils/theme"
 import estate from "../images/estate.png"
+import restate from "../images/restate.png"
 import heats from "../images/heats.png"
 import lenses from "../images/lenses.png"
 import travler from "../images/travler.png"
@@ -42,11 +43,6 @@ const Work = () => {
         <Card href="work/#">
           <CardOverlay>
             <h4>App</h4>
-          </CardOverlay>
-        </Card>
-        <Card href="work/#">
-          <CardOverlay>
-            <h4>Real Estate App</h4>
           </CardOverlay>
         </Card>
       </WorkGrid>
@@ -90,7 +86,7 @@ const Card = styled.a`
     }
   }
   &:nth-child(1) {
-    background: url(${estate});
+    background: url(${restate});
     background-size: cover;
     grid-column: 1/3;
     grid-row: 1/1;
