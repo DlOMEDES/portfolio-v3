@@ -65,7 +65,7 @@ const { colors } = theme
 const Icon = styled.div`
   margin: 20px 0;
 `
-const ServiceBox = styled.div`
+const ServiceBox = styled.section`
   transition: all 0.4s ease-in-out;
   color: ${colors.white};
   padding: 30px;

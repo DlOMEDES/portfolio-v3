@@ -156,7 +156,7 @@ const Triangle = styled.span`
 `
 
 const WorkHead = styled.div`
-  padding-bottom: 150px;
+  padding-bottom: 170px;
 `
 const WorkContainer = styled.section`
   position: relative;

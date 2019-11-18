@@ -7,13 +7,13 @@ export const GlobalStyle = createGlobalStyle`
   *:before,
   *:after {
       box-sizing: inherit;
+      margin: 0;
+      padding: 0;
     }
 
   body {
     @import url('https://fonts.googleapis.com/css?family=Poppins:900,700,400,300"');
     font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
     color: ${colors.blueJaguar};
   }
 
@@ -23,7 +23,6 @@ export const GlobalStyle = createGlobalStyle`
   h4,
   h5 {
   font-weight: 600;
-  margin: 0 0 10px 0;
   }
 
   ol,ul {
