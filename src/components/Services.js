@@ -80,7 +80,7 @@ const ServiceBox = styled.section`
   }
 
   &:hover {
-    background-color: ${colors.blueMadison};
+    background-color: ${colors.blueExpress};
     box-shadow: rgba(2, 12, 27, 0.7) 0px 0px 30px -10px;
   }
 `

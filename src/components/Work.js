@@ -1,11 +1,12 @@
 import React from "react"
 import styled from "styled-components"
+import { Link as CardLink } from "gatsby"
 import theme from "../utils/theme"
-import estate from "../images/estate.png"
 import restate from "../images/restate.png"
 import heats from "../images/heats.png"
 import lenses from "../images/lenses.png"
 import travler from "../images/travler.png"
+import spartan from "../images/spartan-fitness.png"
 
 const { colors } = theme
 
@@ -20,29 +21,29 @@ const Work = () => {
         </WorkArrow>
       </WorkHead>
       <WorkGrid>
-        <Card href="https://r-estate.netlify.com/">
+        <Card to="/realestate-app">
           <CardOverlay>
             <h4>Real Estate App</h4>
           </CardOverlay>
         </Card>
-        <Card href="http://www.diomedes.site/lr-html-email/">
+        <Card to="/lenses-email">
           <CardOverlay>
-            <h4>Responsive Email</h4>
+            <h4>Promotional Email</h4>
           </CardOverlay>
         </Card>
-        <Card href="http://nice-things.surge.sh/">
+        <Card to="/">
           <CardOverlay>
             <h4>Travler Template</h4>
           </CardOverlay>
         </Card>
-        <Card href="http://goodandhealthy.surge.sh/">
+        <Card to="/">
           <CardOverlay>
             <h4>Eats Landing Page</h4>
           </CardOverlay>
         </Card>
-        <Card href="work/#">
+        <Card to="/spartan-fitness">
           <CardOverlay>
-            <h4>App</h4>
+            <h4>gym landing page</h4>
           </CardOverlay>
         </Card>
       </WorkGrid>
@@ -72,7 +73,7 @@ const CardOverlay = styled.div`
     text-transform: uppercase;
   }
 `
-const Card = styled.a`
+const Card = styled(CardLink)`
   grid-column: 1/3;
   grid-row: 1/1;
   position: relative;
@@ -110,7 +111,7 @@ const Card = styled.a`
     background-size: cover;
   }
   &:nth-child(5) {
-    background: url(${estate}) center center no-repeat;
+    background: url(${spartan}) center center no-repeat;
     background-size: 100%;
     grid-column: 2/3;
     grid-row: 3/5;

@@ -1,7 +1,10 @@
 import React from "react"
+import Link from "gatsby-link"
 import logo from "../images/logo.png"
 import styled from "styled-components"
 import theme from "../utils/theme"
+// import { fadeIn } from "../utils/animations"
+
 const { colors } = theme
 
 export const NavContainter = styled.nav`
@@ -22,6 +25,7 @@ export const NavList = styled.ol`
   list-style-type: decimal-leading-zero;
   color: ${colors.white};
   display: flex;
+  transition: all 0.5s ease-out;
   &:hover {
     color: ${colors.roseRed};
   }
@@ -33,6 +37,7 @@ export const NavList = styled.ol`
     color: ${colors.roseRed};
     font-size: 20px;
     font-weight: 600;
+    transition: all 0.5s ease-out;
     &:hover {
       color: ${colors.white};
     }
@@ -43,20 +48,28 @@ const Nav = () => {
   return (
     <NavContainter>
       <Logo>
-        <a href="/">
+        <Link to="/">
           <img src={logo} alt="" />
-        </a>
+        </Link>
       </Logo>
 
       <NavList>
         <li>
-          <a href="#about">About</a>
+          <Link to="/" activeClassName="ServiceContainer">
+            Services
+          </Link>
         </li>
         <li>
-          <a href="#work">Work</a>
+          <Link to="/">About</Link>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <Link to="/">Work</Link>
+        </li>
+        <li>
+          <Link to="/">Blog</Link>
+        </li>
+        <li>
+          <Link to="/">Contact</Link>
         </li>
       </NavList>
     </NavContainter>

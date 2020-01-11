@@ -15,8 +15,8 @@ const index = () => {
         <Hero />
         <Services />
         <Work />
-        <About />
         <Blog />
+        <About />
       </MainContainer>
     </Layout>
   )
@@ -27,9 +27,9 @@ export default index
 // styled components
 const { colors } = theme
 
-const MainContainer = styled.main`
+export const MainContainer = styled.main`
   padding: 70px 275px;
   font-size: 20px;
   line-height: 1.3;
-  background: ${colors.blueMadison};
+  background: ${colors.blueExpress};
 `
