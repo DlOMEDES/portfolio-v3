@@ -1,11 +1,11 @@
 import React from "react"
 import { GlobalStyle } from "../utils/GlobalStyle"
 import styled from "styled-components"
-import Header from "./Header"
-import Footer from "./Footer"
+import Header from "./header"
+import Footer from "./footer"
 // import theme from "../utils/theme"
-import Social from "../components/Social"
-import MyEmail from "../components/MyEmail"
+import Social from "./social"
+import MyEmail from "./my-email"
 // const { colors } = theme
 
 const LayoutContent = styled.div`

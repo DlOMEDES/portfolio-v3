@@ -1,12 +1,12 @@
 import React from "react"
-import Layout from "../components/Layout"
-import Hero from "../components/Hero"
+import Layout from "../components/layout"
+import Hero from "../components/hero"
 import styled from "styled-components"
 import theme from "../utils/theme"
-import Work from "../components/Work"
-import About from "../components/About"
-import Blog from "../components/Blog"
-import Services from "../components/Services"
+import Work from "../components/work"
+import About from "../components/about"
+import Blog from "../components/blog"
+import Services from "../components/services"
 
 const index = () => {
   return (
