@@ -1,21 +1,22 @@
 import { createGlobalStyle } from "styled-components"
-import theme from "../utils/theme"
+import theme from "./theme"
 const { colors } = theme
 
 export const GlobalStyle = createGlobalStyle`
   *,
   *:before,
   *:after {
-      box-sizing: inherit;
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
   body {
     @import url('https://fonts.googleapis.com/css?family=Poppins:900,700,400,300"');
-    font-family: 'Poppins', sans-serif;
-    color: ${colors.white};
+    font-family: "Poppins", Helvetica Neue, sans-serif;
+    color: ${colors.ashblueManatee};
   }
+  
 
   h1,
   h2,

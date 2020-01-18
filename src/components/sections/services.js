@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import theme from "../utils/theme"
+import theme from "../../utils/theme"
 import { FaFileAlt, FaWordpress, FaMobile } from "react-icons/fa"
 const Service = () => {
   return (
-    <ServiceContainer>
+    <ServiceContainer id="services">
       <ServiceHead>
         <ServiceTitle>Services</ServiceTitle>
         <ServiceSquare>
@@ -67,7 +67,6 @@ const Icon = styled.div`
 `
 const ServiceBox = styled.section`
   transition: all 0.4s ease-in-out;
-  color: ${colors.white};
   padding: 30px;
   border-bottom: 2px solid ${colors.roseRed};
 
@@ -92,7 +91,7 @@ const ServiceContent = styled.div`
   letter-spacing: 1px;
 `
 const ServiceHead = styled.div`
-  margin-bottom: 150px;
+  margin-bottom: 200px;
   display: flex;
   align-items: center;
 `
@@ -101,16 +100,19 @@ const ServiceTitle = styled.h2`
   color: ${colors.white};
   text-transform: uppercase;
   letter-spacing: 2px;
+  position: absolute;
+  top: 40px;
 `
 const SquareSpan = styled.span`
   border: 5px solid ${colors.blueQueen};
   width: 120px;
   height: 120px;
   position: absolute;
-  top: -45px;
+  top: 0;
   left: -18px;
 `
 const ServiceSquare = styled.div``
 const ServiceContainer = styled.section`
   position: relative;
+  padding-bottom: 300px;
 `

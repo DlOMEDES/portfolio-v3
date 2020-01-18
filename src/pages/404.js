@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import Link from "gatsby-link"
-import { MainContainer } from "./index"
+import { MainContainer } from "../components/layout"
 
 const NotFound = () => {
   return (

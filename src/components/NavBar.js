@@ -23,23 +23,24 @@ export const Logo = styled.div`
 
 export const NavList = styled.ol`
   list-style-type: decimal-leading-zero;
-  color: ${colors.white};
+  color: ${colors.roseRed};
+  font-size: 16px;
   display: flex;
-  transition: all 0.5s ease-out;
-  &:hover {
+  transition: all 0.3s ease-out;
+  /* &:hover {
     color: ${colors.roseRed};
-  }
+  } */
   li {
     margin: 0 30px;
   }
 
   li a {
-    color: ${colors.roseRed};
-    font-size: 20px;
+    color: ${colors.white};
+    font-size: 16px;
     font-weight: 600;
-    transition: all 0.5s ease-out;
+    transition: all 0.3s ease-out;
     &:hover {
-      color: ${colors.white};
+      color: ${colors.roseRed};
     }
   }
 `
@@ -55,21 +56,21 @@ const Nav = () => {
 
       <NavList>
         <li>
-          <Link to="/" activeClassName="ServiceContainer">
+          <Link to="/#services" activeClassName="ServiceContainer">
             Services
           </Link>
         </li>
         <li>
-          <Link to="/">About</Link>
+          <Link to="/#about">About</Link>
         </li>
         <li>
-          <Link to="/">Work</Link>
+          <Link to="/#work">Work</Link>
         </li>
         <li>
-          <Link to="/">Blog</Link>
+          <Link to="/#blog">Blog</Link>
         </li>
         <li>
-          <Link to="/">Contact</Link>
+          <Link to="/#contact">Contact</Link>
         </li>
       </NavList>
     </NavContainter>

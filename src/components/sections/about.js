@@ -1,13 +1,14 @@
 import React from "react"
 import styled from "styled-components"
-import config from "../config/index"
-import theme from "../utils/theme"
-import bgCode from "../images/bgCode.png"
+// import Layout from '../components/layout'
+import config from "../../config/index"
+import theme from "../../utils/theme"
+import bgCode from "../../images/bgCode.png"
 import { DiHtml5 } from "react-icons/di"
 
 const About = () => {
   return (
-    <AboutContainer>
+    <AboutContainer id="about">
       <AboutHead>
         <h3>More about me and skills</h3>
       </AboutHead>

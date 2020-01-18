@@ -3,28 +3,29 @@ import { GlobalStyle } from "../utils/GlobalStyle"
 import styled from "styled-components"
 import Header from "./header"
 import Footer from "./footer"
-// import theme from "../utils/theme"
+import theme from "../utils/theme"
 import Social from "./social"
 import MyEmail from "./my-email"
-// const { colors } = theme
+const { colors } = theme
 
-const LayoutContent = styled.div`
+export const MainContainer = styled.main`
+  padding: 70px 275px;
+  font-size: 20px;
   line-height: 1.3;
-  font-family: "Poppins", Helvetica Neue, sans-serif;
+  background: ${colors.blueExpress};
+  line-height: 1.3;
 `
 
 const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <LayoutContent>
-        <Header />
-        {/* <Email /> */}
-        {children}
-        <Social />
-        <MyEmail />
-        <Footer />
-      </LayoutContent>
+      <Social />
+      <MyEmail />
+
+      <Header />
+      <MainContainer>{children}</MainContainer>
+      <Footer />
     </>
   )
 }

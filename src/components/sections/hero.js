@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components"
-import theme from "../utils/theme"
-import config from "../config/index"
-import selfImage from "../images/self-bg.png"
+import theme from "../../utils/theme"
+import config from "../../config/index"
+import selfImage from "../../images/self-bg.png"
 
 const Hero = () => {
   return (
     <>
-      <HeroContainer>
+      <HeroContainer id="hero">
         <HeroDetails>
           <Hi>Hi, my name is</Hi>
           <Name>{config.name}</Name>
@@ -63,7 +63,7 @@ const Name = styled.h2`
   font-weight: 900;
 `
 const Subtitle = styled.h3`
-  color: ${colors.blueQueen};
+  color: ${colors.ashblueManatee};
   font-size: 60px;
   font-weight: 900;
 `
@@ -73,8 +73,8 @@ const ContactBtn = styled.div`
     border-radius: 100px;
     background: transparent;
     color: ${colors.roseRed};
-    padding: 20px 40px;
-    font-size: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
 
     border: 1px solid ${colors.roseRed};
     transition: all 0.4s ease-in-out;
