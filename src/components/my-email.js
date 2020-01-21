@@ -28,19 +28,28 @@ const SocialList = styled.div`
   flex-direction: column;
   align-items: center;
   a {
-    font-size: 12px;
+    font-size: 14px;
     writing-mode: vertical-rl;
-    color: ${colors.ashblueManatee};
+    color: rgb(${colors.ashblueManatee});
     margin: 20px auto;
     padding: 10px;
     letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      font-size: 16px;
+      writing-mode: vertical-rl;
+      color: rgb(${colors.violet});
+      margin: 20px auto;
+      padding: 10px;
+      letter-spacing: 2px;
+    }
   }
   &:after {
     content: "";
     display: block;
     width: 1px;
     height: 90px;
-    background-color: ${colors.ashblueManatee};
+    background-color: rgb(${colors.ashblueManatee});
     margin: 0px auto;
   }
 `

@@ -8,17 +8,16 @@ import lenses from "../../images/lenses.png"
 import travler from "../../images/travler.png"
 import spartan from "../../images/spartan-fitness.png"
 
-const { colors } = theme
+const { colors, shadows } = theme
 
 const Work = () => {
   return (
     <WorkContainer id="work">
       <WorkHead>
         <WorkTitle>Work</WorkTitle>
-        <WorkArrow>
-          <Rectangle />
-          <Triangle />
-        </WorkArrow>
+        <WorkCircle>
+          <Circle />
+        </WorkCircle>
       </WorkHead>
       <WorkGrid>
         <Card to="/realestate-app">
@@ -62,7 +61,7 @@ export default Work
 const CardOverlay = styled.div`
   width: 100%;
   height: 100%;
-  background: rgba(229, 64, 84, 0.9);
+  background: rgba(${colors.midnightPurple}, 0.95);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,8 +71,8 @@ const CardOverlay = styled.div`
   transition: all 0.3s ease-in-out;
 
   h4 {
-    color: ${colors.white};
-    background: ${colors.charcoalBlue};
+    color: rgb(${colors.white});
+    background: rgb(${colors.violet});
     padding: 10px 20px;
     text-transform: uppercase;
   }
@@ -138,38 +137,29 @@ const WorkGrid = styled.div`
 const WorkTitle = styled.h2`
   position: absolute;
   z-index: 1;
-  color: ${colors.white};
+  color: rgb(${colors.white});
   text-transform: uppercase;
   letter-spacing: 2px;
-  left: -10px;
-  top: 15px;
+  top: 40px;
 `
-const WorkArrow = styled.div`
-  position: relative;
-  /* margin-bottom: 100px; */
-`
-const Rectangle = styled.span`
+const WorkCircle = styled.div``
+
+const Circle = styled.span`
   position: absolute;
-  width: 35px;
-  height: 55px;
-  background: ${colors.roseRed};
-  top: 0px;
-  left: 25px;
-`
-const Triangle = styled.span`
-  position: absolute;
-  top: 45px;
-  left: -2px;
-  width: 0;
-  height: 0;
-  border-left: 45px solid transparent;
-  border-right: 45px solid transparent;
-  border-top: 45px solid ${colors.roseRed};
+  top: 0;
+  left: -18px;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: ${shadows.small} rgb(${colors.violet});
 `
 
 const WorkHead = styled.div`
-  padding-bottom: 125px;
+  padding-bottom: 200px;
+  position: relative;
 `
 const WorkContainer = styled.section`
   position: relative;
+  margin-bottom: 350px;
 `

@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "gatsby-link"
-import logo from "../images/logo.png"
+import logo from "../images/logo-ash.png"
 import styled from "styled-components"
 import theme from "../utils/theme"
 // import { fadeIn } from "../utils/animations"
@@ -23,7 +23,7 @@ export const Logo = styled.div`
 
 export const NavList = styled.ol`
   list-style-type: decimal-leading-zero;
-  color: ${colors.roseRed};
+  color: rgb(${colors.ashblueManatee});
   font-size: 16px;
   display: flex;
   transition: all 0.3s ease-out;
@@ -35,12 +35,12 @@ export const NavList = styled.ol`
   }
 
   li a {
-    color: ${colors.white};
+    color: rgb(${colors.white});
     font-size: 16px;
     font-weight: 600;
     transition: all 0.3s ease-out;
     &:hover {
-      color: ${colors.roseRed};
+      color: rgb(${colors.violet});
     }
   }
 `

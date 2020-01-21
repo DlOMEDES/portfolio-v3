@@ -14,7 +14,7 @@ const Service = () => {
       <ServiceContent>
         <ServiceBox>
           <Icon>
-            <FaFileAlt size="50px" color={colors.blueQueen} />
+            <FaFileAlt size="50px" />
           </Icon>
 
           <h3>Design to Code</h3>
@@ -29,7 +29,7 @@ const Service = () => {
         </ServiceBox>
         <ServiceBox>
           <Icon>
-            <FaWordpress size="50px" color={colors.blueQueen} />
+            <FaWordpress size="50px" />
           </Icon>
           <h3>CMS Ready</h3>
           <h5>Tailored to your needs</h5>
@@ -43,7 +43,7 @@ const Service = () => {
         </ServiceBox>
         <ServiceBox>
           <Icon>
-            <FaMobile size="50px" color={colors.blueQueen} />
+            <FaMobile size="50px" />
           </Icon>
           <h3>Fully Responsive</h3>
           <h5>Smartphones & other devices</h5>
@@ -61,26 +61,27 @@ const Service = () => {
 
 export default Service
 
-const { colors } = theme
+const { colors, shadows } = theme
 const Icon = styled.div`
   margin: 20px 0;
 `
 const ServiceBox = styled.section`
   transition: all 0.4s ease-in-out;
   padding: 30px;
-  border-bottom: 2px solid ${colors.roseRed};
 
   h3 {
-    color: ${colors.white};
+    color: rgb(${colors.white});
   }
 
   h5 {
-    color: ${colors.roseRed};
+    color: rgb(${colors.violet});
   }
 
   &:hover {
-    background-color: ${colors.blueExpress};
-    box-shadow: rgba(2, 12, 27, 0.7) 0px 0px 30px -10px;
+    background-color: rgb(${colors.midnightPurple});
+    /* box-shadow: rgba(2, 12, 27, 0.8) 0px 0px 30px -10px; */
+    box-shadow: ${shadows.small} rgba(${colors.violet}, 0.2);
+    border-bottom: 3px solid rgba(${colors.violet}, 0.5);
   }
 `
 const ServiceContent = styled.div`
@@ -97,14 +98,15 @@ const ServiceHead = styled.div`
 `
 const ServiceTitle = styled.h2`
   z-index: 1;
-  color: ${colors.white};
+  color: rgb(${colors.white});
   text-transform: uppercase;
   letter-spacing: 2px;
   position: absolute;
   top: 40px;
 `
 const SquareSpan = styled.span`
-  border: 5px solid ${colors.blueQueen};
+  /* border: 5px solid rgba(177, 122, 204, 0.2); */
+  box-shadow: ${shadows.small} rgb(${colors.violet});
   width: 120px;
   height: 120px;
   position: absolute;
@@ -112,7 +114,8 @@ const SquareSpan = styled.span`
   left: -18px;
 `
 const ServiceSquare = styled.div``
+
 const ServiceContainer = styled.section`
   position: relative;
-  padding-bottom: 300px;
+  margin-bottom: 350px;
 `

@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../../utils/theme"
 import config from "../../config/index"
-import selfImage from "../../images/self-bg.png"
+import heroImage from "../../images/hero-image.png"
 
 const Hero = () => {
   return (
@@ -17,7 +17,7 @@ const Hero = () => {
           </ContactBtn>
         </HeroDetails>
         <HeroImage>
-          <img src={selfImage} alt="" />
+          <img src={heroImage} alt="" />
         </HeroImage>
       </HeroContainer>
     </>
@@ -50,20 +50,20 @@ const HeroImage = styled.div`
 `
 
 const Hi = styled.h4`
-  color: ${colors.roseRed};
+  color: rgb(${colors.violet});
   margin: 0 0 20px 3px;
   font-size: 20px;
   font-weight: 400;
 `
 const Name = styled.h2`
-  color: ${colors.white};
+  color: rgb(${colors.white});
 
   margin: 0;
   font-size: 60px;
   font-weight: 900;
 `
 const Subtitle = styled.h3`
-  color: ${colors.ashblueManatee};
+  color: rgb(${colors.ashblueManatee});
   font-size: 60px;
   font-weight: 900;
 `
@@ -72,15 +72,15 @@ const ContactBtn = styled.div`
   a {
     border-radius: 100px;
     background: transparent;
-    color: ${colors.roseRed};
+    color: rgb(${colors.white});
     padding: 12px 24px;
     font-size: 18px;
 
-    border: 1px solid ${colors.roseRed};
+    border: 1px solid rgb(${colors.violet});
     transition: all 0.4s ease-in-out;
     &:hover {
-      background: ${colors.roseRed};
-      color: ${colors.white};
+      background: rgba(${colors.violet}, 0.3);
+      color: rgb(${colors.white});
       border: 1px solid transparent;
     }
   }

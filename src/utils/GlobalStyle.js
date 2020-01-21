@@ -11,10 +11,13 @@ export const GlobalStyle = createGlobalStyle`
       padding: 0;
     }
 
+
+
   body {
     @import url('https://fonts.googleapis.com/css?family=Poppins:900,700,400,300"');
     font-family: "Poppins", Helvetica Neue, sans-serif;
-    color: ${colors.ashblueManatee};
+    color: rgb(${colors.ashblueManatee});
+    background: rgb(${colors.midnightPurple});
   }
   
 
@@ -33,7 +36,6 @@ export const GlobalStyle = createGlobalStyle`
   }
   a {
     text-decoration: none;
-    color: ${colors.roseRed}
   }
 
   input, select, textarea, button {

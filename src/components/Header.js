@@ -2,15 +2,15 @@ import React from "react"
 import Navbar from "./navbar"
 import styled from "styled-components"
 import theme from "../utils/theme"
-const { colors } = theme
+const { colors, shadows } = theme
 
 export const HeaderContainer = styled.header`
   padding: 0 40px;
   height: 70px;
   display: flex;
   align-items: center;
-  background: ${colors.blueExpress};
-  box-shadow: rgba(2, 12, 27, 0.7) 0px 0px 30px -20px;
+  background: ${colors.midnightPurple};
+  box-shadow: ${shadows.black};
   z-index: 1;
   position: relative;
 `

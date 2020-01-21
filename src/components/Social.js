@@ -14,25 +14,22 @@ const Social = () => {
       <SocialList>
         <ListItem>
           <HyperLink href="https://github.com/DlOMEDES">
-            <AiFillGithub size="30px" color={colors.ashblueManatee} />
+            <IconGithub />
           </HyperLink>
         </ListItem>
         <ListItem>
           <HyperLink href="https://www.linkedin.com/in/diomedeslajara/">
-            <TiSocialLinkedinCircular
-              size="30px"
-              color={colors.ashblueManatee}
-            />
+            <IconLinkedin />
           </HyperLink>
         </ListItem>
         <ListItem>
           <HyperLink href="https://twitter.com/dl_ajara">
-            <AiOutlineTwitter size="30px" color={colors.ashblueManatee} />
+            <IconTwitter />
           </HyperLink>
         </ListItem>
         <ListItem>
           <HyperLink href="https://codepen.io/DlOMEDES">
-            <AiFillCodepenCircle size="30px" color={colors.ashblueManatee} />
+            <IconCodepen />
           </HyperLink>
         </ListItem>
       </SocialList>
@@ -60,7 +57,7 @@ const SocialList = styled.ul`
     display: block;
     width: 1px;
     height: 90px;
-    background-color: rgb(168, 178, 209);
+    background-color: rgb(${colors.ashblueManatee});
     margin: 0px auto;
   }
 `
@@ -75,11 +72,50 @@ const ListItem = styled.li`
 
 const HyperLink = styled.a`
   padding: 10px;
-  img {
-    width: 30px;
-    height: 30px;
-    margin: 10px;
-    /* border: 2px solid ${colors.white};
-    border-radius: 50px; */
+`
+
+const IconGithub = styled(AiFillGithub)`
+  font-size: 30px;
+  color: rgb(${colors.ashblueManatee});
+
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    font-size: 35px;
+    color: rgb(${colors.violet});
+  }
+`
+
+const IconLinkedin = styled(TiSocialLinkedinCircular)`
+  font-size: 30px;
+  color: rgb(${colors.ashblueManatee});
+
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    font-size: 35px;
+    color: rgb(${colors.violet});
+  }
+`
+const IconTwitter = styled(AiOutlineTwitter)`
+  font-size: 30px;
+  color: rgb(${colors.ashblueManatee});
+
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    font-size: 35px;
+    color: rgb(${colors.violet});
+  }
+`
+const IconCodepen = styled(AiFillCodepenCircle)`
+  font-size: 30px;
+  color: rgb(${colors.ashblueManatee});
+
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    font-size: 35px;
+    color: rgb(${colors.violet});
   }
 `
