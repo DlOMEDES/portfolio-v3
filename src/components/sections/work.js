@@ -68,15 +68,51 @@ const CardOverlay = styled.div`
   position: absolute;
   top: 0;
   left: -100%;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 
   h4 {
-    color: rgb(${colors.white});
-    background: rgb(${colors.violet});
+    color: rgb(${colors.violet});
     padding: 10px 20px;
     text-transform: uppercase;
   }
 `
+
+const WorkGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 150px);
+  grid-gap: 30px;
+`
+const WorkTitle = styled.h2`
+  position: absolute;
+  z-index: 1;
+  color: rgb(${colors.white});
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  top: 40px;
+`
+const WorkCircle = styled.div``
+
+const Circle = styled.span`
+  position: absolute;
+  top: 0;
+  left: -20px;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: ${shadows.sections} rgb(${colors.violet});
+`
+
+const WorkHead = styled.div`
+  padding-bottom: 200px;
+  position: relative;
+`
+const WorkContainer = styled.section`
+  position: relative;
+  margin-bottom: 350px;
+`
+
 const Card = styled(CardLink)`
   position: relative;
   padding: 40px;
@@ -126,40 +162,4 @@ const Card = styled(CardLink)`
     grid-row: 1/3;
     background-size: cover;
   }
-`
-
-const WorkGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 150px);
-  grid-gap: 30px;
-`
-const WorkTitle = styled.h2`
-  position: absolute;
-  z-index: 1;
-  color: rgb(${colors.white});
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  top: 40px;
-`
-const WorkCircle = styled.div``
-
-const Circle = styled.span`
-  position: absolute;
-  top: 0;
-  left: -18px;
-  height: 120px;
-  width: 120px;
-  border-radius: 50%;
-  display: inline-block;
-  box-shadow: ${shadows.small} rgb(${colors.violet});
-`
-
-const WorkHead = styled.div`
-  padding-bottom: 200px;
-  position: relative;
-`
-const WorkContainer = styled.section`
-  position: relative;
-  margin-bottom: 350px;
 `

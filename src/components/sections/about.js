@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-// import Layout from '../components/layout'
 import config from "../../config/index"
 import theme from "../../utils/theme"
 import bgCode from "../../images/bgCode.png"
@@ -10,9 +9,9 @@ const About = () => {
   return (
     <AboutContainer id="about">
       <AboutHead>
-        <h3>About me</h3>
+        <AboutTitle>About me</AboutTitle>
         <AboutShape>
-          <span></span>
+          <span>▲</span>
         </AboutShape>
       </AboutHead>
       <AboutDetail>
@@ -38,36 +37,31 @@ const About = () => {
 
 export default About
 // styles
-const { colors } = theme
+const { colors, shadows } = theme
 const TechList = styled.li``
 const Tech = styled.ul``
 const Tools = styled.div``
+const AboutTitle = styled.h2`
+  position: absolute;
+  z-index: 1;
+  color: rgb(${colors.white});
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  top: 120px;
+`
 const AboutShape = styled.div`
-   position: relative;
-      width: 100px;
-      height: 90px;
-    }
-    &:before,
-    &:after {
-      position: absolute;
-      content: "";
-      left: 50px;
-      top: 0;
-      width: 50px;
-      height: 80px;
-      background: red;
-      border-radius: 50px 50px 0 0;
-      transform: rotate(-45deg);
-      transform-origin: 0 100%;
-    }
-    &after {
-      left: 0;
-      transform: rotate(45deg);
-      transform-origin: 100% 100%;
+  span {
+    position: absolute;
+    font-size: 180px;
+    color: rgb(${colors.midnightPurple});
+    text-shadow: ${shadows.shapes} rgba(${colors.violet}, 0.7);
+    left: -50px;
+  }
 `
 
 const AboutDetail = styled.div`
   background: url(${bgCode}) center center no-repeat;
+  margin-top: 59px;
   p {
     font-size: 24px;
     margin: 0px;

@@ -16,7 +16,9 @@ const theme = {
     midnightPurple: "26, 20, 38",
   },
   shadows: {
-    small: "0px 15px 44px -10px",
+    sections: "0px 20px 40px -10px",
+    shapes: "0px 20px 40px",
+    boxes: "0px 40px 45px -15px",
     large: "0px 10px 100px 0px",
   },
 }

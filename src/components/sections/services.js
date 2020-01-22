@@ -65,7 +65,7 @@ const { colors, shadows } = theme
 const Icon = styled.div`
   margin: 20px 0;
 `
-const ServiceBox = styled.section`
+const ServiceBox = styled.div`
   transition: all 0.4s ease-in-out;
   padding: 30px;
 
@@ -80,7 +80,7 @@ const ServiceBox = styled.section`
   &:hover {
     background-color: rgb(${colors.midnightPurple});
     /* box-shadow: rgba(2, 12, 27, 0.8) 0px 0px 30px -10px; */
-    box-shadow: ${shadows.small} rgba(${colors.violet}, 0.2);
+    box-shadow: ${shadows.boxes} rgba(${colors.violet}, 0.3);
     border-bottom: 3px solid rgba(${colors.violet}, 0.5);
   }
 `
@@ -92,9 +92,8 @@ const ServiceContent = styled.div`
   letter-spacing: 1px;
 `
 const ServiceHead = styled.div`
-  margin-bottom: 200px;
-  display: flex;
-  align-items: center;
+  padding-bottom: 200px;
+  position: relative;
 `
 const ServiceTitle = styled.h2`
   z-index: 1;
@@ -106,7 +105,7 @@ const ServiceTitle = styled.h2`
 `
 const SquareSpan = styled.span`
   /* border: 5px solid rgba(177, 122, 204, 0.2); */
-  box-shadow: ${shadows.small} rgb(${colors.violet});
+  box-shadow: ${shadows.sections} rgb(${colors.violet});
   width: 120px;
   height: 120px;
   position: absolute;

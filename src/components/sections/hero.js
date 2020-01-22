@@ -79,7 +79,7 @@ const ContactBtn = styled.div`
     border: 1px solid rgb(${colors.violet});
     transition: all 0.4s ease-in-out;
     &:hover {
-      background: rgba(${colors.violet}, 0.3);
+      background: rgba(${colors.violet}, 0.5);
       color: rgb(${colors.white});
       border: 1px solid transparent;
     }
