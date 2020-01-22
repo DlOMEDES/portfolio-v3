@@ -80,7 +80,7 @@ const CardOverlay = styled.div`
 const WorkGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 150px);
+  grid-template-rows: repeat(4, 140px);
   grid-gap: 30px;
 `
 const WorkTitle = styled.h2`
@@ -110,7 +110,7 @@ const WorkHead = styled.div`
 `
 const WorkContainer = styled.section`
   position: relative;
-  margin-bottom: 350px;
+  margin-bottom: 300px;
 `
 
 const Card = styled(CardLink)`
