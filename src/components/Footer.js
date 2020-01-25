@@ -1,10 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import hill from "../images/hill.svg"
-import theme from "../utils/theme"
 import config from "../config"
-
-const colors = theme
 
 const StyledFooter = styled.footer`
   background: url(${hill}) no-repeat center;
