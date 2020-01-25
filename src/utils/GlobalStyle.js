@@ -21,10 +21,12 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Poppins", Helvetica Neue, sans-serif;
     color: rgb(${colors.ashblueManatee});
     background: rgb(${colors.midnightPurple});
+    
   }
 
   p {
       font-size:1.8rem;
+      line-height: 1.8;
   }  
 
   h1,

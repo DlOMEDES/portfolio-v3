@@ -46,13 +46,20 @@ const Input = styled.p`
     font-size: 2.5rem;
     font-weight: 900;
   }
+  &:last-child {
+    content: "&nbsp;";
+    animation: caret 1s steps(1) infinite;
+    background: #f7f7f7a6;
+  }
 `
 const Output = styled.p`
   color: rgb(${colors.violet});
 `
 const Statement = styled.div`
-  padding: 3.5rem 0 0 0;
-  margin: 0 0 3rem 3rem;
+  &:first-child {
+    padding: 5rem 0 0 0;
+  }
+  margin: 0 0 3.5rem 5rem;
 `
 
 const ColoredDot = styled.div`
@@ -116,7 +123,6 @@ const ShapeContainer = styled.div`
 
 const AboutHead = styled.div`
   padding-bottom: 30rem;
-
   position: relative;
 `
 

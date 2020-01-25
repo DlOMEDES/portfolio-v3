@@ -32,10 +32,16 @@ export default Service
 const { colors, shadows } = theme
 const Icon = styled.span`
   font-size: 5rem;
+  margin: 1rem 0 0 0;
 `
 const Box = styled.article`
   transition: all 0.4s ease-in-out;
-  padding: 3rem;
+  padding: 4.5rem 3rem;
+  margin: 0 3rem 0 0;
+
+  &:last-child {
+    margin: 0;
+  }
 
   h3 {
     color: rgb(${colors.white});
@@ -64,7 +70,6 @@ const ServiceContent = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2.5rem;
-  line-height: 1.5;
   letter-spacing: 0.1rem;
 `
 const ServiceHead = styled.div`
