@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link as CardLink } from "gatsby"
 import theme from "../../utils/theme"
+import SectionTitle from "../SectionTitle"
 import restate from "../../images/restate.png"
 import heats from "../../images/heats.png"
 import lenses from "../../images/lenses.png"
@@ -14,10 +15,10 @@ const Work = () => {
   return (
     <WorkContainer id="work">
       <WorkHead>
-        <WorkTitle>Work</WorkTitle>
-        <WorkCircle>
-          <Circle />
-        </WorkCircle>
+        <SectionTitle title="Work" />
+        <ShapeContainer>
+          <span></span>
+        </ShapeContainer>
       </WorkHead>
       <WorkGrid>
         <Card to="/realestate-app">
@@ -72,50 +73,44 @@ const CardOverlay = styled.div`
 
   h4 {
     color: rgb(${colors.violet});
-    padding: 10px 20px;
+    padding: 1rem 2rem;
     text-transform: uppercase;
+    font-size: 2rem;
   }
 `
 
 const WorkGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 140px);
-  grid-gap: 30px;
+  grid-template-rows: repeat(4, 14rem);
+  grid-gap: 3rem;
 `
-const WorkTitle = styled.h2`
-  position: absolute;
-  z-index: 1;
-  color: rgb(${colors.white});
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  top: 40px;
-`
-const WorkCircle = styled.div``
 
-const Circle = styled.span`
-  position: absolute;
-  top: 0;
-  left: -20px;
-  height: 120px;
-  width: 120px;
-  border-radius: 50%;
-  display: inline-block;
-  box-shadow: ${shadows.sections} rgb(${colors.violet});
+const ShapeContainer = styled.div`
+  span {
+    position: absolute;
+    top: 0;
+    left: -2rem;
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: ${shadows.sections} rgb(${colors.violet}, 0.5);
+  }
 `
 
 const WorkHead = styled.div`
-  padding-bottom: 200px;
+  padding-bottom: 25rem;
   position: relative;
 `
 const WorkContainer = styled.section`
   position: relative;
-  margin-bottom: 300px;
+  margin-bottom: 30rem;
 `
 
 const Card = styled(CardLink)`
   position: relative;
-  padding: 40px;
+  padding: 4rem;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
   overflow: hidden;

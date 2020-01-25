@@ -31,57 +31,57 @@ const { colors } = theme
 const HeroContainer = styled.section`
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 1rem;
   min-height: 95vh;
 `
 
 const HeroDetails = styled.div`
-  padding-top: 150px;
+  padding-top: 15rem;
   line-height: 1.5;
-  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
 `
 const HeroImage = styled.div`
-  padding-top: 150px;
+  padding-top: 15rem;
 
   img {
-    width: 275px;
-    border-radius: 100px;
+    width: 27.5rem;
+    border-radius: 10rem;
   }
 `
 
 const Hi = styled.h4`
   color: rgb(${colors.violet});
-  margin: 0 0 20px 3px;
-  font-size: 20px;
+  margin: 0 0 2rem 0.3rem;
+  font-size: 2rem;
   font-weight: 400;
 `
 const Name = styled.h2`
   color: rgb(${colors.white});
 
   margin: 0;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 900;
 `
 const Subtitle = styled.h3`
   color: rgb(${colors.ashblueManatee});
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 900;
 `
 const ContactBtn = styled.div`
-  margin: 60px 0;
+  margin: 6rem 0;
   a {
-    border-radius: 100px;
+    border-radius: 10rem;
     background: transparent;
     color: rgb(${colors.white});
-    padding: 12px 24px;
-    font-size: 18px;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.8rem;
 
-    border: 1px solid rgb(${colors.violet});
+    border: 0.1rem solid rgb(${colors.violet});
     transition: all 0.4s ease-in-out;
     &:hover {
       background: rgba(${colors.violet}, 0.5);
       color: rgb(${colors.white});
-      border: 1px solid transparent;
+      border: 0.1rem solid transparent;
     }
   }
 `

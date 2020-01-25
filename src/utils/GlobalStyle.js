@@ -2,7 +2,9 @@ import { createGlobalStyle } from "styled-components"
 import theme from "./theme"
 const { colors } = theme
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Poppins:900,700,400,300"');
+
   *,
   *:before,
   *:after {
@@ -11,15 +13,19 @@ export const GlobalStyle = createGlobalStyle`
       padding: 0;
     }
 
-
+  html {
+    font-size: 10px;
+  }
 
   body {
-    @import url('https://fonts.googleapis.com/css?family=Poppins:900,700,400,300"');
     font-family: "Poppins", Helvetica Neue, sans-serif;
     color: rgb(${colors.ashblueManatee});
     background: rgb(${colors.midnightPurple});
   }
-  
+
+  p {
+      font-size:1.8rem;
+  }  
 
   h1,
   h2,
@@ -44,3 +50,5 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 `
+
+export default GlobalStyle

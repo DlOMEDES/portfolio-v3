@@ -43,10 +43,10 @@ export default Social
 const { colors } = theme
 
 const SocialContainer = styled.div`
-  width: 40px;
+  width: 4rem;
   position: fixed;
-  bottom: 20px;
-  left: 40px;
+  bottom: 2rem;
+  left: 4rem;
 `
 const SocialList = styled.ul`
   display: flex;
@@ -55,67 +55,67 @@ const SocialList = styled.ul`
   &:after {
     content: "";
     display: block;
-    width: 1px;
-    height: 90px;
+    width: 0.1rem;
+    height: 9rem;
     background-color: rgb(${colors.ashblueManatee});
-    margin: 0px auto;
+    margin: 0 auto;
   }
 `
 
 const ListItem = styled.li`
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 
   &:last-of-type {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
   }
 `
 
 const HyperLink = styled.a`
-  padding: 10px;
+  padding: 1rem;
 `
 
 const IconGithub = styled(AiFillGithub)`
-  font-size: 30px;
+  font-size: 3rem;
   color: rgb(${colors.ashblueManatee});
 
   transition: all 0.3s ease-out;
 
   &:hover {
-    font-size: 35px;
+    font-size: 3.5rem;
     color: rgb(${colors.violet});
   }
 `
 
 const IconLinkedin = styled(TiSocialLinkedinCircular)`
-  font-size: 30px;
+  font-size: 3rem;
   color: rgb(${colors.ashblueManatee});
 
   transition: all 0.3s ease-out;
 
   &:hover {
-    font-size: 35px;
+    font-size: 3.5rem;
     color: rgb(${colors.violet});
   }
 `
 const IconTwitter = styled(AiOutlineTwitter)`
-  font-size: 30px;
+  font-size: 3rem;
   color: rgb(${colors.ashblueManatee});
 
   transition: all 0.3s ease-out;
 
   &:hover {
-    font-size: 35px;
+    font-size: 3.5rem;
     color: rgb(${colors.violet});
   }
 `
 const IconCodepen = styled(AiFillCodepenCircle)`
-  font-size: 30px;
+  font-size: 3rem;
   color: rgb(${colors.ashblueManatee});
 
   transition: all 0.3s ease-out;
 
   &:hover {
-    font-size: 35px;
+    font-size: 3.5rem;
     color: rgb(${colors.violet});
   }
 `

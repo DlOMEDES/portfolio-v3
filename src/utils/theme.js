@@ -11,6 +11,7 @@ const theme = {
     // naturals
     ashblueManatee: "136, 146, 176",
     white: "255, 255, 255",
+    black: "0,0,0",
     // purples
     violet: "177, 122, 204",
     midnightPurple: "26, 20, 38",

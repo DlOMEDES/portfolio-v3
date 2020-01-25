@@ -4,7 +4,7 @@ import styled from "styled-components"
 import theme from "../utils/theme"
 const { colors, shadows } = theme
 
-export const HeaderContainer = styled.header`
+const HeaderContainer = styled.header`
   padding: 0 40px;
   height: 70px;
   display: flex;
