@@ -12,7 +12,7 @@ const index = () => {
       <Hero />
       <Services />
       <Work />
-      <About />
+//       <About />
     </Layout>
   )
 }
