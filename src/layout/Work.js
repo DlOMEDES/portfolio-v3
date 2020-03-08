@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import { Link as CardLink } from "gatsby"
-import theme from "../../utils/theme"
-import SectionTitle from "../SectionTitle"
-import restate from "../../images/restate.png"
-import heats from "../../images/heats.png"
-import lenses from "../../images/lenses.png"
-import travler from "../../images/travler.png"
-import spartan from "../../images/spartan-fitness.png"
+import theme from "../utils/theme"
+import SectionTitle from "../components/SectionTitle"
+import restate from "../images/restate.png"
+import heats from "../images/heats.png"
+import lenses from "../images/lenses.png"
+import travler from "../images/travler.png"
+import spartan from "../images/spartan-fitness.png"
 
 const { colors, shadows } = theme
 
@@ -95,7 +95,7 @@ const ShapeContainer = styled.div`
     width: 12rem;
     border-radius: 50%;
     display: inline-block;
-    box-shadow: ${shadows.sections} rgb(${colors.violet}, 0.5);
+    box-shadow: ${shadows.sections} rgb(${colors.violet}, 0.3);
   }
 `
 

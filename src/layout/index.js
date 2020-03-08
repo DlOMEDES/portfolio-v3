@@ -1,10 +1,10 @@
 import React from "react"
 import GlobalStyle from "../utils/GlobalStyle"
 import styled from "styled-components"
-import Header from "./header"
-import Footer from "./footer"
-import Social from "./social"
-import MyEmail from "./my-email"
+import Header from "./Header"
+import Footer from "./Footer"
+import MyEmail from "../components/my-email"
+import Social from "../components/Social"
 
 export const MainContainer = styled.main`
   padding: 70px 275px;

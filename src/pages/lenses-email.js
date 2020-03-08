@@ -1,6 +1,6 @@
 import React from "react"
-import Layout from "../components/layout"
-import { MainContainer } from "../components/layout"
+import Layout from "../layout"
+import { MainContainer } from "../layout"
 
 const emailPromo = () => {
   return (

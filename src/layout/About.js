@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 // import config from "../../config/index"
-import theme from "../../utils/theme"
+import theme from "../utils/theme"
 // import bgCode from "../../images/bgCode.png"
 // import { DiHtml5 } from "react-icons/di"
-import terminal from "../terminal"
+import terminal from "../../content/terminal"
 
 const About = () => {
   return (
@@ -116,7 +116,7 @@ const ShapeContainer = styled.div`
     position: absolute;
     font-size: 18rem;
     color: rgb(${colors.midnightPurple});
-    text-shadow: ${shadows.shapes} rgba(${colors.violet}, 0.5);
+    text-shadow: ${shadows.shapes} rgba(${colors.violet}, 0.3);
     left: -5rem;
   }
 `

@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import theme from "../../utils/theme"
-import SectionTitle from "../SectionTitle"
-import ServiceBox from "../ServiceBox"
+import theme from "../utils/theme"
+import SectionTitle from "../components/SectionTitle"
+import ServiceBox from "../../content/service-box"
 
 const Service = () => {
   return (
@@ -15,12 +15,12 @@ const Service = () => {
       </ServiceHead>
       <ServiceContent>
         {ServiceBox.map((box, index) => (
-          <Box key={index}>
+          <Article key={index}>
             <Icon>{box.icon}</Icon>
             <h3>{box.title}</h3>
             <h5>{box.subtitme}</h5>
             <p>{box.text}</p>
-          </Box>
+          </Article>
         ))}
       </ServiceContent>
     </ServiceContainer>
@@ -34,11 +34,13 @@ const Icon = styled.span`
   font-size: 5rem;
   margin: 1rem 0 0 0;
 `
-const Box = styled.article`
+const Article = styled.article`
   transition: all 0.4s ease-in-out;
   padding: 4.5rem 3rem;
   margin: 0 3rem 0 0;
-
+  &:hover {
+    transform: scale(1.1);
+  }
   &:last-child {
     margin: 0;
   }
@@ -79,7 +81,7 @@ const ServiceHead = styled.div`
 
 const ShapeContainer = styled.div`
   span {
-    box-shadow: ${shadows.sections} rgba(${colors.violet}, 0.5);
+    box-shadow: ${shadows.sections} rgba(${colors.violet}, 0.3);
     width: 12rem;
     height: 12rem;
     position: absolute;

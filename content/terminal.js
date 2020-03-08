@@ -2,11 +2,11 @@ export default [
   { input: `Diomedes.currentLocation`, output: `"Philadelphia, PA"` },
   {
     input: `Diomedes.skills`,
-    output: `["Html", "Css", "Sass", "JavaScript", "React", "Node", "Webpack", "Git"]`,
+    output: `["Html", "Css", "JavaScript", "PHP", "MySQL", "WordPress", "React", "Node", "Gulp", "Webpack", "Git"]`,
   },
   {
     input: `Diomedes.interests`,
-    output: `["development", "design", "photography", "fishing", "cooking", "fitness"]`,
+    output: `["development", "design", "photography", "fishing", "Health & Fitness"`,
   },
   {
     input: `Diomedes.education`,

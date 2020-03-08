@@ -1,5 +1,5 @@
 import React from "react"
-import Navbar from "./navbar"
+import Navbar from "../components/NavBar"
 import styled from "styled-components"
 import theme from "../utils/theme"
 const { colors, shadows } = theme

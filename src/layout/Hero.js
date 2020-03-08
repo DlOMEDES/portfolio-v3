@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import theme from "../../utils/theme"
-import config from "../../config/index"
-import heroImage from "../../images/hero-image.png"
+import theme from "../utils/theme"
+import config from "../config/index"
+import heroImage from "../images/hero-image.png"
 
 const Hero = () => {
   return (

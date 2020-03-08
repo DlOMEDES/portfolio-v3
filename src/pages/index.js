@@ -1,10 +1,9 @@
 import React from "react"
-import Layout from "../components/layout"
-import Hero from "../components/sections/hero"
-import Work from "../components/sections/work"
-import About from "../components/sections/about"
-
-import Services from "../components/sections/services"
+import Layout from "../layout"
+import Hero from "../layout/Hero"
+import Work from "../layout/Work"
+import About from "../layout/About"
+import Services from "../layout/Services"
 
 const index = () => {
   return (
