@@ -7,38 +7,7 @@ import {
   AiFillCodepenCircle,
 } from "react-icons/ai"
 import { TiSocialLinkedinCircular } from "react-icons/ti"
-
-const Social = () => {
-  return (
-    <SocialContainer>
-      <SocialList>
-        <ListItem>
-          <HyperLink href="https://github.com/DlOMEDES">
-            <IconGithub />
-          </HyperLink>
-        </ListItem>
-        <ListItem>
-          <HyperLink href="https://www.linkedin.com/in/diomedeslajara/">
-            <IconLinkedin />
-          </HyperLink>
-        </ListItem>
-        <ListItem>
-          <HyperLink href="https://twitter.com/dl_ajara">
-            <IconTwitter />
-          </HyperLink>
-        </ListItem>
-        <ListItem>
-          <HyperLink href="https://codepen.io/DlOMEDES">
-            <IconCodepen />
-          </HyperLink>
-        </ListItem>
-      </SocialList>
-    </SocialContainer>
-  )
-}
-
-export default Social
-
+import { device } from "../utils/mixins"
 // styling
 const { colors } = theme
 
@@ -46,7 +15,11 @@ const SocialContainer = styled.div`
   width: 4rem;
   position: fixed;
   bottom: 2rem;
-  left: 4rem;
+  left: 1rem;
+  @media ${device.tablet} {
+    left: 0;
+    top: 35%;
+  }
 `
 const SocialList = styled.ul`
   display: flex;
@@ -59,6 +32,10 @@ const SocialList = styled.ul`
     height: 9rem;
     background-color: rgb(${colors.ashblueManatee});
     margin: 0 auto;
+
+    @media ${device.tablet} {
+      content: none;
+    }
   }
 `
 
@@ -119,3 +96,34 @@ const IconCodepen = styled(AiFillCodepenCircle)`
     color: rgb(${colors.violet});
   }
 `
+
+const Social = () => {
+  return (
+    <SocialContainer>
+      <SocialList>
+        <ListItem>
+          <HyperLink href="https://github.com/DlOMEDES">
+            <IconGithub />
+          </HyperLink>
+        </ListItem>
+        <ListItem>
+          <HyperLink href="https://www.linkedin.com/in/diomedeslajara/">
+            <IconLinkedin />
+          </HyperLink>
+        </ListItem>
+        <ListItem>
+          <HyperLink href="https://twitter.com/dl_ajara">
+            <IconTwitter />
+          </HyperLink>
+        </ListItem>
+        <ListItem>
+          <HyperLink href="https://codepen.io/DlOMEDES">
+            <IconCodepen />
+          </HyperLink>
+        </ListItem>
+      </SocialList>
+    </SocialContainer>
+  )
+}
+
+export default Social

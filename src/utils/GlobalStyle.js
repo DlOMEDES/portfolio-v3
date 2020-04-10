@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 import theme from "./theme"
+import { device } from "../utils/mixins"
 const { colors } = theme
 
 const GlobalStyle = createGlobalStyle`
@@ -8,26 +9,25 @@ const GlobalStyle = createGlobalStyle`
   *,
   *:before,
   *:after {
-      box-sizing: border-box;
+      box-sizing: inherit;
       margin: 0;
       padding: 0;
     }
 
   html {
-    font-size: 10px;
+    box-sizing: border-box;
+    font-size: 62.5%;
   }
 
   body {
     font-family: "Poppins", Helvetica Neue, sans-serif;
     color: rgb(${colors.ashblueManatee});
     background: rgb(${colors.midnightPurple});
-    
+    line-height: 1.6;
+    font-size:1.6rem;
+    font-weight: 400;
   }
 
-  p {
-      font-size:1.8rem;
-      line-height: 1.8;
-  }  
 
   h1,
   h2,

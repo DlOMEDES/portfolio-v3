@@ -39,7 +39,7 @@ export default About
 
 const { colors, shadows } = theme
 const Input = styled.p`
-  color: rgb(${colors.white});
+  color: rgb(${colors.ashblueManatee});
 
   &:before {
     content: "> ";

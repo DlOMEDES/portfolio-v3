@@ -30,8 +30,7 @@ export default Hero
 const { colors } = theme
 const HeroContainer = styled.section`
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-gap: 1rem;
+  grid-template-columns: minmax(min-content, 3fr) 1fr;
   min-height: 95vh;
 `
 
