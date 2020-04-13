@@ -3,7 +3,7 @@ import styled from "styled-components"
 import theme from "../utils/theme"
 import SectionTitle from "../components/SectionTitle"
 import ServiceBox from "../../content/service-box"
-
+import { device } from "../utils/mixins"
 const Service = () => {
   return (
     <ServiceContainer id="services">
@@ -18,7 +18,7 @@ const Service = () => {
           <Article key={index}>
             <Icon>{box.icon}</Icon>
             <h3>{box.title}</h3>
-            <h5>{box.subtitme}</h5>
+            <h5>{box.subtitle}</h5>
             <p>{box.text}</p>
           </Article>
         ))}
@@ -67,12 +67,25 @@ const Article = styled.article`
     box-shadow: ${shadows.boxes} rgba(${colors.violet}, 0.3);
     border-bottom: 0.3rem solid rgba(${colors.violet}, 0.5);
   }
+
+  @media ${device.tablet} {
+    margin: 5rem 0;
+    padding: 0;
+
+    h5 {
+      font-size: 1.8rem;
+    }
+  }
 `
 const ServiceContent = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2.5rem;
   letter-spacing: 0.1rem;
+
+  @media ${device.tablet} {
+    grid-template-columns: 1fr;
+    margin: 15rem 0 0 0;
+  }
 `
 const ServiceHead = styled.div`
   padding-bottom: 25rem;
@@ -93,4 +106,7 @@ const ShapeContainer = styled.div`
 const ServiceContainer = styled.section`
   position: relative;
   margin-bottom: 35rem;
+  @media ${device.tablet} {
+    display: flex;
+  }
 `

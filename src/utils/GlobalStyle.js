@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 import theme from "./theme"
-import { device } from "../utils/mixins"
+// import { device } from "../utils/mixins"
 const { colors } = theme
 
 const GlobalStyle = createGlobalStyle`

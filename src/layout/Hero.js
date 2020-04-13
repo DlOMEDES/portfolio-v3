@@ -3,6 +3,7 @@ import styled from "styled-components"
 import theme from "../utils/theme"
 import config from "../config/index"
 import heroImage from "../images/hero-image.png"
+import { device } from "../utils/mixins"
 
 const Hero = () => {
   return (
@@ -30,7 +31,7 @@ export default Hero
 const { colors } = theme
 const HeroContainer = styled.section`
   display: grid;
-  grid-template-columns: minmax(min-content, 3fr) 1fr;
+  grid-template-columns: 1fr;
   min-height: 95vh;
 `
 
@@ -46,6 +47,10 @@ const HeroImage = styled.div`
     width: 27.5rem;
     border-radius: 10rem;
   }
+
+  @media ${device.tablet} {
+    display: none;
+  }
 `
 
 const Hi = styled.h4`
@@ -53,18 +58,30 @@ const Hi = styled.h4`
   margin: 0 0 2rem 0.3rem;
   font-size: 2rem;
   font-weight: 400;
+
+  @media ${device.tablet} {
+    font-size: 1.8rem;
+    margin: 0;
+  }
 `
 const Name = styled.h2`
   color: rgb(${colors.white});
-
   margin: 0;
   font-size: 6rem;
   font-weight: 900;
+
+  @media ${device.tablet} {
+    font-size: 4rem;
+  }
 `
 const Subtitle = styled.h3`
   color: rgb(${colors.ashblueManatee});
   font-size: 6rem;
   font-weight: 900;
+
+  @media ${device.tablet} {
+    font-size: 3rem;
+  }
 `
 const ContactBtn = styled.div`
   margin: 6rem 0;

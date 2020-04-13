@@ -17,6 +17,7 @@ const SocialContainer = styled.div`
   bottom: 2rem;
   left: 1rem;
   @media ${device.tablet} {
+    display: none;
     left: 0;
     top: 35%;
   }

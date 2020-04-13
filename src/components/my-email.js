@@ -12,6 +12,7 @@ const MyEmailContainer = styled.div`
   right: 1rem;
 
   @media ${device.tablet} {
+    display: none;
     right: 0;
     top: 25%;
   }

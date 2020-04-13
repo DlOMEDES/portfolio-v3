@@ -24,7 +24,7 @@ const About = () => {
 
         <TerminalWindow>
           {terminal.map((statement, index) => (
-            <Statement key="index">
+            <Statement key={index}>
               <Input>{statement.input}</Input>
               <Output>{statement.output}</Output>
             </Statement>

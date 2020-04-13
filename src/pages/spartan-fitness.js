@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../layout"
-import { MainContainer } from "../layout"
+import { MainContainer } from "../utils/variables"
+
 const spartanFitness = () => {
   return (
     <Layout>
