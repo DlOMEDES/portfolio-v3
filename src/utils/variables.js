@@ -7,8 +7,10 @@ export const Main = styled.main`
   }
 `
 
-export const MainContainer = styled.section`
-  padding: 7rem 15rem;
+export const MainContainer = styled.div`
+  max-width: 1440px;
+  min-height: 100vh;
+  padding: 0 150px;
 
   @media ${device.tablet} {
     display: flex;

@@ -51,6 +51,10 @@ const GlobalStyle = createGlobalStyle`
       outline: none;
     }
   }
+
+  section {
+    padding: 20rem 0;
+  }
 `
 
 export default GlobalStyle

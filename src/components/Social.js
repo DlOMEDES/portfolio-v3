@@ -15,7 +15,7 @@ const SocialContainer = styled.div`
   width: 4rem;
   position: fixed;
   bottom: 2rem;
-  left: 1rem;
+  left: 4rem;
   @media ${device.tablet} {
     display: none;
     left: 0;
@@ -53,7 +53,7 @@ const HyperLink = styled.a`
 `
 
 const IconGithub = styled(AiFillGithub)`
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: rgb(${colors.ashblueManatee});
 
   transition: all 0.3s ease-out;
@@ -65,7 +65,7 @@ const IconGithub = styled(AiFillGithub)`
 `
 
 const IconLinkedin = styled(TiSocialLinkedinCircular)`
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: rgb(${colors.ashblueManatee});
 
   transition: all 0.3s ease-out;
@@ -76,7 +76,7 @@ const IconLinkedin = styled(TiSocialLinkedinCircular)`
   }
 `
 const IconTwitter = styled(AiOutlineTwitter)`
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: rgb(${colors.ashblueManatee});
 
   transition: all 0.3s ease-out;
@@ -87,7 +87,7 @@ const IconTwitter = styled(AiOutlineTwitter)`
   }
 `
 const IconCodepen = styled(AiFillCodepenCircle)`
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: rgb(${colors.ashblueManatee});
 
   transition: all 0.3s ease-out;

@@ -2,7 +2,7 @@ import React from "react"
 import Navbar from "../components/NavBar"
 import styled from "styled-components"
 import theme from "../utils/theme"
-import { device } from "../utils/variables"
+import { device } from "../utils/mixins"
 
 const { colors, shadows } = theme
 

@@ -17,8 +17,8 @@ const NavContainter = styled.nav`
 
 const Logo = styled.div`
   img {
-    width: 50px;
-    height: 40px;
+    width: 45px;
+    height: 35px;
   }
 `
 
@@ -43,7 +43,8 @@ const NavList = styled.ol`
 
   li a {
     color: rgb(${colors.white});
-    font-weight: 600;
+    font-weight: 400;
+    font-size:1.4rem;
     transition: all 0.3s ease-out;
     &:hover {
       color: rgb(${colors.violet});

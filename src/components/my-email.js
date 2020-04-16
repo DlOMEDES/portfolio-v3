@@ -9,7 +9,7 @@ const MyEmailContainer = styled.div`
   width: 4rem;
   position: fixed;
   bottom: 2rem;
-  right: 1rem;
+  right: 5.5rem;
 
   @media ${device.tablet} {
     display: none;

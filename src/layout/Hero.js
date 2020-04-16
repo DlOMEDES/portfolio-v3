@@ -31,12 +31,12 @@ export default Hero
 const { colors } = theme
 const HeroContainer = styled.section`
   display: grid;
-  grid-template-columns: 1fr;
-  min-height: 95vh;
+  grid-template-columns: minmax(min-content, 3fr) 1fr;
+  min-height: 100vh;
+  grid-gap: 1rem;
 `
 
 const HeroDetails = styled.div`
-  padding-top: 15rem;
   line-height: 1.5;
   letter-spacing: 0.1rem;
 `
