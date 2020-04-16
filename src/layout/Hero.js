@@ -41,8 +41,6 @@ const HeroDetails = styled.div`
   letter-spacing: 0.1rem;
 `
 const HeroImage = styled.div`
-  padding-top: 15rem;
-
   img {
     width: 27.5rem;
     border-radius: 10rem;
@@ -57,7 +55,6 @@ const Hi = styled.h4`
   color: rgb(${colors.violet});
   margin: 0 0 2rem 0.3rem;
   font-size: 2rem;
-  font-weight: 400;
 
   @media ${device.tablet} {
     font-size: 1.8rem;
@@ -68,16 +65,14 @@ const Name = styled.h2`
   color: rgb(${colors.white});
   margin: 0;
   font-size: 6rem;
-  font-weight: 900;
 
   @media ${device.tablet} {
     font-size: 4rem;
   }
 `
-const Subtitle = styled.h3`
+const Subtitle = styled.h4`
   color: rgb(${colors.ashblueManatee});
   font-size: 6rem;
-  font-weight: 900;
 
   @media ${device.tablet} {
     font-size: 3rem;

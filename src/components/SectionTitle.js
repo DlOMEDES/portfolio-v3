@@ -10,7 +10,6 @@ const Title = styled.h2`
   letter-spacing: 0.2rem;
   font-size: 3.5rem;
   position: absolute;
-  top: 4rem;
 `
 
 const SectionTitle = ({ title }) => {

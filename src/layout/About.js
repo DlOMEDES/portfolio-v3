@@ -4,13 +4,14 @@ import styled from "styled-components"
 import theme from "../utils/theme"
 // import bgCode from "../../images/bgCode.png"
 // import { DiHtml5 } from "react-icons/di"
+import SectionTitle from "../components/SectionTitle"
 import terminal from "../../content/terminal"
 
 const About = () => {
   return (
     <AboutContainer id="about">
       <AboutHead>
-        <AboutTitle>About me</AboutTitle>
+        <SectionTitle title="About me" />
         <ShapeContainer>
           <span>▲</span>
         </ShapeContainer>
@@ -85,6 +86,7 @@ const ColoredDot = styled.div`
 
 const Terminal = styled.div`
   text-transform: capitalize;
+  padding-top: 30rem;
 `
 const TerminalHeader = styled.div`
   height: 28px;
@@ -102,27 +104,16 @@ const TerminalWindow = styled.div`
   padding: 0 0 3rem 0;
 `
 
-const AboutTitle = styled.h2`
-  position: absolute;
-  z-index: 1;
-  color: rgb(${colors.white});
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  top: 12rem;
-  font-size: 3.5rem;
-`
 const ShapeContainer = styled.div`
-  span {
-    position: absolute;
-    font-size: 18rem;
-    color: rgb(${colors.midnightPurple});
-    text-shadow: ${shadows.shapes} rgba(${colors.violet}, 0.3);
-    left: -5rem;
-  }
+  position: absolute;
+  font-size: 28rem;
+  color: rgb(${colors.midnightPurple});
+  text-shadow: ${shadows.shapes} rgba(${colors.violet}, 0.3);
+  left: -7rem;
+  top: -23rem;
 `
 
 const AboutHead = styled.div`
-  padding-bottom: 30rem;
   position: relative;
 `
 

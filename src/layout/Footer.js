@@ -12,8 +12,8 @@ const StyledFooter = styled.footer`
 
 const Copy = styled.p`
   position: absolute;
-  left: 41%;
   top: 10rem;
+  left: 43%;
   text-align: center;
 `
 

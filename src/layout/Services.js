@@ -9,9 +9,7 @@ const Service = () => {
     <ServiceContainer id="services">
       <ServiceHead>
         <SectionTitle title="Services" />
-        <ShapeContainer>
-          <span />
-        </ShapeContainer>
+        <ShapeContainer />
       </ServiceHead>
       <ServiceContent>
         {ServiceBox.map((box, index) => (
@@ -48,17 +46,13 @@ const Article = styled.article`
   h3 {
     color: rgb(${colors.white});
     font-size: 2.2rem;
-    margin: 1rem 0;
+    padding-bottom: 1rem 0;
   }
 
   h5 {
     color: rgb(${colors.violet});
     font-size: 2rem;
-    margin: 0.2rem;
-  }
-
-  p {
-    margin: 0.2rem;
+    padding: 1rem 0;
   }
 
   &:hover {
@@ -82,6 +76,7 @@ const ServiceContent = styled.div`
   grid-gap: 2.5rem;
   letter-spacing: 0.1rem;
   grid-template-columns: repeat(3, 1fr);
+  padding-top: 25rem;
 
   @media ${device.tablet} {
     grid-template-columns: 1fr;
@@ -89,24 +84,20 @@ const ServiceContent = styled.div`
   }
 `
 const ServiceHead = styled.div`
-  padding-bottom: 25rem;
   position: relative;
 `
 
 const ShapeContainer = styled.div`
-  span {
-    box-shadow: ${shadows.sections} rgba(${colors.violet}, 0.3);
-    width: 12rem;
-    height: 12rem;
-    position: absolute;
-    top: 0;
-    left: -1.8rem;
-  }
+  box-shadow: ${shadows.sections} rgba(${colors.violet}, 0.3);
+  width: 15rem;
+  height: 15rem;
+  position: absolute;
+  top: -5rem;
+  left: -2rem;
 `
 
 const ServiceContainer = styled.section`
   position: relative;
-  margin-bottom: 35rem;
   @media ${device.tablet} {
     display: flex;
   }

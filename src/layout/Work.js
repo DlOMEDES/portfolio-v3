@@ -16,9 +16,7 @@ const Work = () => {
     <WorkContainer id="work">
       <WorkHead>
         <SectionTitle title="Work" />
-        <ShapeContainer>
-          <span></span>
-        </ShapeContainer>
+        <ShapeContainer />
       </WorkHead>
       <WorkGrid>
         <Card to="/realestate-app">
@@ -76,6 +74,7 @@ const CardOverlay = styled.div`
     padding: 1rem 2rem;
     text-transform: uppercase;
     font-size: 2rem;
+    border: 1px solid rgb(${colors.violet});
   }
 `
 
@@ -84,23 +83,21 @@ const WorkGrid = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 14rem);
   grid-gap: 3rem;
+  padding-top: 25rem;
 `
 
 const ShapeContainer = styled.div`
-  span {
-    position: absolute;
-    top: 0;
-    left: -2rem;
-    height: 12rem;
-    width: 12rem;
-    border-radius: 50%;
-    display: inline-block;
-    box-shadow: ${shadows.sections} rgb(${colors.violet}, 0.3);
-  }
+  width: 16rem;
+  height: 16rem;
+  position: absolute;
+  top: -5rem;
+  left: -2rem;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: ${shadows.sections} rgb(${colors.violet}, 0.3);
 `
 
 const WorkHead = styled.div`
-  padding-bottom: 25rem;
   position: relative;
 `
 const WorkContainer = styled.section`

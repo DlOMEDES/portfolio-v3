@@ -4,7 +4,7 @@ import theme from "./theme"
 const { colors } = theme
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Poppins:900,700,400,300"');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
   *,
   *:before,
@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: "Poppins", Helvetica Neue, sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: rgb(${colors.ashblueManatee});
     background: rgb(${colors.midnightPurple});
     line-height: 1.6;
@@ -30,14 +30,17 @@ const GlobalStyle = createGlobalStyle`
 
 
   h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-  font-weight: 600;
+  h2, 
+  h3{
+    font-weight: 600;
   }
+  
+  h4, 
+  h5 {
+    font-weight: 300;
+  } 
 
-  ol,ul {
+  ol, ul {
     list-style-type: none;
     margin: 0;
     padding: 0;

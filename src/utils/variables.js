@@ -8,9 +8,12 @@ export const Main = styled.main`
 `
 
 export const MainContainer = styled.div`
-  max-width: 1440px;
-  min-height: 100vh;
   padding: 0 150px;
+  margin: 0px auto;
+  width: 100%;
+  max-width: 1600px;
+  min-height: 100vh;
+  counter-reset: section 0;
 
   @media ${device.tablet} {
     display: flex;
