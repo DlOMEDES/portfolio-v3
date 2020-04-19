@@ -5,7 +5,7 @@ import { device } from "../utils/variables"
 
 const { colors } = theme
 const Title = styled.h2`
-  z-index: 1;
+  z-index: 2;
   color: rgb(${colors.white});
   text-transform: uppercase;
   letter-spacing: 0.2rem;

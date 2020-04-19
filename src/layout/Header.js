@@ -7,6 +7,7 @@ import { device } from "../utils/variables"
 const { colors, shadows } = theme
 
 const HeaderContainer = styled.header`
+  margin-top: 3rem;
   padding: 0 4rem;
   height: 7rem;
   display: flex;
@@ -15,6 +16,11 @@ const HeaderContainer = styled.header`
   box-shadow: ${shadows.black};
   z-index: 1;
   position: relative;
+
+  @media ${device.portrait} {
+    justify-content: center;
+    width: 100vw;
+  }
 `
 
 const Header = () => {

@@ -5,36 +5,20 @@ import config from "../config/index"
 import heroImage from "../images/hero-image.png"
 import { device } from "../utils/variables"
 
-const Hero = () => {
-  return (
-    <>
-      <HeroContainer id="hero">
-        <HeroDetails>
-          <Hi>Hi, my name is</Hi>
-          <Name>{config.name}</Name>
-          <Subtitle>{config.iDO}</Subtitle>
-          <ContactBtn>
-            <a href="/">Contact me</a>
-          </ContactBtn>
-        </HeroDetails>
-        <HeroImage>
-          <img src={heroImage} alt="" />
-        </HeroImage>
-      </HeroContainer>
-    </>
-  )
-}
-
-export default Hero
-
 // styles
 const { colors } = theme
+
 const HeroContainer = styled.section`
   display: grid;
   grid-template-columns: minmax(min-content, 3fr) 1fr;
   min-height: 80vh;
   grid-gap: 3rem;
   align-items: center;
+
+  @media ${device.tablet} {
+    grid-template-columns: 1fr;
+    padding-top: 10rem;
+  }
 `
 
 const HeroDetails = styled.div`
@@ -45,6 +29,10 @@ const HeroImage = styled.div`
   img {
     width: 20rem;
     border-radius: 10rem;
+  }
+
+  @media ${device.tablet} {
+    display: none;
   }
 `
 
@@ -80,3 +68,25 @@ const ContactBtn = styled.div`
     }
   }
 `
+
+const Hero = () => {
+  return (
+    <>
+      <HeroContainer id="hero">
+        <HeroDetails>
+          <Hi>Hi, my name is</Hi>
+          <Name>{config.name}</Name>
+          <Subtitle>{config.iDO}</Subtitle>
+          <ContactBtn>
+            <a href="/">Contact me</a>
+          </ContactBtn>
+        </HeroDetails>
+        <HeroImage>
+          <img src={heroImage} alt="" />
+        </HeroImage>
+      </HeroContainer>
+    </>
+  )
+}
+
+export default Hero

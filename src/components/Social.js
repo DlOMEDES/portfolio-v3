@@ -16,6 +16,10 @@ const SocialContainer = styled.div`
   position: fixed;
   bottom: 0;
   left: 4rem;
+
+  @media ${device.portrait} {
+    display: none;
+  }
 `
 const SocialList = styled.ul`
   display: flex;

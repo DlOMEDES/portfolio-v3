@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
     @media ${device.laptop} {
       font-size: 55%; 
     }
-   
+    
   }
 
   body {
@@ -68,7 +68,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 20rem 0;
 
     @media ${device.tablet} {
-      max-width: 75rem;  
+      max-width: 80rem;  
     }
   }
 `

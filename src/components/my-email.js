@@ -10,6 +10,10 @@ const MyEmailContainer = styled.div`
   position: fixed;
   bottom: 0;
   right: 5.5rem;
+
+  @media ${device.portrait} {
+    display: none;
+  }
 `
 const SocialList = styled.div`
   display: flex;
