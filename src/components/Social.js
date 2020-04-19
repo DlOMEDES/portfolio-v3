@@ -7,20 +7,15 @@ import {
   AiFillCodepenCircle,
 } from "react-icons/ai"
 import { TiSocialLinkedinCircular } from "react-icons/ti"
-import { device } from "../utils/mixins"
+import { device } from "../utils/variables"
 // styling
 const { colors } = theme
 
 const SocialContainer = styled.div`
   width: 4rem;
   position: fixed;
-  bottom: 2rem;
+  bottom: 0;
   left: 4rem;
-  @media ${device.tablet} {
-    display: none;
-    left: 0;
-    top: 35%;
-  }
 `
 const SocialList = styled.ul`
   display: flex;
@@ -30,13 +25,9 @@ const SocialList = styled.ul`
     content: "";
     display: block;
     width: 0.1rem;
-    height: 9rem;
-    background-color: rgb(${colors.ashblueManatee});
+    height: 20rem;
+    border: 0.5px solid rgb(${colors.ashblueManatee});
     margin: 0 auto;
-
-    @media ${device.tablet} {
-      content: none;
-    }
   }
 `
 

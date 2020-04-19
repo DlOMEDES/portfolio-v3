@@ -3,7 +3,7 @@ import Link from "gatsby-link"
 import logo from "../images/dl-logo.png"
 import styled from "styled-components"
 import theme from "../utils/theme"
-import { device } from "../utils/mixins"
+import { device } from "../utils/variables"
 // import { fadeIn } from "../utils/animations"
 
 const { colors } = theme
@@ -32,39 +32,21 @@ const NavList = styled.ol`
   } */
   li {
     margin: 0 30px;
-    @media ${device.tablet} {
-      margin: 2rem auto;
-     
-      &::marker {
-        font-size: 5rem;
-      }
-    }
   }
+
 
   li a {
     color: rgb(${colors.white});
     font-weight: 400;
-    font-size:1.4rem;
+    font-size: 1.4rem;
     transition: all 0.3s ease-out;
     &:hover {
       color: rgb(${colors.violet});
     }
-    @media ${device.tablet} {
-      font-size: 1.8rem;
-    }
+ 
   }
   
-  @media ${device.tablet} {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background: black;
-  }
+  
 `
 
 const Nav = () => {

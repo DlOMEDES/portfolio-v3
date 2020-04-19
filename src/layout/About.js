@@ -6,6 +6,7 @@ import theme from "../utils/theme"
 // import { DiHtml5 } from "react-icons/di"
 import SectionTitle from "../components/SectionTitle"
 import terminal from "../../content/terminal"
+import { device } from "../utils/variables"
 
 const About = () => {
   return (
@@ -106,11 +107,17 @@ const TerminalWindow = styled.div`
 
 const ShapeContainer = styled.div`
   position: absolute;
-  font-size: 28rem;
+  font-size: 26rem;
   color: rgb(${colors.midnightPurple});
   text-shadow: ${shadows.shapes} rgba(${colors.violet}, 0.3);
   left: -7rem;
   top: -23rem;
+
+  @media ${device.tablet} {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+  }
 `
 
 const AboutHead = styled.div`
@@ -119,5 +126,4 @@ const AboutHead = styled.div`
 
 const AboutContainer = styled.section`
   background-size: cover;
-  margin-bottom: 35rem;
 `

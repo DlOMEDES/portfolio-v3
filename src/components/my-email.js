@@ -1,21 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 import theme from "../utils/theme"
-import { device } from "../utils/mixins"
+import { device } from "../utils/variables"
 
 const { colors } = theme
 
 const MyEmailContainer = styled.div`
   width: 4rem;
   position: fixed;
-  bottom: 2rem;
+  bottom: 0;
   right: 5.5rem;
-
-  @media ${device.tablet} {
-    display: none;
-    right: 0;
-    top: 25%;
-  }
 `
 const SocialList = styled.div`
   display: flex;
@@ -42,12 +36,10 @@ const SocialList = styled.div`
     content: "";
     display: block;
     width: 0.1rem;
-    height: 9rem;
-    background-color: rgb(${colors.ashblueManatee});
+    height: 20rem;
+    /* background-color: rgb(${colors.ashblueManatee}); */
+    border: 0.5px solid rgb(${colors.ashblueManatee});
     margin: 0 auto;
-    @media ${device.tablet} {
-      content: none;
-    }
   }
 `
 

@@ -1,25 +1,26 @@
 import styled from "styled-components"
-import { device } from "../utils/mixins"
 
-export const Main = styled.main`
-  @media ${device.tablet} {
-    display: grid;
-  }
-`
+// media query breakpointsź
+const size = {
+  sm: "600px",
+  md: "1200px",
+  lg: "1400px",
+}
+
+export const device = {
+  phone: `(max-width: ${size.xs})`,
+  tablet: `(max-width: ${size.md})`,
+  laptop: `(max-width: ${size.lg})`,
+}
 
 export const MainContainer = styled.div`
   padding: 0 150px;
   margin: 0px auto;
   width: 100%;
-  max-width: 1600px;
+  max-width: 1400px;
   min-height: 100vh;
-  counter-reset: section 0;
 
   @media ${device.tablet} {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    width: 80vw;
-    margin: 0 auto;
+    /* padding: 0 50px; */
   }
 `

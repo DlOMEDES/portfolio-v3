@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import theme from "../utils/theme"
+import { device } from "../utils/variables"
 
 const { colors } = theme
 const Title = styled.h2`
@@ -10,6 +11,12 @@ const Title = styled.h2`
   letter-spacing: 0.2rem;
   font-size: 3.5rem;
   position: absolute;
+
+  @media ${device.tablet} {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `
 
 const SectionTitle = ({ title }) => {

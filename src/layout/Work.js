@@ -8,7 +8,7 @@ import heats from "../images/heats.png"
 import lenses from "../images/lenses.png"
 import travler from "../images/travler.png"
 import spartan from "../images/spartan-fitness.png"
-
+import { device } from "../utils/variables"
 const { colors, shadows } = theme
 
 const Work = () => {
@@ -95,14 +95,23 @@ const ShapeContainer = styled.div`
   border-radius: 50%;
   display: inline-block;
   box-shadow: ${shadows.sections} rgb(${colors.violet}, 0.3);
+
+  @media ${device.tablet} {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `
 
 const WorkHead = styled.div`
   position: relative;
+  @media ${device.tablet} {
+    display: flex;
+    justify-content: center;
+  }
 `
 const WorkContainer = styled.section`
   position: relative;
-  margin-bottom: 30rem;
 `
 
 const Card = styled(CardLink)`

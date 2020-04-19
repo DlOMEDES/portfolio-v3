@@ -3,7 +3,7 @@ import styled from "styled-components"
 import theme from "../utils/theme"
 import config from "../config/index"
 import heroImage from "../images/hero-image.png"
-import { device } from "../utils/mixins"
+import { device } from "../utils/variables"
 
 const Hero = () => {
   return (
@@ -32,51 +32,35 @@ const { colors } = theme
 const HeroContainer = styled.section`
   display: grid;
   grid-template-columns: minmax(min-content, 3fr) 1fr;
-  min-height: 100vh;
-  grid-gap: 1rem;
+  min-height: 80vh;
+  grid-gap: 3rem;
+  align-items: center;
 `
 
 const HeroDetails = styled.div`
-  line-height: 1.5;
+  line-height: 1.3;
   letter-spacing: 0.1rem;
 `
 const HeroImage = styled.div`
   img {
-    width: 27.5rem;
+    width: 20rem;
     border-radius: 10rem;
-  }
-
-  @media ${device.tablet} {
-    display: none;
   }
 `
 
 const Hi = styled.h4`
   color: rgb(${colors.violet});
-  margin: 0 0 2rem 0.3rem;
+  margin: 0 0 1rem 0;
   font-size: 2rem;
-
-  @media ${device.tablet} {
-    font-size: 1.8rem;
-    margin: 0;
-  }
 `
 const Name = styled.h2`
   color: rgb(${colors.white});
-  margin: 0;
-  font-size: 6rem;
 
-  @media ${device.tablet} {
-    font-size: 4rem;
-  }
+  font-size: 6rem;
 `
 const Subtitle = styled.h4`
   color: rgb(${colors.ashblueManatee});
   font-size: 6rem;
-
-  @media ${device.tablet} {
-    font-size: 3rem;
-  }
 `
 const ContactBtn = styled.div`
   margin: 6rem 0;

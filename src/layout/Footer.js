@@ -6,15 +6,15 @@ import config from "../config"
 const StyledFooter = styled.footer`
   background: url(${hill}) no-repeat center;
   background-size: cover;
-  padding: 0rem 0 15rem 0;
+  display: flex;
+  justify-content: center;
+  height: 20rem;
   position: relative;
 `
 
 const Copy = styled.p`
   position: absolute;
   top: 10rem;
-  left: 43%;
-  text-align: center;
 `
 
 const Footer = () => {

@@ -3,7 +3,8 @@ import styled from "styled-components"
 import theme from "../utils/theme"
 import SectionTitle from "../components/SectionTitle"
 import ServiceBox from "../../content/service-box"
-import { device } from "../utils/mixins"
+import { device } from "../utils/variables"
+
 const Service = () => {
   return (
     <ServiceContainer id="services">
@@ -36,6 +37,11 @@ const Article = styled.article`
   transition: all 0.4s ease-in-out;
   padding: 4.5rem 3rem;
   margin: 0 3rem 0 0;
+
+  @media ${device.tablet} {
+    margin: 3rem 0;
+  }
+
   &:hover {
     transform: scale(1.1);
   }
@@ -61,15 +67,6 @@ const Article = styled.article`
     box-shadow: ${shadows.boxes} rgba(${colors.violet}, 0.3);
     border-bottom: 0.3rem solid rgba(${colors.violet}, 0.5);
   }
-
-  @media ${device.tablet} {
-    margin: 5rem 0;
-    padding: 0;
-
-    h5 {
-      font-size: 1.8rem;
-    }
-  }
 `
 const ServiceContent = styled.div`
   display: grid;
@@ -80,11 +77,14 @@ const ServiceContent = styled.div`
 
   @media ${device.tablet} {
     grid-template-columns: 1fr;
-    margin: 15rem 0 0 0;
   }
 `
 const ServiceHead = styled.div`
   position: relative;
+  @media ${device.tablet} {
+    display: flex;
+    justify-content: center;
+  }
 `
 
 const ShapeContainer = styled.div`
@@ -94,11 +94,14 @@ const ShapeContainer = styled.div`
   position: absolute;
   top: -5rem;
   left: -2rem;
+
+  @media ${device.tablet} {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `
 
 const ServiceContainer = styled.section`
   position: relative;
-  @media ${device.tablet} {
-    display: flex;
-  }
 `

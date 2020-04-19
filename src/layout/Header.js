@@ -2,7 +2,7 @@ import React from "react"
 import Navbar from "../components/NavBar"
 import styled from "styled-components"
 import theme from "../utils/theme"
-import { device } from "../utils/mixins"
+import { device } from "../utils/variables"
 
 const { colors, shadows } = theme
 
@@ -15,12 +15,6 @@ const HeaderContainer = styled.header`
   box-shadow: ${shadows.black};
   z-index: 1;
   position: relative;
-
-  @media ${device.tablet} {
-    padding: 0 2rem;
-    height: 0;
-    margin-top: 1rem;
-  }
 `
 
 const Header = () => {
