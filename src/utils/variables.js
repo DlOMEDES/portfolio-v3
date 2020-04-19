@@ -4,7 +4,7 @@ import styled from "styled-components"
 const size = {
   sm: "600px",
   md: "1200px",
-  lg: "1400px",
+  lg: "1440px",
 }
 
 export const device = {
@@ -17,7 +17,7 @@ export const MainContainer = styled.div`
   padding: 0 150px;
   margin: 0px auto;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1600px;
   min-height: 100vh;
 
   @media ${device.tablet} {

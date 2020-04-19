@@ -68,13 +68,17 @@ const CardOverlay = styled.div`
   top: 0;
   left: -100%;
   transition: all 0.4s ease-in-out;
+  border: 1px solid rgb(${colors.violet});
 
   h4 {
-    color: rgb(${colors.violet});
+    color: rgb(${colors.white});
     padding: 1rem 2rem;
     text-transform: uppercase;
     font-size: 2rem;
-    border: 1px solid rgb(${colors.violet});
+
+    &:hover {
+      color: rgb(${colors.violet});
+    }
   }
 `
 
@@ -84,6 +88,12 @@ const WorkGrid = styled.div`
   grid-template-rows: repeat(4, 14rem);
   grid-gap: 3rem;
   padding-top: 25rem;
+
+  @media ${device.tablet} {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 32rem);
+    grid-gap: 8rem;
+  }
 `
 
 const ShapeContainer = styled.div`
@@ -162,5 +172,16 @@ const Card = styled(CardLink)`
     grid-column: 3/4;
     grid-row: 1/3;
     background-size: cover;
+  }
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(4),
+  &:nth-child(5),
+  &:nth-child(6) {
+    @media ${device.tablet} {
+      grid-column: auto;
+      grid-row: auto;
+    }
   }
 `
