@@ -4,8 +4,7 @@ import logo from "../images/dl-logo.png"
 import styled from "styled-components"
 import theme from "../utils/theme"
 import { device } from "../utils/variables"
-// import { fadeIn } from "../utils/animations"
-
+import MenuBtn from "./MenuBtn"
 const { colors } = theme
 
 const NavContainter = styled.nav`
@@ -15,7 +14,6 @@ const NavContainter = styled.nav`
   align-items: center;
 
   @media ${device.portrait} {
-    /* display: none; */
     flex-direction: column;
   }
 `
@@ -24,19 +22,19 @@ const Logo = styled.div`
   z-index: 1;
   a {
     img {
-      width: 45px;
-      height: 35px;
+      width: 5rem;
+      height: 5rem;
     }
   }
 
   @media ${device.portrait} {
     position: absolute;
-    left: 7.5rem;
-    top: 0;
+    left: 5rem;
+    top: -1rem;
 
     a {
       background: rgb(${colors.midnightPurple});
-      padding: 2rem;
+      padding: 0.5rem;
       border-radius: 1rem;
     }
   }
@@ -45,12 +43,13 @@ const Logo = styled.div`
     left: 5rem;
 
     a {
-      padding: 1rem;
+      padding: 0.5rem;
     }
   }
 `
 
 const NavList = styled.ol`
+  display: none;
   list-style-type: decimal-leading-zero;
   color: rgb(${colors.ashblueManatee});
   display: flex;
@@ -121,6 +120,12 @@ const Nav = () => {
           <Link to="/#contact">Contact</Link>
         </li>
       </NavList>
+
+      <MenuBtn>
+        <span class="MenuBtn-line" />
+        <span class="MenuBtn-line" />
+        <span class="MenuBtn-line" />
+      </MenuBtn>
     </NavContainter>
   )
 }
