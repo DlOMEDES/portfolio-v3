@@ -4,7 +4,8 @@ import logo from "../images/dl-logo.png"
 import styled from "styled-components"
 import theme from "../utils/theme"
 import { device } from "../utils/variables"
-import MenuBtn from "./MenuBtn"
+import DrawerMenuBtn from "./DrawerMenuBtn"
+
 const { colors } = theme
 
 const NavContainter = styled.nav`
@@ -19,7 +20,7 @@ const NavContainter = styled.nav`
 `
 
 const Logo = styled.div`
-  z-index: 1;
+  z-index: 201;
   a {
     img {
       width: 5rem;
@@ -31,20 +32,10 @@ const Logo = styled.div`
     position: absolute;
     left: 5rem;
     top: -1rem;
-
-    a {
-      background: rgb(${colors.midnightPurple});
-      padding: 0.5rem;
-      border-radius: 1rem;
-    }
   }
 
   @media ${device.phone} {
-    left: 5rem;
-
-    a {
-      padding: 0.5rem;
-    }
+    left: 1rem;
   }
 `
 
@@ -70,30 +61,11 @@ const NavList = styled.ol`
   }
 
   @media ${device.portrait} {
-    padding: 9rem 0;
-    width: 85vw;
-    background: white;
-    border-radius: 1rem;
-    flex-direction: column;
-    list-style-type: none;
-    align-items: center;
-    position: fixed;
-    top: 7%;
-    height: 75vh;
-
-    li {
-      padding: 1rem 0;
-    }
-
-    li a {
-      font-weight: 700;
-      color: rgb(${colors.midnightPurple});
-      font-size: 2.4rem;
-    }
+    display: none;
   }
 `
 
-const Nav = () => {
+const NavBar = ({ toggle, show }) => {
   return (
     <NavContainter>
       <Logo>
@@ -121,13 +93,9 @@ const Nav = () => {
         </li>
       </NavList>
 
-      <MenuBtn>
-        <span class="MenuBtn-line" />
-        <span class="MenuBtn-line" />
-        <span class="MenuBtn-line" />
-      </MenuBtn>
+      <DrawerMenuBtn click={toggle} show={show} />
     </NavContainter>
   )
 }
 
-export default Nav
+export default NavBar

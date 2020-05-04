@@ -1,37 +1,43 @@
+import React from "react"
 import styled from "styled-components"
 import theme from "../utils/theme"
 import { device } from "../utils/variables"
 
 const { colors } = theme
 
-const MenuBtn = styled.div`
+const MenuBtn = styled.button`
+  border: none;
   display: none;
+  &:focus {
+    outline: none;
+  }
   @media ${device.portrait} {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     right: 5rem;
-    top: -1rem;
+    top: 2rem;
     padding: 0.5rem;
     cursor: pointer;
     padding: 1.5rem;
-    background: rgb(${colors.midnightPurple});
+    background: transparent;
     border-radius: 1rem;
+    z-index: 201;
     /* lines */
-    .MenuBtn-line {
+    .menuBtn-line {
       width: 3.5rem;
       height: 0.4rem;
       margin: 0 0 0.6rem 0;
       background: rgb(${colors.white});
-      /* @include easeOut; */
+      transition: transform 0.3s ease-in;
     }
 
-    .MenuBtn-close {
+    &.close {
       /* // rotate btn lines into X */
       transform: rotate(180deg);
       /* // animation: rotate180 1s ease-in-out; */
       .menuBtn-line {
-        background: $brand-lightGold;
+        background: rgb(${colors.white});
         /* // rotate line 1 */
         &:nth-child(1) {
           transform: rotate(45deg) translate(0.6rem, 0.4rem);
@@ -49,6 +55,20 @@ const MenuBtn = styled.div`
       }
     }
   }
+
+  @media ${device.phone} {
+    right: 1rem;
+  }
 `
 
-export default MenuBtn
+const DrawerMenuBtn = ({ click, show }) => {
+  return (
+    <MenuBtn className={show ? "close" : "none"} onClick={click}>
+      <span className="menuBtn-line"></span>
+      <span className="menuBtn-line"></span>
+      <span className="menuBtn-line"></span>
+    </MenuBtn>
+  )
+}
+
+export default DrawerMenuBtn

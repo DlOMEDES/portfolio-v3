@@ -29,6 +29,6 @@ export const MainContainer = styled.div`
     padding: 0 75px;
   }
   @media ${device.phone} {
-    padding: 0 50px;
+    padding: 0 25px;
   }
 `

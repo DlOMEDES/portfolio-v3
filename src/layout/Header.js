@@ -1,9 +1,9 @@
-import React from "react"
+import React, { Component } from "react"
 import Navbar from "../components/NavBar"
 import styled from "styled-components"
 import theme from "../utils/theme"
 import { device } from "../utils/variables"
-
+import DrawerMenu from "../components/DrawerMenu"
 const { colors, shadows } = theme
 
 const HeaderContainer = styled.header`
@@ -23,12 +23,32 @@ const HeaderContainer = styled.header`
   }
 `
 
-const Header = () => {
-  return (
-    <HeaderContainer>
-      <Navbar />
-    </HeaderContainer>
-  )
+class Header extends Component {
+  state = {
+    drawerOpen: false,
+  }
+
+  handleToggle = () => {
+    this.setState(prevState => {
+      return { drawerOpen: !prevState.drawerOpen }
+    })
+  }
+
+  render() {
+    // let drawer
+
+    // if (this.state.drawerOpen) {
+    //   drawer = <DrawerMenu />
+    // }
+
+    return (
+      <HeaderContainer>
+        <Navbar toggle={this.handleToggle} show={this.state.drawerOpen} />
+        {/* {drawer} */}
+        <DrawerMenu show={this.state.drawerOpen} />
+      </HeaderContainer>
+    )
+  }
 }
 
 export default Header

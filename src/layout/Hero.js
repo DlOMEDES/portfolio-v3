@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../utils/theme"
 import config from "../config/index"
-import heroImage from "../images/hero-image.png"
+import heroImage from "../images/self-noBG.png"
 import { device } from "../utils/variables"
 
 // styles
@@ -28,7 +28,8 @@ const HeroDetails = styled.div`
 const HeroImage = styled.div`
   img {
     width: 20rem;
-    border-radius: 10rem;
+    border-radius: 1rem;
+    background: rgb(${colors.ashblueManatee});
   }
 
   @media ${device.tablet} {
@@ -53,7 +54,7 @@ const Subtitle = styled.h4`
 const ContactBtn = styled.div`
   margin: 6rem 0;
   a {
-    border-radius: 10rem;
+    border-radius: 0.5rem;
     background: transparent;
     color: rgb(${colors.white});
     padding: 1.2rem 2.4rem;
