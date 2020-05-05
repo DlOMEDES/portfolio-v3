@@ -32,3 +32,5 @@ export const MainContainer = styled.div`
     padding: 0 25px;
   }
 `
+// for projects
+export const Grid = styled.div``

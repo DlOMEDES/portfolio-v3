@@ -4,9 +4,7 @@ import { Link as CardLink } from "gatsby"
 import theme from "../utils/theme"
 import SectionTitle from "../components/SectionTitle"
 import restate from "../images/restate.png"
-import heats from "../images/heats.png"
 import lenses from "../images/lenses.png"
-import travler from "../images/travler.png"
 import spartan from "../images/spartan-fitness.png"
 import { device } from "../utils/variables"
 const { colors, shadows } = theme
@@ -19,34 +17,29 @@ const Work = () => {
         <ShapeContainer />
       </WorkHead>
       <WorkGrid>
-        <Card to="/realestate-app">
+        <Card to="/fitnessTheme">
           <CardOverlay>
-            <h4>Real Estate App</h4>
-          </CardOverlay>
-        </Card>
-        <Card to="/lenses-email">
-          <CardOverlay>
-            <h4>Promotional Email</h4>
+            <h4>SpartanFitness - wp theme</h4>
           </CardOverlay>
         </Card>
         <Card to="/">
           <CardOverlay>
-            <h4>Travler Template</h4>
+            <h4>php mysql - app</h4>
+          </CardOverlay>
+        </Card>
+        <Card to="/lensesEmail">
+          <CardOverlay>
+            <h4>LR Lenses - html email</h4>
           </CardOverlay>
         </Card>
         <Card to="/">
           <CardOverlay>
-            <h4>Eats Landing Page</h4>
-          </CardOverlay>
-        </Card>
-        <Card to="/spartan-fitness">
-          <CardOverlay>
-            <h4>gym landing page</h4>
+            <h4>nodejs - app</h4>
           </CardOverlay>
         </Card>
         <Card to="/">
           <CardOverlay>
-            <h4>Empty App</h4>
+            <h4>RealEstate - react web app</h4>
           </CardOverlay>
         </Card>
       </WorkGrid>
@@ -136,43 +129,37 @@ const Card = styled(CardLink)`
     }
   }
   &:nth-child(1) {
-    background: url(${restate});
+    background: url(${spartan});
     background-size: cover;
     grid-column: 1 / 3;
     grid-row: 1 / 3;
   }
   &:nth-child(2) {
-    background: url(${lenses}) center center no-repeat;
-    grid-column: 4/4;
-    grid-row: 1/5;
-    background-size: cover;
-  }
-  &:nth-child(3) {
-    background: url(${travler}) center center no-repeat;
-    grid-column: 1/2;
-    grid-row: 3/5;
-    background-size: cover;
-  }
-  &:nth-child(4) {
-    background: url(${heats}) center center no-repeat;
-    grid-column: 2/4;
-    grid-row: 3/3;
-    background-size: cover;
-  }
-  &:nth-child(5) {
-    background: url(${spartan}) center center no-repeat;
-    background-size: 100%;
-    grid-column: 2/4;
-    grid-row: 4/5;
-    background-size: cover;
-  }
-  &:nth-child(6) {
-    background: url(${spartan}) bottom no-repeat;
-    /* background-size: 100%; */
+    background: rgb(29, 160, 137) center center no-repeat;
     grid-column: 3/4;
     grid-row: 1/3;
     background-size: cover;
   }
+  &:nth-child(3) {
+    background: url(${lenses}) center center no-repeat;
+    grid-column: 4/5;
+    grid-row: 1/-1;
+    background-size: cover;
+  }
+  &:nth-child(4) {
+    background: rgb(36, 162, 170) top center no-repeat;
+    grid-column: 1/2;
+    grid-row: 3/5;
+    background-size: cover;
+  }
+  &:nth-child(5) {
+    background: url(${restate}) center center no-repeat;
+    background-size: 100%;
+    grid-column: 2/4;
+    grid-row: 3/5;
+    background-size: cover;
+  }
+
   &:nth-child(1),
   &:nth-child(2),
   &:nth-child(3),

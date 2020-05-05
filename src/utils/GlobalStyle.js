@@ -66,7 +66,7 @@ const GlobalStyle = createGlobalStyle`
     max-width: 120rem;  
     margin: 0 auto;
     padding: 20rem 0;
-
+    
     @media ${device.tablet} {
       max-width: 80rem;  
     }

@@ -26,7 +26,7 @@ module.exports = {
         // background_color: config.darkNavyColor,
         // theme_color: config.navyColor,
         // display: "minimal-ui",
-        icon: "src/images/logo-ash.png",
+        icon: "src/images/dl-logo.png",
       },
     },
   ],

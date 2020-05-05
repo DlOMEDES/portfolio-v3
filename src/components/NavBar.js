@@ -42,7 +42,7 @@ const Logo = styled.div`
 const NavList = styled.ol`
   display: none;
   list-style-type: decimal-leading-zero;
-  color: rgb(${colors.ashblueManatee});
+  color: rgb(${colors.violet});
   display: flex;
   transition: all 0.3s ease-out;
 

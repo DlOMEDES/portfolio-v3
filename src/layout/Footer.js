@@ -20,7 +20,7 @@ const Copy = styled.p`
 const Footer = () => {
   return (
     <StyledFooter>
-      <Copy>Created by {config.name} © 2019</Copy>
+      <Copy>Created by {config.name} ©2019 - Present</Copy>
     </StyledFooter>
   )
 }
