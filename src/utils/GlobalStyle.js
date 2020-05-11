@@ -65,12 +65,23 @@ const GlobalStyle = createGlobalStyle`
   section {
     max-width: 120rem;  
     margin: 0 auto;
-    padding: 20rem 0;
     
     @media ${device.tablet} {
       max-width: 80rem;  
     }
   }
+
+
+/* utility classes */
+  .mbSm {margin-bottom: 2rem;}
+  .mbMd {margin-bottom: 3rem;}
+  .mbLg {margin-bottom: 4rem;}
+  .mbXl {margin-bottom: 8rem;}
+
+  .sectionPad{padding: 20rem 0;}
+  .sectionMar{margin: 15rem 0;}
+
+  
 `
 
 export default GlobalStyle

@@ -10,7 +10,7 @@ import { device } from "../utils/variables"
 
 const About = () => {
   return (
-    <AboutContainer id="about">
+    <AboutContainer id="about" className="sectionPad">
       <AboutHead>
         <SectionTitle title="About me" />
         <ShapeContainer>

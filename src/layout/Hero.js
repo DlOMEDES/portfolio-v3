@@ -73,13 +73,13 @@ const ContactBtn = styled.div`
 const Hero = () => {
   return (
     <>
-      <HeroContainer id="hero">
+      <HeroContainer id="hero" className="sectionPad">
         <HeroDetails>
           <Hi>Hi, my name is</Hi>
           <Name>{config.name}</Name>
           <Subtitle>{config.iDO}</Subtitle>
           <ContactBtn>
-            <a href="/">Contact me</a>
+            <a href="mailto:diomedes.lajara@gmail.com">Contact me</a>
           </ContactBtn>
         </HeroDetails>
         <HeroImage>

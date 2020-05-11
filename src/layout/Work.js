@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Link as CardLink } from "gatsby"
+// import { Link as CardLink } from "gatsby"
 import theme from "../utils/theme"
 import SectionTitle from "../components/SectionTitle"
 import restate from "../images/restate.png"
@@ -11,35 +11,35 @@ const { colors, shadows } = theme
 
 const Work = () => {
   return (
-    <WorkContainer id="work">
+    <WorkContainer id="work" className="sectionPad">
       <WorkHead>
         <SectionTitle title="Work" />
         <ShapeContainer />
       </WorkHead>
       <WorkGrid>
-        <Card to="/fitnessTheme">
+        <Card href="https://dlomedes.github.io/spartan-fitness/">
           <CardOverlay>
-            <h4>SpartanFitness - wp theme</h4>
+            <h4>WordPress Custom Fitness Theme </h4>
           </CardOverlay>
         </Card>
-        <Card to="/">
+        <Card href="http://nice-things.surge.sh/">
           <CardOverlay>
-            <h4>php mysql - app</h4>
+            <h4>Travel Landing Page</h4>
           </CardOverlay>
         </Card>
-        <Card to="/lensesEmail">
+        <Card href="https://dlomedes.github.io/lr-html-email/">
           <CardOverlay>
-            <h4>LR Lenses - html email</h4>
+            <h4>Responsive Html Email Template</h4>
           </CardOverlay>
         </Card>
-        <Card to="/">
+        <Card href="/">
           <CardOverlay>
-            <h4>nodejs - app</h4>
+            <h4>Comsing Soon</h4>
           </CardOverlay>
         </Card>
-        <Card to="/">
+        <Card href="https://r-estate.netlify.app/">
           <CardOverlay>
-            <h4>RealEstate - react web app</h4>
+            <h4>Real Estate Web App</h4>
           </CardOverlay>
         </Card>
       </WorkGrid>
@@ -84,7 +84,7 @@ const WorkGrid = styled.div`
 
   @media ${device.tablet} {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 32rem);
+    grid-template-rows: repeat(5, 32rem);
     grid-gap: 8rem;
   }
 `
@@ -117,7 +117,7 @@ const WorkContainer = styled.section`
   position: relative;
 `
 
-const Card = styled(CardLink)`
+const Card = styled.a`
   position: relative;
   padding: 4rem;
   transition: all 0.4s ease-in-out;

@@ -6,11 +6,11 @@ const { colors } = theme
 
 const Drawer = styled.nav`
   height: 100vh;
+  width: 70vw;
   background: rgb(${colors.white});
   position: fixed;
   top: 0;
   left: 0;
-  width: 80vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,6 +32,7 @@ const Drawer = styled.nav`
       a {
         font-size: 2.5rem;
         font-weight: 600;
+        color: rgb(${colors.midnightPurple});
       }
     }
   }

@@ -7,7 +7,7 @@ import { device } from "../utils/variables"
 
 const Service = () => {
   return (
-    <ServiceContainer id="services">
+    <ServiceContainer id="services" className="sectionPad">
       <ServiceHead>
         <SectionTitle title="Services" />
         <ShapeContainer />
