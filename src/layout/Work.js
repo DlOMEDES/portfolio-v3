@@ -6,6 +6,7 @@ import SectionTitle from "../components/SectionTitle"
 import restate from "../images/restate.png"
 import lenses from "../images/lenses.png"
 import spartan from "../images/spartan-fitness.png"
+import travler from "../images/travler.png"
 import { device } from "../utils/variables"
 const { colors, shadows } = theme
 
@@ -135,7 +136,7 @@ const Card = styled.a`
     grid-row: 1 / 3;
   }
   &:nth-child(2) {
-    background: rgb(29, 160, 137) center center no-repeat;
+    background: url(${travler}), rgb(29, 160, 137) center center no-repeat;
     grid-column: 3/4;
     grid-row: 1/3;
     background-size: cover;
