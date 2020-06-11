@@ -2,8 +2,6 @@ import React from "react"
 import styled from "styled-components"
 // import config from "../../config/index"
 import theme from "../utils/theme"
-// import bgCode from "../../images/bgCode.png"
-// import { DiHtml5 } from "react-icons/di"
 import SectionTitle from "../components/SectionTitle"
 import terminal from "../../content/terminal"
 import { device } from "../utils/variables"
@@ -41,7 +39,7 @@ export default About
 
 const { colors, shadows } = theme
 const Input = styled.p`
-  color: rgb(${colors.ashblueManatee});
+  color: rgb(${colors.violet});
 
   &:before {
     content: "> ";
@@ -55,7 +53,7 @@ const Input = styled.p`
   }
 `
 const Output = styled.p`
-  color: rgb(${colors.violet});
+  color: rgb(${colors.ashblueManatee});
 `
 const Statement = styled.div`
   &:first-child {
@@ -112,7 +110,7 @@ const ShapeContainer = styled.div`
   text-shadow: ${shadows.shapes} rgba(${colors.violet}, 0.3);
   left: -7rem;
   top: -23rem;
-
+  z-index: -1;
   @media ${device.tablet} {
     top: 50%;
     left: 50%;

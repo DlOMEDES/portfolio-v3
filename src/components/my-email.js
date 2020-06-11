@@ -20,7 +20,7 @@ const SocialList = styled.div`
   flex-direction: column;
   align-items: center;
   a {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     writing-mode: vertical-rl;
     color: rgb(${colors.ashblueManatee});
     margin: 2rem auto;
@@ -28,7 +28,7 @@ const SocialList = styled.div`
     letter-spacing: 0.2rem;
     transition: all 0.3s ease-in-out;
     &:hover {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       writing-mode: vertical-rl;
       color: rgb(${colors.violet});
       margin: 2rem auto;

@@ -28,7 +28,6 @@ const TopBanner = styled.section`
     margin-left: -5rem;
     border-radius: 1rem;
     z-index: 0;
-    background: rgb(${colors.midnightPurple});
     box-shadow: 10px 10px 0px 5px rgba(0, 0, 0, 0.4);
 
     display: flex;
@@ -108,6 +107,7 @@ const Intro = styled.section`
 
   .code {
     border: 0.1rem solid rgb(${colors.ashblueManatee});
+    margin: 1rem 0;
   }
 `
 const BrandContent = styled.section`

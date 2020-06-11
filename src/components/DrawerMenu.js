@@ -6,7 +6,7 @@ const { colors } = theme
 
 const Drawer = styled.nav`
   height: 100vh;
-  width: 70vw;
+  width: 80vw;
   background: rgb(${colors.white});
   position: fixed;
   top: 0;
@@ -49,21 +49,33 @@ const DrawerMenu = ({ show }) => {
     <Drawer className={drawClass}>
       <ul>
         <li>
-          <Link to="/#services" activeClassName="ServiceContainer">
+          <Link
+            target="_blank"
+            to="/#services"
+            activeClassName="ServiceContainer"
+          >
             Services
           </Link>
         </li>
         <li>
-          <Link to="/#about">About</Link>
+          <Link target="_blank" to="/#about">
+            About
+          </Link>
         </li>
         <li>
-          <Link to="/#work">Work</Link>
+          <Link target="_blank" to="/#work">
+            Work
+          </Link>
         </li>
         <li>
-          <Link to="/#blog">Blog</Link>
+          <Link target="_blank" to="/#blog">
+            Blog
+          </Link>
         </li>
         <li>
-          <Link to="/#contact">Contact</Link>
+          <Link target="_blank" to="/#contact">
+            Contact
+          </Link>
         </li>
       </ul>
     </Drawer>
