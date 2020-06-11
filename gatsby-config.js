@@ -6,6 +6,13 @@
 const path = require("path")
 
 module.exports = {
+  siteMetadata: {
+    title: "Diomedes lajara | Web Developer",
+    description: "I help small companies & clients grow their business online",
+    url: "https://www.diomedes.dev", // No trailing slash allowed!
+    // image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
+    twitterUsername: "@dl_ajara",
+  },
   plugins: [
     `gatsby-plugin-styled-components`,
     {

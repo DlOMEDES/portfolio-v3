@@ -124,11 +124,14 @@ const Card = styled.a`
   transition: all 0.4s ease-in-out;
   cursor: pointer;
   overflow: hidden;
+  background-position: center;
+
   &:hover {
     ${CardOverlay} {
       left: 0;
     }
   }
+
   &:nth-child(1) {
     background: url(${spartan});
     background-size: cover;
@@ -165,11 +168,24 @@ const Card = styled.a`
   &:nth-child(2),
   &:nth-child(3),
   &:nth-child(4),
-  &:nth-child(5),
-  &:nth-child(6) {
+  &:nth-child(5) {
+    background-position: center;
     @media ${device.tablet} {
       grid-column: auto;
       grid-row: auto;
+      background-position: center;
+    }
+  }
+
+  &:nth-child(3) {
+    @media ${device.tablet} {
+      background-position: top;
+    }
+  }
+
+  &:nth-child(5) {
+    @media ${device.tablet} {
+      background-position: left;
     }
   }
 `
