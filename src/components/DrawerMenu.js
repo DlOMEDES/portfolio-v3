@@ -49,33 +49,18 @@ const DrawerMenu = ({ show }) => {
     <Drawer className={drawClass}>
       <ul>
         <li>
-          <Link
-            target="_blank"
-            to="/#services"
-            activeClassName="ServiceContainer"
-          >
+          <Link to="/#services" activeClassName="ServiceContainer">
             Services
           </Link>
         </li>
         <li>
-          <Link target="_blank" to="/#about">
-            About
-          </Link>
+          <Link to="/#about">About</Link>
         </li>
         <li>
-          <Link target="_blank" to="/#work">
-            Work
-          </Link>
+          <Link to="/#work">Work</Link>
         </li>
         <li>
-          <Link target="_blank" to="/#blog">
-            Blog
-          </Link>
-        </li>
-        <li>
-          <Link target="_blank" to="/#contact">
-            Contact
-          </Link>
+          <Link to="/fortheblog">Blog</Link>
         </li>
       </ul>
     </Drawer>

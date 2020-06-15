@@ -7,10 +7,9 @@ const path = require("path")
 
 module.exports = {
   siteMetadata: {
-    title: "Diomedes lajara | Web Developer",
+    title: "Diomedes lajara | Web Developer located in Philadelphia, PA",
     description: "I help small companies & clients grow their business online",
-    url: "https://www.diomedes.dev", // No trailing slash allowed!
-    // image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
+    url: "https://www.diomedes.dev",
     twitterUsername: "@dl_ajara",
   },
   plugins: [
@@ -23,6 +22,7 @@ module.exports = {
         components: path.join(__dirname, "src/components"),
         pages: path.join(__dirname, "src/pages"),
         utils: path.join(__dirname, "src/utils"),
+        layout: path.join(__dirname, "src/layout"),
       },
     },
     {

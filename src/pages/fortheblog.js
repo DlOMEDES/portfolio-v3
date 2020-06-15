@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import theme from "../utils/theme"
-import Layout from "../layout"
-import { device } from "../utils/variables"
+import theme from "utils/theme"
+import Layout from "layout"
+import { device } from "utils/variables"
 
 const { colors } = theme
 
@@ -131,7 +131,7 @@ const fortheblog = () => {
   return (
     <Layout>
       <ShortInfo>
-        <Hello>This is fortheBlog, where I write about web development.</Hello>
+        <p>Page under construction</p>
       </ShortInfo>
 
       <ShowCase>

@@ -1,15 +1,7 @@
 module.exports = {
-  siteTitle: "Diomedes Lajara | Software Developer",
-  siteDescription: `I’m a Frontend Developer with a passion for Ui design. My specialty is 
-  building high-quality interfaces for websites and applications.
-  Before going down the web rabbit hole, I worked mainly in hospitality but 
-  always enjoyed design, technology and gaming. Nowdays I'm mostly 
-  focused on improving my development skills and outdoor activities.
-  I enjoy learning something new with every project I work on. This helps
-  me expand my knowledge and see what solutions are possible for current 
-  and future projects
-  .`,
-  iDO: `I build things for the web.`,
+  siteTitle: "Diomedes Lajara | Web Developer",
+  siteDescription: `I’m a Developer who loves beautiful front-end User Interfaces.`,
+  iDO: `I help small companies & clients grow their business online.`,
   siteKeywords:
     "Diomedes Lajara, Diomedes, Lajara, dlomedes, software, developer, front-end, web developer, javascript",
   siteUrl: "https://diomedes.site",
