@@ -6,7 +6,7 @@ const { colors } = theme
 
 const Drawer = styled.nav`
   height: 100vh;
-  width: 80vw;
+  width: 75vw;
   background: rgb(${colors.white});
   position: fixed;
   top: 0;

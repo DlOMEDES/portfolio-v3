@@ -14,6 +14,7 @@ module.exports = {
     twitterUsername: "@dl_ajara",
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
       resolve: "gatsby-plugin-root-import",

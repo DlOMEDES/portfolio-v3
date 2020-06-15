@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../utils/theme"
 import Layout from "../layout"
+import { device } from "../utils/variables"
+
 const { colors } = theme
 
 const ShortInfo = styled.section`
@@ -20,43 +22,98 @@ const Hello = styled.h1`
 const ShowCase = styled.section`
   width: 100%;
   margin: 0 auto;
-  ul {
-    width: 90%;
-    margin-left: 5%;
-  }
 
-  .projects {
+  .postList {
     display: flex;
     flex-direction: column;
     text-align: left;
-    background: $white;
-    margin-bottom: 5em;
-    box-shadow: 0px 40px 60px -20px rgba(0, 0, 0, 0.2);
 
-    .project_thumb {
-      margin: 0 auto 1.5em auto;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      img {
-        /* width: 100%; */
-        object-fit: contain;
+    article {
+      position: relative;
+      @media ${device.minDesk} {
+        display: flex;
+        align-items: center;
       }
     }
 
-    .project_desc {
-      margin: 0 5% 10% 5%;
+    .post-title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center;
+      width: 100%;
+      z-index: -1;
 
-      h1 {
-        /* font-family: $main_font */
-        font-size: 1.5em;
-        margin-bottom: 0.5em;
+      h2 {
         color: rgb(${colors.midnightPurple});
       }
+
+      @media ${device.minDesk} {
+        width: auto;
+      }
+    }
+
+    .postImg {
+      box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.6);
+      position: absolute;
+      background: rgb(${colors.ashblueManatee});
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      width: 30rem;
+      height: 12rem;
+      display: flex;
+      flex-direction: column;
+      z-index: -2;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 12rem;
+      }
+      @media ${device.minDesk} {
+        right: auto;
+        left: 0;
+        width: 35rem;
+        height: 25rem;
+        z-index: -3;
+
+        img {
+          height: 35rem;
+        }
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, #eaee44, #33d0ff);
+        opacity: 0.6;
+      }
+    }
+
+    .postDesc {
+      padding: 1rem;
+      background: white;
+      margin: 5rem 0;
+      z-index: -3;
+      position: relative;
+      @media ${device.minDesk} {
+        margin: 4rem 0;
+        padding: 5rem 1rem;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.6);
+        z-index: -2;
+        width: 55vw;
+        left: 23rem;
+      }
+
       .project_info {
         font-family: rgb(${colors.violet});
         font-weight: 300;
-        color: rgb(${colors.violet});
+        color: rgb(${colors.midnightPurple});
         margin-bottom: 1em;
         line-height: 1.35;
         font-size: 1em;
@@ -74,23 +131,24 @@ const fortheblog = () => {
   return (
     <Layout>
       <ShortInfo>
-        <Hello>
-          Welcome to fortheBlog, where I write about web development.
-        </Hello>
+        <Hello>This is fortheBlog, where I write about web development.</Hello>
       </ShortInfo>
 
       <ShowCase>
         <ul>
-          <li className="projects">
+          <li className="postList">
             <article>
-              <div className="project_thumb">
+              <a href="/" className="post-title">
+                <h2>blog post 1</h2>
+              </a>
+
+              <div className="postImg">
                 <img
-                  src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                  src="https://images.pexels.com/photos/4057663/pexels-photo-4057663.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
                   alt=""
                 />
               </div>
-              <div className="project_desc">
-                <h2>blog post 1</h2>
+              <div className="postDesc">
                 <p className="project_info">
                   This is a blog post showcasing available meals and a way to
                   get in touch with the best chefs in the country.
