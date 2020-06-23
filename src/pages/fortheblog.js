@@ -13,12 +13,6 @@ const ShortInfo = styled.section`
   text-align: center;
 `
 
-const Hello = styled.h1`
-  font-size: 1.25em;
-  line-height: 1.3;
-  color: rgb(${colors.ashblueManatee});
-`
-
 const ShowCase = styled.section`
   width: 100%;
   margin: 0 auto;
@@ -150,8 +144,9 @@ const fortheblog = () => {
               </div>
               <div className="postDesc">
                 <p className="project_info">
-                  This is a blog post showcasing available meals and a way to
-                  get in touch with the best chefs in the country.
+                  This is a blog article Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Iure eligendi dicta modi quo sit odio
+                  placeat nihil et alias deserunt.
                 </p>
               </div>
             </article>
