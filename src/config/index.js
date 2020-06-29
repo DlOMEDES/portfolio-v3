@@ -1,7 +1,7 @@
 module.exports = {
   siteTitle: "Diomedes Lajara | Web Developer",
   siteDescription: `I’m a Developer who loves beautiful front-end User Interfaces.`,
-  iDO: `I help small companies & clients grow their business online.`,
+  iDO: `I Build things in the web.`,
   siteKeywords:
     "Diomedes Lajara, Diomedes, Lajara, dlomedes, software, developer, front-end, web developer, javascript",
   siteUrl: "https://diomedes.site",

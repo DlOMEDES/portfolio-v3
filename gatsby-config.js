@@ -8,7 +8,7 @@ const path = require("path")
 module.exports = {
   siteMetadata: {
     title: "Diomedes lajara | Web Developer located in Philadelphia, PA",
-    description: "I help small companies & clients grow their business online",
+    description: "I build things on the web.",
     url: "https://www.diomedes.dev",
     twitterUsername: "@dl_ajara",
   },
