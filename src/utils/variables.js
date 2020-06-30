@@ -13,7 +13,6 @@ export const device = {
   portrait: `(max-width: ${size.sm})`,
   tablet: `(max-width: ${size.md})`,
   laptop: `(max-width: ${size.lg})`,
-  minDesk: `(min-width: ${size.sm})`,
 }
 
 export const MainContainer = styled.div`

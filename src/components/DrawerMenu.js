@@ -6,7 +6,7 @@ const { colors } = theme
 
 const Drawer = styled.nav`
   height: 100vh;
-  width: 75vw;
+  width: 70vw;
   background: rgb(${colors.white});
   position: fixed;
   top: 0;
@@ -60,7 +60,10 @@ const DrawerMenu = ({ show }) => {
           <Link to="/#work">Work</Link>
         </li>
         <li>
-          <Link to="/fortheblog">Blog</Link>
+          <Link to="/#blog">Blog</Link>
+        </li>
+        <li>
+          <Link to="/#contact">Contact</Link>
         </li>
       </ul>
     </Drawer>

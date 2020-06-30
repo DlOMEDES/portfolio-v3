@@ -33,6 +33,8 @@ const MenuBtn = styled.button`
     }
 
     &.close {
+      /* // rotate btn lines into X */
+      transform: rotate(180deg);
       /* // animation: rotate180 1s ease-in-out; */
       .menuBtn-line {
         background: rgb(${colors.white});

@@ -45,7 +45,7 @@ const NavList = styled.ol`
   color: rgb(${colors.ashblueManatee});
   display: flex;
   transition: all 0.3s ease-out;
-  font-size: 1.6rem;
+
   li {
     margin: 0 30px;
   }
@@ -53,7 +53,7 @@ const NavList = styled.ol`
   li a {
     color: rgb(${colors.white});
     font-weight: 400;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     transition: all 0.3s ease-out;
     &:hover {
       color: rgb(${colors.violet});
@@ -86,7 +86,10 @@ const NavBar = ({ toggle, show }) => {
           <Link to="/#work">Work</Link>
         </li>
         <li>
-          <Link to="/fortheblog">Blog</Link>
+          <Link to="/#blog">Blog</Link>
+        </li>
+        <li>
+          <Link to="/#contact">Contact</Link>
         </li>
       </NavList>
 
