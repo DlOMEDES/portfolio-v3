@@ -86,10 +86,7 @@ const NavBar = ({ toggle, show }) => {
           <Link to="/#work">Work</Link>
         </li>
         <li>
-          <Link to="/#blog">Blog</Link>
-        </li>
-        <li>
-          <Link to="/#contact">Contact</Link>
+          <Link to="/fortheblog">Blog</Link>
         </li>
       </NavList>
 

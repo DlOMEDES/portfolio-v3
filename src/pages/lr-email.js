@@ -3,6 +3,8 @@ import styled from "styled-components"
 import theme from "../utils/theme"
 import Layout from "../layout"
 import LRglasses from "../images/LR-Glasses.png"
+import Head from "components/Head"
+
 const { colors } = theme
 
 const GridIt = styled.div`
@@ -134,6 +136,7 @@ const Mockup = styled.section`
 const lensesEmail = () => {
   return (
     <Layout>
+      <Head title="LR Promo Email Template" />
       <GridIt>
         <TopBanner>
           <ImgInside>

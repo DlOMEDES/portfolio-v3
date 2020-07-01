@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import theme from "utils/theme"
-import Layout from "layout"
+import Layout from "../layout"
 import { device } from "utils/variables"
+import Head from "components/Head"
 
 const { colors } = theme
 
@@ -124,6 +125,7 @@ const ShowCase = styled.section`
 const fortheblog = () => {
   return (
     <Layout>
+      <Head title="F.T.B" />
       <ShortInfo>
         <p>Page under construction</p>
       </ShortInfo>

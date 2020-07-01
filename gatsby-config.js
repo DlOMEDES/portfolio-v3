@@ -6,7 +6,12 @@
 const path = require("path")
 
 module.exports = {
+  siteMetadata: {
+    title: "Web Developer in Philadelphia, PA",
+    author: "Diomedes Lajara",
+  },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
       resolve: "gatsby-plugin-root-import",
@@ -15,6 +20,7 @@ module.exports = {
         components: path.join(__dirname, "src/components"),
         pages: path.join(__dirname, "src/pages"),
         utils: path.join(__dirname, "src/utils"),
+        layout: path.join(__dirname, "src/layout"),
       },
     },
     {
