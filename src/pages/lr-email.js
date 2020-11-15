@@ -9,7 +9,7 @@ const { colors } = theme
 
 const GridIt = styled.div`
   display: grid;
-  grid-template-rows: 30vw min-content 40vw repeat(3, min-content);
+  grid-template-rows: 20vw min-content 40vw repeat(3, min-content);
   grid-template-columns:
     [fullstart] minmax(3rem, 1fr) [centerstart] repeat(
       8,

@@ -1,7 +1,7 @@
 ---
 title: 'Hi, my name is'
 name: 'Diomedes Lajara'
-subtitle: 'I build things for the web.'
+subtitle: 'The internet is my second home'
 contactText: 'Let's Talk'
 ---
 

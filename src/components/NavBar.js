@@ -6,6 +6,7 @@ import theme from "../utils/theme"
 import { device } from "../utils/variables"
 import DrawerMenuBtn from "./DrawerMenuBtn"
 
+
 const { colors } = theme
 
 const NavContainter = styled.nav`
@@ -94,5 +95,6 @@ const NavBar = ({ toggle, show }) => {
     </NavContainter>
   )
 }
+
 
 export default NavBar
