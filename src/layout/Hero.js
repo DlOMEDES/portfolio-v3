@@ -10,7 +10,7 @@ const { colors } = theme
 
 const HeroContainer = styled.section`
   display: grid;
-  grid-template-columns: minmax(min-content, 3fr) 1fr;
+  grid-template-columns: minmax(min-content, 2fr) 1fr;
   min-height: 80vh;
   grid-gap: 3rem;
   align-items: center;
@@ -26,6 +26,7 @@ const HeroDetails = styled.div`
   letter-spacing: 0.1rem;
 `
 const HeroImage = styled.div`
+  margin: 0 auto;
   img {
     width: 20rem;
     border-radius: 1rem;
@@ -49,7 +50,7 @@ const Name = styled.h2`
 `
 const Subtitle = styled.h4`
   color: rgb(${colors.ashblueManatee});
-  font-size: 6rem;
+  font-size: 3rem;
 `
 const ContactBtn = styled.div`
   margin: 6rem 0;
@@ -59,6 +60,7 @@ const ContactBtn = styled.div`
     color: rgb(${colors.white});
     padding: 1.2rem 2.4rem;
     font-size: 1.8rem;
+    letter-spacing: 0.3rem;
 
     border: 0.1rem solid rgb(${colors.violet});
     transition: all 0.4s ease-in-out;
@@ -79,7 +81,7 @@ const Hero = () => {
           <Name>{config.name}</Name>
           <Subtitle>{config.iDO}</Subtitle>
           <ContactBtn>
-            <a href="mailto:diomedes.lajara@gmail.com">Contact me</a>
+            <a href="mailto:diomedes.lajara@gmail.com">CONTACT ME</a>
           </ContactBtn>
         </HeroDetails>
         <HeroImage>

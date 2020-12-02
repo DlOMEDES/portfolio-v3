@@ -12,7 +12,7 @@ const About = () => {
   return (
     <AboutContainer id="about" className="sectionPad">
       <AboutHead>
-        <SectionTitle title="About me" />
+        <SectionTitle title="About" />
         <ShapeContainer>
           <span>▲</span>
         </ShapeContainer>
@@ -25,13 +25,18 @@ const About = () => {
         </TerminalHeader>
 
         <TerminalWindow>
-          {terminal.map((statement, index) => (
-            <Statement key={index}>
-              <Input>{statement.input}</Input>
-              <Output>{statement.output}</Output>
-            </Statement>
-          ))}
+          {terminal.map((statement, index, last) => {
+            return (
+              <Statement key={index}>
+                <Input>{statement.input}</Input>
+                <Output>{statement.output}</Output>
+              </Statement>
+            )
+          })}
         </TerminalWindow>
+        <AboutBtn>
+          <a href="/">More about me</a>
+        </AboutBtn>
       </Terminal>
     </AboutContainer>
   )
@@ -126,4 +131,24 @@ const AboutHead = styled.div`
 
 const AboutContainer = styled.section`
   background-size: cover;
+`
+const AboutBtn = styled.div`
+  margin: 6rem 0;
+  text-align: center;
+  a {
+    border-radius: 0.5rem;
+    background: transparent;
+    color: rgb(${colors.white});
+    padding: 1rem 10rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.3rem;
+
+    border: 0.1rem solid rgb(${colors.violet});
+    transition: all 0.4s ease-in-out;
+    &:hover {
+      background: rgba(${colors.violet}, 0.5);
+      color: rgb(${colors.white});
+      border: 0.1rem solid transparent;
+    }
+  }
 `

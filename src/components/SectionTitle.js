@@ -8,7 +8,7 @@ const Title = styled.h2`
   z-index: 2;
   color: rgb(${colors.white});
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   font-size: 3.5rem;
   position: absolute;
 

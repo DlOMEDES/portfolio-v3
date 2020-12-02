@@ -8,42 +8,51 @@ import lenses from "../images/lenses.png"
 import spartan from "../images/spartan-fitness.png"
 import travler from "../images/travler.png"
 import { device } from "../utils/variables"
+
 const { colors, shadows } = theme
 
 const Work = () => {
   return (
     <WorkContainer id="work" className="sectionPad">
       <WorkHead>
-        <SectionTitle title="Work" />
+        <SectionTitle title="Projects" />
         <ShapeContainer />
       </WorkHead>
+
       <WorkGrid>
         <Card href="https://dlomedes.github.io/spartan-fitness/">
           <CardOverlay>
             <h4>WordPress Custom Fitness Theme </h4>
           </CardOverlay>
         </Card>
+
         <Card href="http://nice-things.surge.sh/">
           <CardOverlay>
             <h4>Travel Landing Page</h4>
           </CardOverlay>
         </Card>
+
         <Card href="https://dlomedes.github.io/lr-html-email/">
           <CardOverlay>
             <h4>Responsive Html Email Template</h4>
           </CardOverlay>
         </Card>
+
         <Card href="/">
           <CardOverlay>
             <h4>Comsing Soon</h4>
           </CardOverlay>
         </Card>
+
         <Card href="https://r-estate.netlify.app/">
           <CardOverlay>
             <h4>Real Estate Web App</h4>
           </CardOverlay>
         </Card>
       </WorkGrid>
+      <ProjectBtn>
+        <a href="/">ALL PROJECTS</a>
+      </ProjectBtn>
     </WorkContainer>
   )
 }
@@ -170,6 +179,26 @@ const Card = styled.a`
     @media ${device.tablet} {
       grid-column: auto;
       grid-row: auto;
+    }
+  }
+`
+const ProjectBtn = styled.div`
+  margin: 6rem 0;
+  text-align: center;
+  a {
+    border-radius: 0.5rem;
+    background: transparent;
+    color: rgb(${colors.white});
+    padding: 1rem 10rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.3rem;
+
+    border: 0.1rem solid rgb(${colors.violet});
+    transition: all 0.4s ease-in-out;
+    &:hover {
+      background: rgba(${colors.violet}, 0.5);
+      color: rgb(${colors.white});
+      border: 0.1rem solid transparent;
     }
   }
 `
