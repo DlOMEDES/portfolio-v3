@@ -122,7 +122,7 @@ const ShowCase = styled.section`
   }
 `
 
-const fortheblog = () => {
+const blogs = () => {
   return (
     <Layout>
       <Head title="F.T.B" />
@@ -159,4 +159,4 @@ const fortheblog = () => {
   )
 }
 
-export default fortheblog
+export default blogs

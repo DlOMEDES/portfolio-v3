@@ -4,6 +4,7 @@ import theme from "../utils/theme"
 import config from "../config/index"
 import heroImage from "../images/self-noBG.png"
 import { device } from "../utils/variables"
+import { Link } from "gatsby"
 
 // styles
 const { colors } = theme
@@ -81,7 +82,7 @@ const Hero = () => {
           <Name>{config.name}</Name>
           <Subtitle>{config.iDO}</Subtitle>
           <ContactBtn>
-            <a href="mailto:diomedes.lajara@gmail.com">CONTACT ME</a>
+            <Link to="/contact">CONTACT ME</Link>
           </ContactBtn>
         </HeroDetails>
         <HeroImage>

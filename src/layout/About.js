@@ -35,7 +35,7 @@ const About = () => {
           })}
         </TerminalWindow>
         <AboutBtn>
-          <a href="/">More about me</a>
+          <a href="/about">More about me</a>
         </AboutBtn>
       </Terminal>
     </AboutContainer>

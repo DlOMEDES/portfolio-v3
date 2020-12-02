@@ -51,7 +51,7 @@ const Work = () => {
         </Card>
       </WorkGrid>
       <ProjectBtn>
-        <a href="/">ALL PROJECTS</a>
+        <a href="/projects">ALL PROJECTS</a>
       </ProjectBtn>
     </WorkContainer>
   )

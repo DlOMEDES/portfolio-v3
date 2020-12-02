@@ -6,7 +6,6 @@ import theme from "../utils/theme"
 import { device } from "../utils/variables"
 import DrawerMenuBtn from "./DrawerMenuBtn"
 
-
 const { colors } = theme
 
 const NavContainter = styled.nav`
@@ -76,18 +75,21 @@ const NavBar = ({ toggle, show }) => {
       </Logo>
       <NavList>
         <li>
-          <Link to="/#services" activeClassName="ServiceContainer">
-            Services
+          <Link to="/" activeClassName="ServiceContainer">
+            Home
           </Link>
         </li>
         <li>
-          <Link to="/#about">About</Link>
+          <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to="/#work">Work</Link>
+          <Link to="/projects">Projects</Link>
         </li>
         <li>
-          <Link to="/fortheblog">Blog</Link>
+          <Link to="/blogs">Blogs</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contact</Link>
         </li>
       </NavList>
 
@@ -95,6 +97,5 @@ const NavBar = ({ toggle, show }) => {
     </NavContainter>
   )
 }
-
 
 export default NavBar
