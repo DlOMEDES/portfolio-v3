@@ -2,11 +2,9 @@ import React from "react"
 import Link from "gatsby-link"
 import logo from "../images/dl-logo.png"
 import styled from "styled-components"
-import theme from "../utils/theme"
 import { device } from "../utils/variables"
 import DrawerMenuBtn from "./DrawerMenuBtn"
-
-const { colors } = theme
+import NavLinks from "../config/NavLinks"
 
 const NavContainter = styled.nav`
   display: flex;
@@ -39,32 +37,6 @@ const Logo = styled.div`
   }
 `
 
-const NavList = styled.ol`
-  display: none;
-  list-style-type: decimal-leading-zero;
-  color: rgb(${colors.ashblueManatee});
-  display: flex;
-  transition: all 0.3s ease-out;
-
-  li {
-    margin: 0 30px;
-  }
-
-  li a {
-    color: rgb(${colors.white});
-    font-weight: 400;
-    font-size: 1.4rem;
-    transition: all 0.3s ease-out;
-    &:hover {
-      color: rgb(${colors.violet});
-    }
-  }
-
-  @media ${device.portrait} {
-    display: none;
-  }
-`
-
 const NavBar = ({ toggle, show }) => {
   return (
     <NavContainter>
@@ -73,25 +45,7 @@ const NavBar = ({ toggle, show }) => {
           <img src={logo} alt="" />
         </Link>
       </Logo>
-      <NavList>
-        <li>
-          <Link to="/" activeClassName="ServiceContainer">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/projects">Projects</Link>
-        </li>
-        <li>
-          <Link to="/blogs">Blogs</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-      </NavList>
+      <NavLinks styleClass="nav-links" />
 
       <DrawerMenuBtn click={toggle} show={show} />
     </NavContainter>

@@ -27,22 +27,6 @@ module.exports = {
     },
   ],
 
-  navLinks: [
-    {
-      name: "About",
-      url: "#about",
-    },
-
-    {
-      name: "Work",
-      url: "#work",
-    },
-    {
-      name: "Contact",
-      url: "#contact",
-    },
-  ],
-
   twitterHandle: "@dl_ajara",
 
   navHeight: 100,

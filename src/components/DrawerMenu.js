@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import Link from "gatsby-link"
 import theme from "../utils/theme"
+import NavLinks from "../config/NavLinks"
+
 const { colors } = theme
 
 const Drawer = styled.nav`
@@ -20,22 +21,6 @@ const Drawer = styled.nav`
   &.open {
     transform: translateX(0);
   }
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    li {
-      margin: 1rem 0;
-
-      a {
-        font-size: 2.5rem;
-        font-weight: 600;
-        color: rgb(${colors.midnightPurple});
-      }
-    }
-  }
 `
 
 const DrawerMenu = ({ show }) => {
@@ -47,25 +32,7 @@ const DrawerMenu = ({ show }) => {
 
   return (
     <Drawer className={drawClass}>
-      <ul>
-        <li>
-          <Link to="/#services" activeClassName="ServiceContainer">
-            Services
-          </Link>
-        </li>
-        <li>
-          <Link to="/#about">About</Link>
-        </li>
-        <li>
-          <Link to="/#work">Work</Link>
-        </li>
-        <li>
-          <Link to="/#blog">Blog</Link>
-        </li>
-        <li>
-          <Link to="/#contact">Contact</Link>
-        </li>
-      </ul>
+      <NavLinks styleClass="side-links" />
     </Drawer>
   )
 }
