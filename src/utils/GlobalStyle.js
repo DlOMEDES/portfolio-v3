@@ -64,7 +64,7 @@ const GlobalStyle = createGlobalStyle`
 
   section {
     max-width: 120rem;  
-    margin: 0 auto;
+    /* margin: 0 auto; */
     
     @media ${device.tablet} {
       max-width: 80rem;  
@@ -78,9 +78,11 @@ const GlobalStyle = createGlobalStyle`
   .mbLg {margin-bottom: 4rem;}
   .mbXl {margin-bottom: 8rem;}
 
-  .sectionPad{padding: 20rem 0;}
-  .sectionMar{margin: 15rem 0;}
+/* section margin */
+  .mSec10 {margin: 10rem 0}
 
+/* section padding */
+  .sectionPad{padding: 20rem 0;}
   
 `
 

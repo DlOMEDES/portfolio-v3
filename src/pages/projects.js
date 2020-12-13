@@ -4,12 +4,16 @@ import theme from "../utils/theme"
 import Layout from "../layout"
 import LRglasses from "../images/LR-Glasses.png"
 import Head from "components/Head"
+import { Link } from "gatsby"
+import FontOne from "../images/font-oswald.png"
+import FontTwo from "../images/font-raleway.png"
+import projectWire from "../images/wireframe.png"
 
 const { colors } = theme
 
 const GridIt = styled.div`
   display: grid;
-  grid-template-rows: 20vw min-content 40vw repeat(3, min-content);
+  grid-template-rows: 20vw min-content 40vw repeat(2, min-content);
   grid-template-columns:
     [fullstart] minmax(3rem, 1fr) [centerstart] repeat(
       8,
@@ -36,6 +40,7 @@ const TopBanner = styled.section`
     align-items: center;
     p {
       margin-left: 2rem;
+
       span {
         color: rgb(${colors.violet});
         margin-right: 0.5rem;
@@ -43,7 +48,6 @@ const TopBanner = styled.section`
     }
   }
 `
-
 const ImgInside = styled.div`
   grid-column: 1/5;
   grid-row: 1/-1;
@@ -62,7 +66,6 @@ const ImgInside = styled.div`
     position: sticky;
   }
 `
-
 const Date = styled.div`
   grid-column: 5/6;
   grid-row: 2 / span 1;
@@ -80,7 +83,7 @@ const Intro = styled.section`
   /* background: teal; */
   grid-column: colstart 2 / colend 7;
 
-  h2 {
+  h1 {
     font-size: 4.5rem;
   }
 
@@ -89,7 +92,7 @@ const Intro = styled.section`
     height: 5rem;
     width: 15rem;
     cursor: pointer;
-    color: rgb(${colors.white});
+
     border-radius: 0.5rem;
     background: transparent;
     font-size: 1.8rem;
@@ -99,6 +102,9 @@ const Intro = styled.section`
       background: rgba(177, 122, 204, 0.5);
       color: rgb(${colors.white});
       border: 0.1rem solid transparent;
+    }
+    a {
+      color: rgb(${colors.white});
     }
   }
 
@@ -112,25 +118,74 @@ const Intro = styled.section`
     margin: 1rem 0;
   }
 `
-const BrandContent = styled.section`
-  grid-column: fullstart/colend 4;
-`
-const BrandFrame = styled.section`
-  background: salmon;
-  grid-column: colstart 5 / fullend;
-`
-const Colors = styled.section`
-  background: crimson;
+const ProjectContent = styled.section`
+  grid-column: colstart 2 / colend 4;
+  align-self: center;
 
-  grid-column: centerstart/centerend;
+  h2 {
+    font-size: 3rem;
+    margin-top: 3rem;
+  }
 `
+const ProjectMock = styled.section`
+  background: salmon;
+  grid-column: colstart 6 / fullend;
+  margin: 0;
+  height: 55rem;
+  width: 40rem;
+  align-self: center;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`
+
+const Colors = styled.section`
+  grid-column: centerstart/centerend;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  grid-gap: 10rem;
+`
+
+const ProjectColors = styled.div`
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .colorHex {
+    color: white;
+  }
+
+  &.color-1 {
+    background-color: rgb(${colors.ashblueManatee});
+    border: 1px solid rgb(${colors.ashblueManatee});
+  }
+
+  &.color-2 {
+    background-color: rgb(${colors.violet});
+    border: 1px solid rgb(${colors.violet});
+  }
+  &.color-3 {
+    background-color: #bba57c;
+    border: 1px solid rgb(${colors.midnightPurple});
+  }
+`
+
 const Fonts = styled.section`
-  background: indigo;
   grid-column: colstart 2 / colend 7;
-`
-const Mockup = styled.section`
-  background: olive;
-  grid-column: centerstart/centerend;
+  display: flex;
+  justify-content: space-evenly;
+
+  .fontOne,
+  .fontTwo {
+    padding: 2rem;
+    background: white;
+    margin: 1rem;
+  }
 `
 
 const lensesEmail = () => {
@@ -159,8 +214,8 @@ const lensesEmail = () => {
           </Context>
         </TopBanner>
 
-        <Intro className="sectionMar">
-          <h2 className="mbSm">LR Lenses</h2>
+        <Intro className="mSec10">
+          <h1 className="mbSm">LR Lenses</h1>
           <p className="mbLg">
             LRL aims to be a modern, solid and easy-to-use web-based software to
             manage content. With its intuitive dashboard and hand-crafted UI,
@@ -168,11 +223,19 @@ const lensesEmail = () => {
             he/she needs.
           </p>
 
-          <button className="web">Visit Website</button>
-          <button className="code">View Code</button>
+          <button className="web">
+            <Link to="https://dlomedes.github.io/lr-html-email/">
+              Visit Website
+            </Link>
+          </button>
+          <button className="code">
+            <Link to="https://github.com/DlOMEDES/lr-html-email">
+              View Code
+            </Link>
+          </button>
         </Intro>
-        <BrandContent className="sectionMar">
-          <h3 className="mbMd">Built with customers in mind, and Love.</h3>
+        <ProjectContent className="mSec10">
+          <h2 className="mbMd">Built with customers in mind, and Love.</h2>
 
           <p className="mbSm">
             First Lato is modular: every part of the application is a separate
@@ -190,11 +253,25 @@ const lensesEmail = () => {
             responsive custom theme, a custom flex grid system, custom form
             validation, dynamic themes and more.
           </p>
-        </BrandContent>
-        <BrandFrame className="sectionMar">BrandFrame</BrandFrame>
-        <Colors className="sectionMar">Colors</Colors>
-        <Fonts className="sectionMar">Fonts</Fonts>
-        <Mockup className="sectionMar">Mockup</Mockup>
+        </ProjectContent>
+        <ProjectMock className="mSec10">
+          <img src={projectWire} alt="" />
+        </ProjectMock>
+        <Colors className="mSec10">
+          <ProjectColors className="color-1">
+            <p className="colorHex">#colorHEX</p>
+          </ProjectColors>
+          <ProjectColors className="color-2" />
+          <ProjectColors className="color-3" />
+        </Colors>
+        <Fonts className="mSec10">
+          <div className="fontOne">
+            <img src={FontOne} alt="" />
+          </div>
+          <div className="fontTwo">
+            <img src={FontTwo} alt="" />
+          </div>
+        </Fonts>
       </GridIt>
     </Layout>
   )

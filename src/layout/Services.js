@@ -73,7 +73,7 @@ const ServiceContent = styled.div`
   grid-gap: 2.5rem;
   letter-spacing: 0.1rem;
   grid-template-columns: repeat(3, 1fr);
-  padding-top: 25rem;
+  padding-top: 22rem;
 
   @media ${device.tablet} {
     grid-template-columns: 1fr;

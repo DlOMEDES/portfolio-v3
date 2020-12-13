@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-// import { Link as CardLink } from "gatsby"
+import { Link } from "gatsby"
 import theme from "../utils/theme"
 import SectionTitle from "../components/SectionTitle"
 import restate from "../images/restate.png"
@@ -10,54 +10,6 @@ import travler from "../images/travler.png"
 import { device } from "../utils/variables"
 
 const { colors, shadows } = theme
-
-const Work = () => {
-  return (
-    <WorkContainer id="work" className="sectionPad">
-      <WorkHead>
-        <SectionTitle title="Projects" />
-        <ShapeContainer />
-      </WorkHead>
-
-      <WorkGrid>
-        <Card href="https://dlomedes.github.io/spartan-fitness/">
-          <CardOverlay>
-            <h4>WordPress Custom Fitness Theme </h4>
-          </CardOverlay>
-        </Card>
-
-        <Card href="http://nice-things.surge.sh/">
-          <CardOverlay>
-            <h4>Travel Landing Page</h4>
-          </CardOverlay>
-        </Card>
-
-        <Card href="https://dlomedes.github.io/lr-html-email/">
-          <CardOverlay>
-            <h4>Responsive Html Email Template</h4>
-          </CardOverlay>
-        </Card>
-
-        <Card href="/">
-          <CardOverlay>
-            <h4>Comsing Soon</h4>
-          </CardOverlay>
-        </Card>
-
-        <Card href="https://r-estate.netlify.app/">
-          <CardOverlay>
-            <h4>Real Estate Web App</h4>
-          </CardOverlay>
-        </Card>
-      </WorkGrid>
-      <ProjectBtn>
-        <a href="/projects">ALL PROJECTS</a>
-      </ProjectBtn>
-    </WorkContainer>
-  )
-}
-
-export default Work
 
 // styles
 const CardOverlay = styled.div`
@@ -202,3 +154,51 @@ const ProjectBtn = styled.div`
     }
   }
 `
+
+const Work = () => {
+  return (
+    <WorkContainer id="work" className="sectionPad">
+      <WorkHead>
+        <SectionTitle title="Projects" />
+        <ShapeContainer />
+      </WorkHead>
+
+      <WorkGrid>
+        <Card href="https://dlomedes.github.io/spartan-fitness/">
+          <CardOverlay>
+            <h4>WordPress Custom Fitness Theme </h4>
+          </CardOverlay>
+        </Card>
+
+        <Card href="http://nice-things.surge.sh/">
+          <CardOverlay>
+            <h4>Travel Landing Page</h4>
+          </CardOverlay>
+        </Card>
+
+        <Card href="https://dlomedes.github.io/lr-html-email/">
+          <CardOverlay>
+            <h4>Responsive Html Email Template</h4>
+          </CardOverlay>
+        </Card>
+
+        <Card href="/">
+          <CardOverlay>
+            <h4>Comsing Soon</h4>
+          </CardOverlay>
+        </Card>
+
+        <Card href="https://r-estate.netlify.app/">
+          <CardOverlay>
+            <h4>Real Estate Web App</h4>
+          </CardOverlay>
+        </Card>
+      </WorkGrid>
+      <ProjectBtn>
+        <Link to="/projects">ALL PROJECTS</Link>
+      </ProjectBtn>
+    </WorkContainer>
+  )
+}
+
+export default Work

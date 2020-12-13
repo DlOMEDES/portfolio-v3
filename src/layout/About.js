@@ -1,50 +1,14 @@
 import React from "react"
 import styled from "styled-components"
-// import config from "../../config/index"
 import theme from "../utils/theme"
-// import bgCode from "../../images/bgCode.png"
-// import { DiHtml5 } from "react-icons/di"
 import SectionTitle from "../components/SectionTitle"
 import terminal from "../../content/terminal"
 import { device } from "../utils/variables"
-
-const About = () => {
-  return (
-    <AboutContainer id="about" className="sectionPad">
-      <AboutHead>
-        <SectionTitle title="About" />
-        <ShapeContainer>
-          <span>▲</span>
-        </ShapeContainer>
-      </AboutHead>
-      <Terminal>
-        <TerminalHeader>
-          <ColoredDot className="ash" />
-          <ColoredDot className="violet" />
-          <ColoredDot className="midnight" />
-        </TerminalHeader>
-
-        <TerminalWindow>
-          {terminal.map((statement, index, last) => {
-            return (
-              <Statement key={index}>
-                <Input>{statement.input}</Input>
-                <Output>{statement.output}</Output>
-              </Statement>
-            )
-          })}
-        </TerminalWindow>
-        <AboutBtn>
-          <a href="/about">More about me</a>
-        </AboutBtn>
-      </Terminal>
-    </AboutContainer>
-  )
-}
-
-export default About
+import { Link } from "gatsby"
+// STYLES
 
 const { colors, shadows } = theme
+
 const Input = styled.p`
   color: rgb(${colors.ashblueManatee});
 
@@ -92,7 +56,7 @@ const ColoredDot = styled.div`
 
 const Terminal = styled.div`
   text-transform: capitalize;
-  padding-top: 30rem;
+  padding-top: 21rem;
 `
 const TerminalHeader = styled.div`
   height: 28px;
@@ -152,3 +116,39 @@ const AboutBtn = styled.div`
     }
   }
 `
+
+const About = () => {
+  return (
+    <AboutContainer id="about" className="sectionPad">
+      <AboutHead>
+        <SectionTitle title="About" />
+        <ShapeContainer>
+          <span>▲</span>
+        </ShapeContainer>
+      </AboutHead>
+      <Terminal>
+        <TerminalHeader>
+          <ColoredDot className="ash" />
+          <ColoredDot className="violet" />
+          <ColoredDot className="midnight" />
+        </TerminalHeader>
+
+        <TerminalWindow>
+          {terminal.map((statement, index, last) => {
+            return (
+              <Statement key={index}>
+                <Input>{statement.input}</Input>
+                <Output>{statement.output}</Output>
+              </Statement>
+            )
+          })}
+        </TerminalWindow>
+        <AboutBtn>
+          <Link to="/about">MORE ABOUT ME</Link>
+        </AboutBtn>
+      </Terminal>
+    </AboutContainer>
+  )
+}
+
+export default About

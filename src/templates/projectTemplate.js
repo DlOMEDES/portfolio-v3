@@ -200,4 +200,4 @@ const lensesEmail = () => {
   )
 }
 
-export default lensesEmail
+export default projectTemplate

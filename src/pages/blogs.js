@@ -44,7 +44,6 @@ const ShowCase = styled.section`
       }
 
       @media ${device.minDesk} {
-        width: auto;
       }
     }
 
@@ -67,8 +66,6 @@ const ShowCase = styled.section`
         height: 12rem;
       }
       @media ${device.minDesk} {
-        right: auto;
-        left: 0;
         width: 35rem;
         height: 25rem;
         z-index: -3;
@@ -97,12 +94,12 @@ const ShowCase = styled.section`
       z-index: -3;
       position: relative;
       @media ${device.minDesk} {
-        margin: 4rem 0;
         padding: 5rem 1rem;
         box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.6);
         z-index: -2;
-        width: 55vw;
-        left: 23rem;
+        position: absolute;
+        top: -5rem;
+        right: 0;
       }
 
       .project_info {
