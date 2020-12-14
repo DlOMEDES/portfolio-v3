@@ -3,7 +3,7 @@ import styled from "styled-components"
 import theme from "../utils/theme"
 import SectionTitle from "../components/SectionTitle"
 import terminal from "../../content/terminal"
-import { device } from "../utils/variables"
+import { device, Button } from "../utils/variables"
 import { Link } from "gatsby"
 // STYLES
 
@@ -96,25 +96,8 @@ const AboutHead = styled.div`
 const AboutContainer = styled.section`
   background-size: cover;
 `
-const AboutBtn = styled.div`
-  margin: 6rem 0;
+const AboutBtn = styled(Button)`
   text-align: center;
-  a {
-    border-radius: 0.5rem;
-    background: transparent;
-    color: rgb(${colors.white});
-    padding: 1rem 10rem;
-    font-size: 1.8rem;
-    letter-spacing: 0.3rem;
-
-    border: 0.1rem solid rgb(${colors.violet});
-    transition: all 0.4s ease-in-out;
-    &:hover {
-      background: rgba(${colors.violet}, 0.5);
-      color: rgb(${colors.white});
-      border: 0.1rem solid transparent;
-    }
-  }
 `
 
 const About = () => {
@@ -144,7 +127,7 @@ const About = () => {
           })}
         </TerminalWindow>
         <AboutBtn>
-          <Link to="/about">MORE ABOUT ME</Link>
+          <Link to="/about">more about me</Link>
         </AboutBtn>
       </Terminal>
     </AboutContainer>

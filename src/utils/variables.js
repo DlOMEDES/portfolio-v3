@@ -1,9 +1,10 @@
 import styled from "styled-components"
-
+import theme from "../utils/theme"
+const { colors } = theme
 // media query breakpointsź
 const size = {
-  xs: "480px",
-  sm: "768px",
+  xs: "600px",
+  sm: "800px",
   md: "1200px",
   lg: "1440px",
 }
@@ -17,7 +18,7 @@ export const device = {
 
 export const MainContainer = styled.div`
   padding: 0 150px;
-  margin: 0px auto;
+  margin: 0 auto;
   width: 100%;
   max-width: 1600px;
   min-height: 100vh;
@@ -26,9 +27,32 @@ export const MainContainer = styled.div`
     padding: 0 100px;
   }
   @media ${device.portrait} {
-    padding: 0 75px;
+    padding: 0 100px;
   }
   @media ${device.phone} {
     padding: 0 25px;
+  }
+`
+
+export const Button = styled.div`
+  margin: 6rem 0;
+  text-transform: uppercase;
+  a {
+    border-radius: 0.5rem;
+    background: rgba(${colors.violet}, 0.5);
+    color: rgb(${colors.white});
+    padding: 1rem 10rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.3rem;
+
+    transition: all 0.4s ease-in-out;
+    &:hover {
+      background: rgba(${colors.violet});
+      color: rgb(${colors.white});
+      border: 0.1rem solid transparent;
+    }
+    @media ${device.tablet} {
+      padding: 1rem 6.7rem;
+    }
   }
 `

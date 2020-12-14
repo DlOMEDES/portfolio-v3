@@ -7,7 +7,7 @@ import restate from "../images/restate.png"
 import lenses from "../images/lenses.png"
 import spartan from "../images/spartan-fitness.png"
 import travler from "../images/travler.png"
-import { device } from "../utils/variables"
+import { device, Button } from "../utils/variables"
 
 const { colors, shadows } = theme
 
@@ -77,6 +77,10 @@ const WorkHead = styled.div`
 `
 const WorkContainer = styled.section`
   position: relative;
+  @media ${device.tablet} {
+    max-width: 75%;
+    margin: 0 auto;
+  }
 `
 
 const Card = styled.a`
@@ -134,27 +138,9 @@ const Card = styled.a`
     }
   }
 `
-const ProjectBtn = styled.div`
-  margin: 6rem 0;
+const WorkButton = styled(Button)`
   text-align: center;
-  a {
-    border-radius: 0.5rem;
-    background: transparent;
-    color: rgb(${colors.white});
-    padding: 1rem 10rem;
-    font-size: 1.8rem;
-    letter-spacing: 0.3rem;
-
-    border: 0.1rem solid rgb(${colors.violet});
-    transition: all 0.4s ease-in-out;
-    &:hover {
-      background: rgba(${colors.violet}, 0.5);
-      color: rgb(${colors.white});
-      border: 0.1rem solid transparent;
-    }
-  }
 `
-
 const Work = () => {
   return (
     <WorkContainer id="work" className="sectionPad">
@@ -194,9 +180,9 @@ const Work = () => {
           </CardOverlay>
         </Card>
       </WorkGrid>
-      <ProjectBtn>
+      <WorkButton>
         <Link to="/projects">ALL PROJECTS</Link>
-      </ProjectBtn>
+      </WorkButton>
     </WorkContainer>
   )
 }

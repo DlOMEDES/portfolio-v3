@@ -77,6 +77,8 @@ const ServiceContent = styled.div`
 
   @media ${device.tablet} {
     grid-template-columns: 1fr;
+    max-width: 75%;
+    margin: 0 auto;
   }
 `
 const ServiceHead = styled.div`

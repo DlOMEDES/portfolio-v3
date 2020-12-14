@@ -23,7 +23,15 @@ const GlobalStyle = createGlobalStyle`
     @media ${device.laptop} {
       font-size: 52%; 
     }
-    
+    @media ${device.tablet} {
+      font-size: 48%; 
+    }
+    @media ${device.portrait} {
+      font-size: 52%; 
+    }
+    @media ${device.phone} {
+      font-size: 52%; 
+    }
   }
 
   body {
@@ -65,10 +73,6 @@ const GlobalStyle = createGlobalStyle`
   section {
     max-width: 120rem;  
     /* margin: 0 auto; */
-    
-    @media ${device.tablet} {
-      max-width: 80rem;  
-    }
   }
 
 
