@@ -5,29 +5,6 @@ import SectionTitle from "../components/SectionTitle"
 import ServiceBox from "../../content/service-box"
 import { device } from "../utils/variables"
 
-const Service = () => {
-  return (
-    <ServiceContainer id="services" className="sectionPad">
-      <ServiceHead>
-        <SectionTitle title="Services" />
-        <ShapeContainer />
-      </ServiceHead>
-      <ServiceContent>
-        {ServiceBox.map((box, index) => (
-          <Article key={index}>
-            <Icon>{box.icon}</Icon>
-            <h3>{box.title}</h3>
-            <h5>{box.subtitle}</h5>
-            <p>{box.text}</p>
-          </Article>
-        ))}
-      </ServiceContent>
-    </ServiceContainer>
-  )
-}
-
-export default Service
-
 const { colors, shadows } = theme
 const Icon = styled.span`
   font-size: 5rem;
@@ -107,3 +84,26 @@ const ShapeContainer = styled.div`
 const ServiceContainer = styled.section`
   position: relative;
 `
+
+const Service = () => {
+  return (
+    <ServiceContainer id="services" className="sectionPad">
+      <ServiceHead>
+        <SectionTitle title="What I Do" />
+        <ShapeContainer />
+      </ServiceHead>
+      <ServiceContent>
+        {ServiceBox.map((box, index) => (
+          <Article key={index}>
+            <Icon>{box.icon}</Icon>
+            <h3>{box.title}</h3>
+            <h5>{box.subtitle}</h5>
+            <p>{box.text}</p>
+          </Article>
+        ))}
+      </ServiceContent>
+    </ServiceContainer>
+  )
+}
+
+export default Service

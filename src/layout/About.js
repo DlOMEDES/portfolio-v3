@@ -126,9 +126,9 @@ const About = () => {
             )
           })}
         </TerminalWindow>
-        <AboutBtn>
+        {/* <AboutBtn>
           <Link to="/about">more about me</Link>
-        </AboutBtn>
+        </AboutBtn> */}
       </Terminal>
     </AboutContainer>
   )

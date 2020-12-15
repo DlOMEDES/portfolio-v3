@@ -57,15 +57,15 @@ export default function NavLinks({ styleClass }) {
           Home
         </Link>
       </li>
-      <li>
+      {/* <li>
         <Link to="/about">About</Link>
-      </li>
+      </li> */}
       <li>
         <Link to="/projects">Projects</Link>
       </li>
-      <li>
+      {/* <li>
         <Link to="/blogs">Blogs</Link>
-      </li>
+      </li> */}
       <li>
         <Link to="/contact">Contact</Link>
       </li>

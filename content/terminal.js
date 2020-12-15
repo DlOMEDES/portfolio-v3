@@ -1,15 +1,19 @@
 export default [
-  { input: `Diomedes.currentLocation`, output: `Philadelphia, PA` },
+  { input: `Current.Location`, output: `Philadelphia, PA` },
   {
-    input: `Diomedes.skills`,
-    output: `[HTML, CSS, JavaScript, React, Node, MySQL, WordPress, PHP, Webpack, Git ]`,
+    input: `Honed.Skills`,
+    output: `HTML, CSS, JavaScript, React, Node, PHP, MySQL, WordPress, Webpack, Git`,
   },
   {
-    input: `Diomedes.interests`,
-    output: `[development, design, photography, fishing, Health & Fitness`,
+    input: `Personal.Interests`,
+    output: `development, design, photography, fishing, Health & Fitness`,
   },
   {
-    input: `Diomedes.education`,
+    input: `Formal.Education`,
     output: `computer science - community college of the city of new york`,
+  },
+  {
+    input: `Learning.Platforms`,
+    output: `Online Courses - Freecodecamp, Udemy, TeamTreeHouse, Youtube`,
   },
 ]
