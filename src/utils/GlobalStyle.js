@@ -72,7 +72,7 @@ const GlobalStyle = createGlobalStyle`
 
   section {
     max-width: 120rem;  
-    /* margin: 0 auto; */
+    margin: 0 auto;
   }
 
 
