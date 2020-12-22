@@ -5,8 +5,8 @@ import SectionTitle from "../components/SectionTitle"
 import terminal from "../../content/terminal"
 import { device, Button } from "../utils/variables"
 import { Link } from "gatsby"
-// STYLES
 
+// STYLES
 const { colors, shadows } = theme
 
 const Input = styled.p`
@@ -31,6 +31,10 @@ const Statement = styled.div`
     padding: 5rem 0 0 0;
   }
   margin: 0 0 3.5rem 5rem;
+
+  @media ${device.tablet} {
+    margin: 0px 1rem 3.5rem 3rem;
+  }
 `
 
 const ColoredDot = styled.div`
@@ -104,7 +108,7 @@ const About = () => {
   return (
     <AboutContainer id="about" className="sectionPad">
       <AboutHead>
-        <SectionTitle title="About" />
+        <SectionTitle title="bits of me" />
         <ShapeContainer>
           <span>▲</span>
         </ShapeContainer>
@@ -126,9 +130,9 @@ const About = () => {
             )
           })}
         </TerminalWindow>
-        {/* <AboutBtn>
+        <AboutBtn>
           <Link to="/about">more about me</Link>
-        </AboutBtn> */}
+        </AboutBtn>
       </Terminal>
     </AboutContainer>
   )

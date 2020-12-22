@@ -43,16 +43,24 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
   }
 
-
-  h1,
-  h2, 
-  h3{
+  
+  h1 {
+    font-size: 5rem;
+  }
+  h2 { 
+    font-size: 4rem;
+  } 
+  h3 { 
+    font-size: 3rem;
     font-weight: 600;
   }
-  
-  h4, 
+  h4 {
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
   h5 {
     font-weight: 300;
+    font-size: 2rem;
   } 
 
   ol, ul {
@@ -70,10 +78,10 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  section {
+  /* section {
     max-width: 120rem;  
-    /* margin: 0 auto; */
-  }
+    margin: 0 auto;
+  } */
 
 
 /* utility classes */

@@ -50,16 +50,12 @@ const HeroImage = styled.div`
 const Hi = styled.h4`
   color: rgb(${colors.violet});
   margin: 0 0 1rem 0;
-  font-size: 2rem;
 `
-const Name = styled.h2`
+const Name = styled.h1`
   color: rgb(${colors.white});
-
-  font-size: 6rem;
 `
 const Subtitle = styled.h4`
   color: rgb(${colors.ashblueManatee});
-  font-size: 3rem;
 `
 
 const HeroButton = styled(Button)`

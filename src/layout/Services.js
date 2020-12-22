@@ -3,32 +3,26 @@ import styled from "styled-components"
 import theme from "../utils/theme"
 import SectionTitle from "../components/SectionTitle"
 import ServiceBox from "../../content/service-box"
+import SkillIcons from "../../content/skills"
 import { device } from "../utils/variables"
 
 const { colors, shadows } = theme
-const Icon = styled.span`
-  font-size: 5rem;
-  margin: 1rem 0 0 0;
-`
+
 const Article = styled.article`
   transition: all 0.4s ease-in-out;
   padding: 4.5rem 3rem;
   margin: 0 3rem 0 0;
 
-  @media ${device.tablet} {
-    margin: 3rem 0;
-  }
-
   &:hover {
     transform: scale(1.1);
   }
+
   &:last-child {
     margin: 0;
   }
 
-  h3 {
+  h4 {
     color: rgb(${colors.white});
-    font-size: 2.2rem;
     padding-bottom: 1rem 0;
   }
 
@@ -43,6 +37,13 @@ const Article = styled.article`
     /* box-shadow: rgba(2, 12, 27, 0.8) 0px 0px 30px -10px; */
     box-shadow: ${shadows.boxes} rgba(${colors.violet}, 0.3);
     border-bottom: 0.3rem solid rgba(${colors.violet}, 0.5);
+  }
+
+  @media ${device.tablet} {
+    margin: 3rem 0;
+    &:last-child {
+      margin: 3rem 0;
+    }
   }
 `
 const ServiceContent = styled.div`
@@ -85,6 +86,21 @@ const ServiceContainer = styled.section`
   position: relative;
 `
 
+const Skills = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+  text-align: center;
+
+  h5 {
+    text-transform: uppercase;
+  }
+`
+const Icon = styled.span`
+  font-size: 5rem;
+  margin: 0.5rem;
+`
+
 const Service = () => {
   return (
     <ServiceContainer id="services" className="sectionPad">
@@ -95,13 +111,20 @@ const Service = () => {
       <ServiceContent>
         {ServiceBox.map((box, index) => (
           <Article key={index}>
-            <Icon>{box.icon}</Icon>
-            <h3>{box.title}</h3>
+            <h4>{box.title}</h4>
             <h5>{box.subtitle}</h5>
             <p>{box.text}</p>
           </Article>
         ))}
       </ServiceContent>
+      <Skills className="mSec10">
+        {SkillIcons.map((icon, index) => (
+          <div key={index}>
+            <h5>{icon.text}</h5>
+            <Icon>{icon.logo}</Icon>
+          </div>
+        ))}
+      </Skills>
     </ServiceContainer>
   )
 }

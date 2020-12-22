@@ -20,7 +20,7 @@ const NavList = styled.ol`
     li a {
       color: rgb(${colors.white});
       font-weight: 400;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       transition: all 0.3s ease-out;
       &:hover {
         color: rgb(${colors.violet});
@@ -57,14 +57,14 @@ export default function NavLinks({ styleClass }) {
           Home
         </Link>
       </li>
-      {/* <li>
+      <li>
         <Link to="/about">About</Link>
-      </li> */}
+      </li>
       <li>
         <Link to="/projects">Projects</Link>
       </li>
       {/* <li>
-        <Link to="/blogs">Blogs</Link>
+        <Link to="/blog">Blog</Link>
       </li> */}
       <li>
         <Link to="/contact">Contact</Link>
