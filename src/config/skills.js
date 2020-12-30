@@ -1,8 +1,14 @@
 import React from "react"
-import { FaWordpress, FaHtml5, FaCss3, FaReact, FaPhp } from "react-icons/fa"
+import {
+  FaWordpress,
+  FaHtml5,
+  FaCss3,
+  FaReact,
+  FaPhp,
+  FaNodeJs,
+} from "react-icons/fa"
 import { IoLogoJavascript } from "react-icons/io"
 import { DiMysql } from "react-icons/di"
-import { AiOutlineApi } from "react-icons/ai"
 
 export default [
   {
@@ -22,8 +28,8 @@ export default [
     logo: <FaReact />,
   },
   {
-    text: "api",
-    logo: <AiOutlineApi />,
+    text: "node",
+    logo: <FaNodeJs />,
   },
   {
     text: "php",

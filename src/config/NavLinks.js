@@ -58,14 +58,11 @@ export default function NavLinks({ styleClass }) {
         </Link>
       </li>
       <li>
-        <Link to="/about">About</Link>
+        <Link to="/blog">Blog</Link>
       </li>
       <li>
         <Link to="/projects">Projects</Link>
       </li>
-      {/* <li>
-        <Link to="/blog">Blog</Link>
-      </li> */}
       <li>
         <Link to="/contact">Contact</Link>
       </li>

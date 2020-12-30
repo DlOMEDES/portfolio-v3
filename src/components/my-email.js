@@ -29,10 +29,7 @@ const SocialList = styled.div`
     transition: all 0.3s ease-in-out;
     &:hover {
       font-size: 1.8rem;
-      writing-mode: vertical-rl;
       color: rgb(${colors.violet});
-      margin: 2rem auto;
-      padding: 1rem;
       letter-spacing: 0.2rem;
     }
   }

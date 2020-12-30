@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../layout"
 import Hero from "../layout/Hero"
 import Work from "../layout/Work"
-import About from "../layout/About"
+import Skills from "../layout/Skills"
 import Services from "../layout/Services"
 import Head from "components/Head"
 
@@ -13,7 +13,7 @@ const index = () => {
       <Hero />
       <Services />
       <Work />
-      <About />
+      <Skills />
     </Layout>
   )
 }

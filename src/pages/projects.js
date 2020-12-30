@@ -6,6 +6,7 @@ import FontOne from "../images/font-oswald.png"
 import FontTwo from "../images/font-raleway.png"
 import projectWire from "../images/project-email.png"
 import LRglasses from "../images/LR-Glasses.png"
+import { device } from "../utils/variables"
 
 const { colors } = theme
 
@@ -34,6 +35,10 @@ const Hero = styled.section`
     z-index: -1;
     border-radius: 0.5rem;
   }
+
+  @media ${device.tablet} {
+    grid-column: fullstart/fullend;
+  }
 `
 const Context = styled.div`
   grid-column: col-start 7 / fullend;
@@ -49,18 +54,26 @@ const Context = styled.div`
     padding: 3rem 1rem;
 
     span {
-      color: rgb(${colors.violet});
+      color: rgb(${colors.white});
       margin: 0 0.5rem 0 2rem;
     }
   }
 
-  .date {
-  }
+  @media ${device.tablet} {
+    margin: 0;
+    grid-column: col-start 2 / col-end 7;
 
-  .role {
-  }
+    display: flex;
+    flex-direction: row;
+    p {
+      margin: 0;
+      box-shadow: none;
+      padding: 1rem;
 
-  .context {
+      span {
+        margin: 0;
+      }
+    }
   }
 `
 
@@ -84,21 +97,34 @@ const Story = styled.section`
   h4 {
     color: rgb(${colors.white});
   }
+
+  @media ${device.tablet} {
+    grid-column: col-start 2 / col-end 7;
+
+    .content {
+      padding: 0;
+    }
+  }
 `
 const MockFrame = styled.div`
   grid-column: col-start 5 / fullend;
 
   display: grid;
-
+  align-items: center;
   img {
     width: 100%;
+  }
+
+  @media ${device.tablet} {
+    grid-column: col-start 2 / col-end 7;
   }
 `
 const Colors = styled.section`
   grid-column: col-start 2 / col-end 7;
 
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 5rem;
 
   .color {
     background: brown;
@@ -119,14 +145,16 @@ const Fonts = styled.section`
   grid-column: col-start 2 / col-end 7;
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 3rem;
 
   .fontOne,
   .fontTwo {
     padding: 2rem;
     background: white;
-
+    &:hover {
+      // on hover make the images bigger and add a overlay like the project grid.
+    }
     img {
       object-fit: cover;
       width: 100%;
@@ -158,6 +186,8 @@ export default function project2() {
         <Intro className="mSec10">
           <h2 className="mbSm">LR Lenses</h2>
           <p className="mbLg">
+            WRITE here what i did, how and what tech i used.
+            <br />
             LRL aims to be a modern, solid and easy-to-use web-based software to
             manage content. With its intuitive dashboard and hand-crafted UI,
             Lato helps every customer to easily manage every kind of content
@@ -168,16 +198,20 @@ export default function project2() {
           <div className="content">
             <h4 className="mbMd">Project Story</h4>
             <p className="mbSm">
+              WRITE THE RESULTS
+              <br />
               First Lato is modular: every part of the application is a separate
               module with its purpose.
             </p>
             <p className="mbSm">
-              As the Lead Front-end Developer, my main task is to build the
+              WRITE ABOUT THE COLORS USED.
+              <br />
               lato_view module, which is responsible of the entire Look and Feel
               of the application.
             </p>
             <p className="mbSm">
-              I built the entire UI/UX of the admin dashboard, including a
+              WRITE ABOUT THE FONTS.
+              <br />I built the entire UI/UX of the admin dashboard, including a
               responsive custom theme, a custom flex grid system, custom form
               validation, dynamic themes and more.
             </p>
@@ -199,16 +233,17 @@ export default function project2() {
           <div className="color color-4">
             <p className="hexColor">HexColor4</p>
           </div>
-          <div className="color color-5">
-            <p className="hexColor">Hexcolor5</p>
-          </div>
         </Colors>
         <Fonts className="mSec10">
           <div className="fontOne">
-            <img src={FontOne} alt="" />
+            <a href="https://fonts.google.com/specimen/Oswald?query=osw">
+              <img src={FontOne} alt="" />
+            </a>
           </div>
           <div className="fontTwo">
-            <img src={FontTwo} alt="" />
+            <a href="https://fonts.google.com/specimen/Raleway">
+              <img src={FontTwo} alt="" />
+            </a>
           </div>
         </Fonts>
       </GridContainer>

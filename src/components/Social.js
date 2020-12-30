@@ -43,52 +43,48 @@ const ListItem = styled.li`
   }
 `
 
-const HyperLink = styled.a`
-  padding: 1rem;
-`
-
 const IconGithub = styled(AiFillGithub)`
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: rgb(${colors.ashblueManatee});
 
   transition: all 0.3s ease-out;
 
   &:hover {
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: rgb(${colors.violet});
   }
 `
 
 const IconLinkedin = styled(TiSocialLinkedinCircular)`
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: rgb(${colors.ashblueManatee});
 
   transition: all 0.3s ease-out;
 
   &:hover {
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: rgb(${colors.violet});
   }
 `
 const IconTwitter = styled(AiOutlineTwitter)`
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: rgb(${colors.ashblueManatee});
 
   transition: all 0.3s ease-out;
 
   &:hover {
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: rgb(${colors.violet});
   }
 `
 const IconCodepen = styled(AiFillCodepenCircle)`
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: rgb(${colors.ashblueManatee});
 
   transition: all 0.3s ease-out;
 
   &:hover {
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: rgb(${colors.violet});
   }
 `
@@ -98,24 +94,24 @@ const Social = () => {
     <SocialContainer>
       <SocialList>
         <ListItem>
-          <HyperLink href="https://github.com/DlOMEDES">
+          <a href="https://github.com/DlOMEDES">
             <IconGithub />
-          </HyperLink>
+          </a>
         </ListItem>
         <ListItem>
-          <HyperLink href="https://www.linkedin.com/in/diomedeslajara/">
+          <a href="https://www.linkedin.com/in/diomedeslajara/">
             <IconLinkedin />
-          </HyperLink>
+          </a>
         </ListItem>
         <ListItem>
-          <HyperLink href="https://twitter.com/dl_ajara">
+          <a href="https://twitter.com/dl_ajara">
             <IconTwitter />
-          </HyperLink>
+          </a>
         </ListItem>
         <ListItem>
-          <HyperLink href="https://codepen.io/DlOMEDES">
+          <a href="https://codepen.io/DlOMEDES">
             <IconCodepen />
-          </HyperLink>
+          </a>
         </ListItem>
       </SocialList>
     </SocialContainer>

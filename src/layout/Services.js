@@ -2,8 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../utils/theme"
 import SectionTitle from "../components/SectionTitle"
-import ServiceBox from "../../content/service-box"
-import SkillIcons from "../../content/skills"
+import ServiceBox from "../config/service-box"
 import { device } from "../utils/variables"
 
 const { colors, shadows } = theme
@@ -55,8 +54,12 @@ const ServiceContent = styled.div`
 
   @media ${device.tablet} {
     grid-template-columns: 1fr;
-    max-width: 75%;
+    max-width: 80%;
     margin: 0 auto;
+  }
+
+  @media ${device.phone} {
+    max-width: 100%;
   }
 `
 const ServiceHead = styled.div`
@@ -86,21 +89,6 @@ const ServiceContainer = styled.section`
   position: relative;
 `
 
-const Skills = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 6rem;
-  text-align: center;
-
-  h5 {
-    text-transform: uppercase;
-  }
-`
-const Icon = styled.span`
-  font-size: 5rem;
-  margin: 0.5rem;
-`
-
 const Service = () => {
   return (
     <ServiceContainer id="services" className="sectionPad">
@@ -117,14 +105,6 @@ const Service = () => {
           </Article>
         ))}
       </ServiceContent>
-      <Skills className="mSec10">
-        {SkillIcons.map((icon, index) => (
-          <div key={index}>
-            <h5>{icon.text}</h5>
-            <Icon>{icon.logo}</Icon>
-          </div>
-        ))}
-      </Skills>
     </ServiceContainer>
   )
 }

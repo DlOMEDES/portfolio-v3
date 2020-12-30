@@ -2,9 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../utils/theme"
 import SectionTitle from "../components/SectionTitle"
-import terminal from "../../content/terminal"
+import terminal from "../config/terminal"
 import { device, Button } from "../utils/variables"
 import { Link } from "gatsby"
+import SkillIcons from "../config/skills"
 
 // STYLES
 const { colors, shadows } = theme
@@ -32,6 +33,11 @@ const Statement = styled.div`
   }
   margin: 0 0 3.5rem 5rem;
 
+  &:nth-child(2) {
+    p {
+      text-transform: initial;
+    }
+  }
   @media ${device.tablet} {
     margin: 0px 1rem 3.5rem 3rem;
   }
@@ -104,11 +110,36 @@ const AboutBtn = styled(Button)`
   text-align: center;
 `
 
+const Skills = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-gap: 6rem;
+
+  h4 {
+    grid-column: 1/-1;
+    color: rgb(${colors.white});
+    text-transform: uppercase;
+    margin-left: 3rem;
+  }
+
+  .logos {
+    text-align: center;
+    h5 {
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+  }
+`
+const Icon = styled.span`
+  font-size: 5rem;
+  margin: 0.5rem;
+`
+
 const About = () => {
   return (
     <AboutContainer id="about" className="sectionPad">
       <AboutHead>
-        <SectionTitle title="bits of me" />
+        <SectionTitle title="Honed skills" />
         <ShapeContainer>
           <span>▲</span>
         </ShapeContainer>
@@ -130,10 +161,16 @@ const About = () => {
             )
           })}
         </TerminalWindow>
-        <AboutBtn>
-          <Link to="/about">more about me</Link>
-        </AboutBtn>
       </Terminal>
+      <Skills className="mSec10">
+        <h4>My tools</h4>
+        {SkillIcons.map((icon, index) => (
+          <div className="logos" key={index}>
+            <h5>{icon.text}</h5>
+            <Icon>{icon.logo}</Icon>
+          </div>
+        ))}
+      </Skills>
     </AboutContainer>
   )
 }

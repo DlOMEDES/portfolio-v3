@@ -61,6 +61,7 @@ const GlobalStyle = createGlobalStyle`
   h5 {
     font-weight: 300;
     font-size: 2rem;
+    text-transform: capitalize;
   } 
 
   ol, ul {
