@@ -1,11 +1,11 @@
 export default [
   {
     input: `Design.UIUX`,
-    output: `user interface design experience`,
+    output: `I am not a designer but I understand design principles and how to apply them. eye for design`,
   },
   {
     input: `Frontend.Development`,
-    output: `converting design and data to a graphical user interface`,
+    output: `converting design and data to a graphical user interface, eating api's`,
   },
   {
     input: `Backend.Development`,

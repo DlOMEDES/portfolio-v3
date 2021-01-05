@@ -1,14 +1,14 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import theme from "../utils/theme"
 import SectionTitle from "../components/SectionTitle"
 // import restate from "../images/restate.png"
 // import lenses from "../images/lenses.png"
 // import spartan from "../images/spartan-fitness.png"
 // import travler from "../images/travler.png"
-import { device, Button } from "../utils/variables"
-
+import { device } from "../utils/variables"
+import { useStaticQuery } from "gatsby"
 const { colors, shadows } = theme
 
 // styles
@@ -62,23 +62,22 @@ const CardOverlay = styled.div`
   height: 100%;
   background: rgba(${colors.midnightPurple}, 0.95);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
   top: 0;
   left: -100%;
   transition: all 0.4s ease-in-out;
-  border: 1px solid rgb(${colors.violet});
+  /* border: 1px solid rgb(${colors.violet}); */
 
-  h4 {
-    color: rgb(${colors.white});
-    padding: 1rem 2rem;
+  h3 {
+    color: rgb(${colors.violet});
     text-transform: uppercase;
-    font-size: 2rem;
+  }
 
-    &:hover {
-      color: rgb(${colors.white});
-    }
+  p {
+    color: rgb(${colors.white});
   }
 `
 
@@ -137,13 +136,32 @@ const Card = styled(Link)`
     }
   }
 `
-const WorkButton = styled(Button)`
-  text-align: center;
+// const WorkButton = styled(Button)`
+//   text-align: center;
 
-  @media ${device.tablet} {
-  }
-`
+//   @media ${device.tablet} {
+//   }
+// `
 const Work = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              title
+              context
+            }
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  console.log(data)
   return (
     <WorkContainer id="work" className="sectionPad">
       <WorkHead>
@@ -152,35 +170,18 @@ const Work = () => {
       </WorkHead>
 
       <WorkGrid>
-        <Card to="/projects">
-          <CardOverlay>
-            <h4>Project 1</h4>
-          </CardOverlay>
-        </Card>
-
-        <Card to="/projects">
-          <CardOverlay>
-            <h4>Project 2</h4>
-          </CardOverlay>
-        </Card>
-
-        <Card to="/projects">
-          <CardOverlay>
-            <h4>Project 3</h4>
-          </CardOverlay>
-        </Card>
-
-        <Card to="/projects">
-          <CardOverlay>
-            <h4>Project 4</h4>
-          </CardOverlay>
-        </Card>
-
-        <Card to="/projects">
-          <CardOverlay>
-            <h4>Project 5</h4>
-          </CardOverlay>
-        </Card>
+        {data.allMarkdownRemark.edges.map(edge => {
+          return (
+            <>
+              <Card to={`/project/${edge.node.fields.slug}`}>
+                <CardOverlay>
+                  <h3>{edge.node.frontmatter.title}</h3>
+                  <p>{edge.node.frontmatter.context}</p>
+                </CardOverlay>
+              </Card>
+            </>
+          )
+        })}
       </WorkGrid>
       {/* <WorkButton>
         <Link to="/projects">ALL PROJECTS</Link>

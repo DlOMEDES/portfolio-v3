@@ -2,11 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../utils/theme"
 import Layout from "../layout"
-import FontOne from "../images/font-oswald.png"
-import FontTwo from "../images/font-raleway.png"
-import projectWire from "../images/project-email.png"
-import LRglasses from "../images/LR-Glasses.png"
 import { device } from "../utils/variables"
+import { graphql } from "gatsby"
 
 const { colors } = theme
 
@@ -163,13 +160,11 @@ const Fonts = styled.section`
   }
 `
 
-export default function project2() {
+const ProjectTemplate = () => {
   return (
     <Layout>
       <GridContainer>
-        <Hero className="mSec10">
-          <img src={LRglasses} alt="" />
-        </Hero>
+        <Hero className="mSec10">{/* <img src={LRglasses} alt="" /> */}</Hero>
         <Context className="mSec10">
           <p className="date">
             <span>Date</span> October 2019
@@ -218,7 +213,7 @@ export default function project2() {
           </div>
         </Story>
         <MockFrame className="mSec10">
-          <img src={projectWire} alt="" />
+          {/* <img src={projectWire} alt="" /> */}
         </MockFrame>
         <Colors className="mSec10">
           <div className="color color-1">
@@ -237,12 +232,12 @@ export default function project2() {
         <Fonts className="mSec10">
           <div className="fontOne">
             <a href="https://fonts.google.com/specimen/Oswald?query=osw">
-              <img src={FontOne} alt="" />
+              {/* <img src={FontOne} alt="" /> */}
             </a>
           </div>
           <div className="fontTwo">
             <a href="https://fonts.google.com/specimen/Raleway">
-              <img src={FontTwo} alt="" />
+              {/* <img src={FontTwo} alt="" /> */}
             </a>
           </div>
         </Fonts>
@@ -250,3 +245,4 @@ export default function project2() {
     </Layout>
   )
 }
+export default ProjectTemplate

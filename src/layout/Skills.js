@@ -3,8 +3,8 @@ import styled from "styled-components"
 import theme from "../utils/theme"
 import SectionTitle from "../components/SectionTitle"
 import terminal from "../config/terminal"
-import { device, Button } from "../utils/variables"
-import { Link } from "gatsby"
+import { device } from "../utils/variables"
+// import { Link } from "gatsby"
 import SkillIcons from "../config/skills"
 
 // STYLES
@@ -106,9 +106,9 @@ const AboutHead = styled.div`
 const AboutContainer = styled.section`
   background-size: cover;
 `
-const AboutBtn = styled(Button)`
-  text-align: center;
-`
+// const AboutBtn = styled(Button)`
+//   text-align: center;
+// `
 
 const Skills = styled.div`
   display: grid;
