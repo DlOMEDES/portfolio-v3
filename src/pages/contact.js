@@ -1,12 +1,13 @@
 import React from "react"
-import Layout from "../layout/"
-const about = () => {
+import Layout from "../layout"
+
+export default function Contact() {
   return (
     <Layout>
-      <h1>Contact Page</h1>
-      <p>Here i will have a contact form</p>
+      <section>
+        <h3>Let's work together</h3>
+        <p></p>
+      </section>
     </Layout>
   )
 }
-
-export default about

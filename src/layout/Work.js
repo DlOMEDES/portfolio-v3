@@ -3,10 +3,6 @@ import styled from "styled-components"
 import { graphql, Link } from "gatsby"
 import theme from "../utils/theme"
 import SectionTitle from "../components/SectionTitle"
-// import restate from "../images/restate.png"
-// import lenses from "../images/lenses.png"
-// import spartan from "../images/spartan-fitness.png"
-// import travler from "../images/travler.png"
 import { device } from "../utils/variables"
 import { useStaticQuery } from "gatsby"
 const { colors, shadows } = theme
@@ -16,7 +12,7 @@ const { colors, shadows } = theme
 const WorkGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 14rem);
+  grid-template-rows: repeat(4, 16rem);
   grid-gap: 3rem;
   padding-top: 25rem;
 
@@ -57,7 +53,7 @@ const WorkContainer = styled.section`
     margin: 0 auto;
   }
 `
-const CardOverlay = styled.div`
+const CardOverlay = styled(Link)`
   width: 100%;
   height: 100%;
   background: rgba(${colors.midnightPurple}, 0.95);
@@ -72,23 +68,24 @@ const CardOverlay = styled.div`
   /* border: 1px solid rgb(${colors.violet}); */
 
   h3 {
-    color: rgb(${colors.violet});
+    color: rgb(${colors.white});
     text-transform: uppercase;
   }
 
-  p {
-    color: rgb(${colors.white});
+  h5 {
+    color: rgb(${colors.violet});
   }
 `
 
-const Card = styled(Link)`
+const Card = styled.div`
   position: relative;
-  padding: 4rem;
+  text-align: center;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
   overflow: hidden;
   &:hover {
     ${CardOverlay} {
+      padding: 2rem;
       left: 0;
     }
   }
@@ -148,9 +145,13 @@ const Work = () => {
       allMarkdownRemark {
         edges {
           node {
+            id
             frontmatter {
               title
               context
+              image {
+                absolutePath
+              }
             }
             fields {
               slug
@@ -161,7 +162,6 @@ const Work = () => {
     }
   `)
 
-  console.log(data)
   return (
     <WorkContainer id="work" className="sectionPad">
       <WorkHead>
@@ -172,14 +172,12 @@ const Work = () => {
       <WorkGrid>
         {data.allMarkdownRemark.edges.map(edge => {
           return (
-            <>
-              <Card to={`/project/${edge.node.fields.slug}`}>
-                <CardOverlay>
-                  <h3>{edge.node.frontmatter.title}</h3>
-                  <p>{edge.node.frontmatter.context}</p>
-                </CardOverlay>
-              </Card>
-            </>
+            <Card key={edge.node.id}>
+              <CardOverlay to={`/project/${edge.node.fields.slug}`}>
+                <h3>{edge.node.frontmatter.title}</h3>
+                <h5>{edge.node.frontmatter.context}</h5>
+              </CardOverlay>
+            </Card>
           )
         })}
       </WorkGrid>

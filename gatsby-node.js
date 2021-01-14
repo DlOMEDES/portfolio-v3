@@ -41,6 +41,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
+  // create new dynmic pages for slugs
   result.data.allMarkdownRemark.edges.forEach(edge => {
     createPage({
       component: projectTemplate,
@@ -50,5 +51,4 @@ module.exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-  // create new dynmic pages
 }

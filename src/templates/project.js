@@ -160,55 +160,62 @@ const Fonts = styled.section`
   }
 `
 
-const ProjectTemplate = () => {
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      frontmatter {
+        title
+        challenge
+        context
+        date
+        story
+        role
+      }
+    }
+  }
+`
+
+const ProjectTemplate = props => {
+  console.log(props)
   return (
     <Layout>
       <GridContainer>
         <Hero className="mSec10">{/* <img src={LRglasses} alt="" /> */}</Hero>
         <Context className="mSec10">
           <p className="date">
-            <span>Date</span> October 2019
+            <span>Date</span>
+            {props.data.markdownRemark.frontmatter.date}
           </p>
 
           <p className="role">
-            <span>Role</span> Email Developer
+            <span>Role</span>
+            {props.data.markdownRemark.frontmatter.role}
           </p>
 
           <p className="type">
-            <span>Context</span> Personal Project
+            <span>Context</span>
+            {props.data.markdownRemark.frontmatter.context}
           </p>
         </Context>
         <Intro className="mSec10">
-          <h2 className="mbSm">LR Lenses</h2>
+          <h2 className="mbSm">
+            {props.data.markdownRemark.frontmatter.title}
+          </h2>
           <p className="mbLg">
-            WRITE here what i did, how and what tech i used.
-            <br />
-            LRL aims to be a modern, solid and easy-to-use web-based software to
-            manage content. With its intuitive dashboard and hand-crafted UI,
-            Lato helps every customer to easily manage every kind of content
-            he/she needs.
+            {props.data.markdownRemark.frontmatter.challenge}
           </p>
         </Intro>
         <Story className="mSec10">
           <div className="content">
             <h4 className="mbMd">Project Story</h4>
             <p className="mbSm">
-              WRITE THE RESULTS
-              <br />
-              First Lato is modular: every part of the application is a separate
-              module with its purpose.
+              {props.data.markdownRemark.frontmatter.story}
             </p>
             <p className="mbSm">
-              WRITE ABOUT THE COLORS USED.
-              <br />
-              lato_view module, which is responsible of the entire Look and Feel
-              of the application.
+              {props.data.markdownRemark.frontmatter.story}
             </p>
             <p className="mbSm">
-              WRITE ABOUT THE FONTS.
-              <br />I built the entire UI/UX of the admin dashboard, including a
-              responsive custom theme, a custom flex grid system, custom form
-              validation, dynamic themes and more.
+              {props.data.markdownRemark.frontmatter.story}
             </p>
           </div>
         </Story>

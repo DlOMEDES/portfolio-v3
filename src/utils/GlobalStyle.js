@@ -45,10 +45,10 @@ const GlobalStyle = createGlobalStyle`
 
   
   h1 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   h2 { 
-    font-size: 4rem;
+    font-size: 3.5rem;
   } 
   h3 { 
     font-size: 3rem;
@@ -59,8 +59,8 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
   }
   h5 {
-    font-weight: 300;
     font-size: 2rem;
+    font-weight: 300;
     text-transform: capitalize;
   } 
 
