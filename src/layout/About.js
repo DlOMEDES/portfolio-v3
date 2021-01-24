@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../utils/theme"
 import SectionTitle from "../components/SectionTitle"
-import ServiceBox from "../config/service-box"
+import AboutBox from "../config/About-box"
 import { device } from "../utils/variables"
 
 const { colors, shadows } = theme
@@ -35,7 +35,7 @@ const Article = styled.article`
     background-color: rgb(${colors.midnightPurple});
     /* box-shadow: rgba(2, 12, 27, 0.8) 0px 0px 30px -10px; */
     box-shadow: ${shadows.boxes} rgba(${colors.violet}, 0.3);
-    border-bottom: 0.3rem solid rgba(${colors.violet}, 0.5);
+    border-bottom: 0.3rem solid rgb(${colors.white});
   }
 
   @media ${device.tablet} {
@@ -45,7 +45,7 @@ const Article = styled.article`
     }
   }
 `
-const ServiceContent = styled.div`
+const AboutContent = styled.div`
   display: grid;
   grid-gap: 2.5rem;
   letter-spacing: 0.1rem;
@@ -62,7 +62,7 @@ const ServiceContent = styled.div`
     max-width: 100%;
   }
 `
-const ServiceHead = styled.div`
+const AboutHead = styled.div`
   position: relative;
   @media ${device.tablet} {
     display: flex;
@@ -85,28 +85,30 @@ const ShapeContainer = styled.div`
   }
 `
 
-const ServiceContainer = styled.section`
+const AboutContainer = styled.section`
   position: relative;
 `
 
-const Service = () => {
+const About = () => {
   return (
-    <ServiceContainer id="services" className="sectionPad">
-      <ServiceHead>
-        <SectionTitle title="What I Do" />
+    <AboutContainer id="Abouts" className="sectionPad">
+      <AboutHead>
+        <SectionTitle title="about me" />
         <ShapeContainer />
-      </ServiceHead>
-      <ServiceContent>
-        {ServiceBox.map((box, index) => (
+      </AboutHead>
+      <AboutContent>
+        {AboutBox.map((box, index) => (
           <Article key={index}>
             <h4>{box.title}</h4>
             <h5>{box.subtitle}</h5>
             <p>{box.text}</p>
+            <br />
+            <p>{box.extraText}</p>
           </Article>
         ))}
-      </ServiceContent>
-    </ServiceContainer>
+      </AboutContent>
+    </AboutContainer>
   )
 }
 
-export default Service
+export default About

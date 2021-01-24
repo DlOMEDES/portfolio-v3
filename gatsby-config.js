@@ -11,11 +11,20 @@ module.exports = {
     author: "Diomedes Lajara",
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: "content",
         path: `${__dirname}/content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "images",
+        path: `${__dirname}/src/images`,
       },
     },
     `gatsby-transformer-remark`,
@@ -41,7 +50,7 @@ module.exports = {
         // background_color: config.darkNavyColor,
         // theme_color: config.navyColor,
         // display: "minimal-ui",
-        icon: "src/images/dl-logo.png",
+        // icon: "src/images/dlogo.png",
       },
     },
   ],

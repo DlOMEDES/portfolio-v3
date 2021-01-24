@@ -28,8 +28,8 @@ export default [
     logo: <FaReact />,
   },
   {
-    text: "node",
-    logo: <FaNodeJs />,
+    text: "wordpress",
+    logo: <FaWordpress />,
   },
   {
     text: "php",
@@ -40,7 +40,7 @@ export default [
     logo: <DiMysql />,
   },
   {
-    text: "wordpress",
-    logo: <FaWordpress />,
+    text: "node",
+    logo: <FaNodeJs />,
   },
 ]

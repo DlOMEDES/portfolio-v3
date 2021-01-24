@@ -33,6 +33,10 @@ const HeroContainer = styled.section`
 const HeroDetails = styled.div`
   line-height: 1.3;
   letter-spacing: 0.1rem;
+
+  h4 {
+    font-weight: 300;
+  }
 `
 const HeroImage = styled.div`
   margin: 0 auto;
@@ -47,17 +51,18 @@ const HeroImage = styled.div`
   }
 `
 
-const Hi = styled.p`
-  color: rgb(${colors.ashblueManatee});
-  margin: 0 0 1.5rem 0;
+const Hi = styled.h4`
+  color: rgb(${colors.violet});
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
 `
-const Title = styled.h1`
+const Name = styled.h2`
   color: rgb(${colors.white});
+  font-size: 6rem;
 `
-const Subtitle = styled.h5`
-  margin: 1.5rem 0;
-  color: rgba(${colors.violet}, 0.5);
-  text-transform: none;
+const Subtitle = styled.h4`
+  color: rgb(${colors.ashblueManatee});
+  font-size: 3rem;
 `
 
 const HeroButton = styled(Button)`
@@ -73,8 +78,8 @@ const Hero = () => {
     <>
       <HeroContainer id="hero" className="sectionPad">
         <HeroDetails>
-          <Hi>Hi, my name is {config.name}.</Hi>
-          <Title>{config.iDo}</Title>
+          <Hi>Hi, my name is</Hi>
+          <Name>{config.name}</Name>
           <Subtitle>{config.siteDescription}</Subtitle>
           <HeroButton>
             <Link to="/contact">contact me</Link>

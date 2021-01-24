@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "gatsby-link"
-import logo from "../images/dl-logo.png"
+import logo from "../images/dlogo.png"
 import styled from "styled-components"
 import { device } from "../utils/variables"
 import DrawerMenuBtn from "./DrawerMenuBtn"

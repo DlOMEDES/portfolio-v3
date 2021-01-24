@@ -1,18 +1,23 @@
 export default [
   {
-    input: `Design.UIUX`,
-    output: `I am not a designer but I understand design principles and how to apply them. eye for design`,
+    input: `Responsive Design`,
+    output: `I use programs like Figma and Adobe to create mock-ups of what the product will look like in mobile devices and desktops. I also keep a sketch book to brainstorm quick wireframes iterations.`,
   },
   {
-    input: `Frontend.Development`,
-    output: `converting design and data to a graphical user interface, eating api's`,
+    input: `Frontend Development`,
+    output: `This is what I specialize in. I enjoy using the combination of HTML, CSS, JavaScript to build beautiful and responsive frontend websites and web based applications.`,
+  },
+
+  {
+    input: `HTML / CSS / Sass / Styled-Components`,
+    output: `I'm passionate about these technologies to power shapes, structure and colors when developing a pixel perfect web design. `,
   },
   {
-    input: `Backend.Development`,
-    output: `from the server side of an application that communicates between the database and the browser`,
+    input: `JavaScript / React / jQuery`,
+    output: `Using JS is facinating. It gives me an inifinite number of posibilities for creating solutions that are tailored to specific requirements. My favorite way of using it is to manipulate DOM elements of web pages to give users an interactive experience.`,
   },
   {
-    input: `My.Goal`,
-    output: `To create and solve web things using my tools`,
+    input: `PHP / NODE / MySQL`,
+    output: `These are my secondary tools that support and carryout the rest of the work in the backend. PHP helps me build full themes in WordPress and Node comes in many usable packages. These techonologies also allow me build basic servers connected to a database and perform CRUD operations.`,
   },
 ]

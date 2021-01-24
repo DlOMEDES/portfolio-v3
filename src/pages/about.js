@@ -1,12 +1,15 @@
 import React from "react"
 import Layout from "../layout/"
-const about = () => {
+import About from "../layout/About"
+import Skills from "../layout/Skills"
+
+const AboutPage = () => {
   return (
     <Layout>
-      <h1>About Page</h1>
-      <p>this is all about me </p>
+      <About />
+      <Skills />
     </Layout>
   )
 }
 
-export default about
+export default AboutPage

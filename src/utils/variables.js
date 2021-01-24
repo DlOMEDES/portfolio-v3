@@ -39,17 +39,17 @@ export const Button = styled.div`
   text-transform: uppercase;
   a {
     border-radius: 0.5rem;
-    background: rgba(${colors.violet}, 0.5);
+    background: rgba(${colors.violet}, 0.3);
     color: rgb(${colors.white});
     padding: 1rem 10rem;
     font-size: 1.8rem;
+    font-weight: bold;
     letter-spacing: 0.3rem;
 
     transition: all 0.4s ease-in-out;
     &:hover {
-      background: rgba(${colors.violet});
-      color: rgb(${colors.white});
-      border: 0.1rem solid transparent;
+      background: rgb(${colors.white});
+      color: rgb(${colors.midnightPurple});
     }
     @media ${device.tablet} {
       padding: 1rem 6.7rem;

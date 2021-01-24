@@ -73,7 +73,12 @@ const CardOverlay = styled(Link)`
   }
 
   h5 {
-    color: rgb(${colors.violet});
+    color: rgb(${colors.ashblueManatee});
+  }
+
+  @media ${device.tablet} {
+    background: rgba(${colors.midnightPurple}, 0.5);
+    left: 0%;
   }
 `
 
@@ -149,9 +154,6 @@ const Work = () => {
             frontmatter {
               title
               context
-              image {
-                absolutePath
-              }
             }
             fields {
               slug

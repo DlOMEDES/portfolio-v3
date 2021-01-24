@@ -3,7 +3,7 @@ import Layout from "../layout"
 import Hero from "../layout/Hero"
 import Work from "../layout/Work"
 import Skills from "../layout/Skills"
-import Services from "../layout/Services"
+import About from "../layout/About"
 import Head from "components/Head"
 
 const index = () => {
@@ -11,7 +11,7 @@ const index = () => {
     <Layout>
       <Head title="Diomedes Lajara" />
       <Hero />
-      <Services />
+      <About />
       <Work />
       <Skills />
     </Layout>

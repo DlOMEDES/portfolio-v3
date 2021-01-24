@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../utils/theme"
 import Layout from "../layout"
-import { device } from "../utils/variables"
+import { device, Button } from "../utils/variables"
 import { graphql } from "gatsby"
 
 const { colors } = theme
@@ -13,7 +13,6 @@ const GridContainer = styled.div`
   grid-template-columns:
     1fr [fullstart] repeat(8, [col-start] minmax(min-content, 16rem) [col-end])
     [fullend] 1fr;
-  margin-top: 15rem;
 `
 
 const Hero = styled.section`
@@ -69,29 +68,52 @@ const Context = styled.div`
 
       span {
         margin: 0;
+        display: block;
       }
     }
   }
 `
 
 const Intro = styled.section`
-  grid-column: col-start 2 / col-end 7;
-
-  h2 {
+  grid-column: col-start 1 / col-end 7;
+  /* text-align: center; */
+  h1 {
     color: rgb(${colors.white});
     text-transform: uppercase;
   }
 `
+const ProjectButton = styled(Button)`
+  display: inline-block;
+  margin: 1rem 1rem 0 0;
+
+  a {
+    font-weight: bold;
+    padding: 1rem 5rem;
+    margin: 0 3rem 0 0;
+  }
+
+  &:last-child {
+    a {
+      background: transparent;
+      border: 0.1rem solid rgb(${colors.ashblueManatee});
+
+      &:hover {
+        color: rgba(${colors.violet}, 0.5);
+        border: 0.1rem solid rgba(${colors.violet}, 0.5);
+      }
+    }
+  }
+`
+
 const Story = styled.section`
   grid-column: fullstart/ col-end 4;
   display: flex;
   align-items: center;
 
   .content {
-    padding: 1vh 5vw;
   }
 
-  h4 {
+  h3 {
     color: rgb(${colors.white});
   }
 
@@ -176,38 +198,43 @@ export const query = graphql`
 `
 
 const ProjectTemplate = props => {
-  console.log(props)
   return (
     <Layout>
       <GridContainer>
         <Hero className="mSec10">{/* <img src={LRglasses} alt="" /> */}</Hero>
         <Context className="mSec10">
-          <p className="date">
-            <span>Date</span>
-            {props.data.markdownRemark.frontmatter.date}
+          <p className="type">
+            <span>Context </span>
+            {props.data.markdownRemark.frontmatter.context}
           </p>
-
           <p className="role">
-            <span>Role</span>
+            <span>Role </span>
             {props.data.markdownRemark.frontmatter.role}
           </p>
-
-          <p className="type">
-            <span>Context</span>
-            {props.data.markdownRemark.frontmatter.context}
+          <p className="date">
+            <span>Date </span>
+            {props.data.markdownRemark.frontmatter.date}
           </p>
         </Context>
         <Intro className="mSec10">
-          <h2 className="mbSm">
+          <h1 className="mbSm">
             {props.data.markdownRemark.frontmatter.title}
-          </h2>
+          </h1>
           <p className="mbLg">
             {props.data.markdownRemark.frontmatter.challenge}
+            {props.data.markdownRemark.frontmatter.story}
+            {props.data.markdownRemark.frontmatter.story}
           </p>
+          <ProjectButton>
+            <a href="/#">View Project</a>
+          </ProjectButton>
+          <ProjectButton>
+            <a href="/#">View Code</a>
+          </ProjectButton>
         </Intro>
         <Story className="mSec10">
           <div className="content">
-            <h4 className="mbMd">Project Story</h4>
+            <h3 className="mbMd">Project Story</h3>
             <p className="mbSm">
               {props.data.markdownRemark.frontmatter.story}
             </p>

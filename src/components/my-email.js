@@ -48,7 +48,7 @@ const MyEmail = () => {
   return (
     <MyEmailContainer>
       <SocialList>
-        <a href="diomedes.lajara@gmail.com">diomedes.lajara@gmail.com</a>
+        <a href="mailto:diomedes.lajara@gmail.com">diomedes.lajara@gmail.com</a>
       </SocialList>
     </MyEmailContainer>
   )

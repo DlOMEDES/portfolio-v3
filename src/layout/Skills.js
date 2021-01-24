@@ -11,7 +11,7 @@ import SkillIcons from "../config/skills"
 const { colors, shadows } = theme
 
 const Input = styled.p`
-  color: rgb(${colors.ashblueManatee});
+  color: rgb(${colors.white});
 
   &:before {
     content: "> ";
@@ -25,18 +25,18 @@ const Input = styled.p`
   }
 `
 const Output = styled.p`
-  color: rgb(${colors.violet});
+  color: rgb(${colors.ashblueManatee});
 `
 const Statement = styled.div`
+  p {
+    text-transform: initial;
+  }
   &:first-child {
     padding: 5rem 0 0 0;
   }
   margin: 0 0 3.5rem 5rem;
 
   &:nth-child(2) {
-    p {
-      text-transform: initial;
-    }
   }
   @media ${device.tablet} {
     margin: 0px 1rem 3.5rem 3rem;
@@ -139,7 +139,7 @@ const About = () => {
   return (
     <AboutContainer id="about" className="sectionPad">
       <AboutHead>
-        <SectionTitle title="Honed skills" />
+        <SectionTitle title="My Skills" />
         <ShapeContainer>
           <span>▲</span>
         </ShapeContainer>

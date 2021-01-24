@@ -1,7 +1,6 @@
 module.exports = {
   siteTitle: "Diomedes Lajara | Freelance Web Developer in Philadelphia",
-  iDo: `I help small businesses grow online`,
-  siteDescription: `Building tailored websites, applications and online marketing.`,
+  siteDescription: `I build quality user interfaces for websites and apps.`,
   siteKeywords:
     "Diomedes Lajara, Diomedes, Lajara, dlomedes, software, developer, front-end, web developer, javascript",
   siteUrl: "https://diomedes.dev",

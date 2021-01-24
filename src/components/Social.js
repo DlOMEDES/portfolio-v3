@@ -94,22 +94,38 @@ const Social = () => {
     <SocialContainer>
       <SocialList>
         <ListItem>
-          <a href="https://github.com/DlOMEDES">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/DlOMEDES"
+          >
             <IconGithub />
           </a>
         </ListItem>
         <ListItem>
-          <a href="https://www.linkedin.com/in/diomedeslajara/">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/diomedeslajara/"
+          >
             <IconLinkedin />
           </a>
         </ListItem>
         <ListItem>
-          <a href="https://twitter.com/dl_ajara">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/dl_ajara"
+          >
             <IconTwitter />
           </a>
         </ListItem>
         <ListItem>
-          <a href="https://codepen.io/DlOMEDES">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://codepen.io/DlOMEDES"
+          >
             <IconCodepen />
           </a>
         </ListItem>
