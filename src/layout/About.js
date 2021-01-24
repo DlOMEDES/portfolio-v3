@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../utils/theme"
 import SectionTitle from "../components/SectionTitle"
-import AboutBox from "../config/About-box"
+import AboutBox from "../config/about-box"
 import { device } from "../utils/variables"
 
 const { colors, shadows } = theme
