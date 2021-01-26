@@ -21,7 +21,7 @@ export const MainContainer = styled.div`
   margin: 0 auto;
   width: 100%;
   max-width: 1600px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 
   @media ${device.tablet} {
     padding: 0 100px;

@@ -24,6 +24,7 @@ const NavList = styled.ol`
       transition: all 0.3s ease-out;
       &:hover {
         color: rgb(${colors.violet});
+        box-shadow: 0 0.1rem rgb(${colors.ashblueManatee});
       }
     }
 
