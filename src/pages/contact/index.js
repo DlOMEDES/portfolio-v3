@@ -7,13 +7,14 @@ export default function Contact() {
       <section className="contact-page">
         <section className="contact-form">
           <h3>Get In Touch</h3>
-          <form action="">
+          <form action="https://formspree.io/f/xknpydkd" method="POST">
             <div className="form-group">
               <input type="name" className="form-control" placeholder="name" />
               <input
                 type="email"
                 className="form-control"
                 placeholder="email"
+                name="email"
               />
               <textarea
                 name="message"

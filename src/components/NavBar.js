@@ -13,7 +13,7 @@ const NavContainter = styled.nav`
   align-items: center;
 
   @media ${device.portrait} {
-    flex-direction: column;
+    flex-direction: row;
   }
 `
 
@@ -27,7 +27,6 @@ const Logo = styled.div`
   }
 
   @media ${device.portrait} {
-    position: absolute;
     left: 5rem;
     top: -1rem;
   }

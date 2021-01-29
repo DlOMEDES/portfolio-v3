@@ -14,14 +14,10 @@ const MenuBtn = styled.button`
   @media ${device.portrait} {
     display: flex;
     flex-direction: column;
-    position: fixed;
     right: 5rem;
     top: 2rem;
-    padding: 0.5rem;
     cursor: pointer;
-    padding: 1.5rem;
     background: transparent;
-    border-radius: 1rem;
     z-index: 201;
     /* lines */
     .menuBtn-line {
@@ -40,7 +36,7 @@ const MenuBtn = styled.button`
         background: rgb(${colors.white});
         /* // rotate line 1 */
         &:nth-child(1) {
-          transform: rotate(45deg) translate(0.6rem, 0.4rem);
+          transform: rotate(45deg) translate(0.6rem, 1rem);
           /* // animation: rotate45 0.5s ease-in; */
         }
         /* // hide line 2 */
@@ -49,7 +45,7 @@ const MenuBtn = styled.button`
         }
         /* // rotate line 3 */
         &:nth-child(3) {
-          transform: rotate(-45deg) translate(1rem, -0.8rem);
+          transform: rotate(-45deg) translate(0.5rem, -1rem);
           /* // animation: rotateMinus45 0.5s ease-in; */
         }
       }

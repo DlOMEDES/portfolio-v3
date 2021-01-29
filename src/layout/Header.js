@@ -7,9 +7,8 @@ import DrawerMenu from "../components/DrawerMenu"
 const { colors, shadows } = theme
 
 const HeaderContainer = styled.header`
-  margin-top: 3rem;
   padding: 0 4rem;
-  height: 7rem;
+  height: 10rem;
   display: flex;
   align-items: center;
   background: ${colors.midnightPurple};
