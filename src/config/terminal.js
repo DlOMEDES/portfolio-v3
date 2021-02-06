@@ -5,12 +5,12 @@ export default [
   },
   {
     input: `Frontend Development`,
-    output: `This is what I specialize in. I enjoy using the combination of HTML, CSS, JavaScript to build beautiful and responsive frontend websites and web based applications.`,
+    output: `This is what I specialize in. I enjoy using the combination of HTML, CSS, JavaScript to build beautiful and responsive websites and web based applications.`,
   },
 
   {
     input: `HTML / CSS / Sass / Styled-Components`,
-    output: `I'm passionate about these technologies to power shapes, structure and colors when developing a pixel perfect web design. `,
+    output: `I'm passionate about these technologies to power shapes, structure and colors when developing a pixel perfect web design.`,
   },
   {
     input: `JavaScript / React / jQuery`,

@@ -139,7 +139,7 @@ const About = () => {
   return (
     <AboutContainer id="about" className="sectionPad">
       <AboutHead>
-        <SectionTitle title="My Skills" />
+        <SectionTitle title="Tech Skills" />
         <ShapeContainer>
           <span>▲</span>
         </ShapeContainer>

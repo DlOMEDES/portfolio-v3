@@ -93,7 +93,7 @@ const About = () => {
   return (
     <AboutContainer id="Abouts" className="sectionPad">
       <AboutHead>
-        <SectionTitle title="about me" />
+        <SectionTitle title="What I do" />
         <ShapeContainer />
       </AboutHead>
       <AboutContent>

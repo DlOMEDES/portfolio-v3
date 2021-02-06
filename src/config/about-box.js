@@ -1,21 +1,20 @@
 export default [
   {
-    title: "Who am I?",
-    subtitle: "A frontend developer",
-    text: `I taught myself web design and development to solve problems creatively.`,
-    extraText: `Using my obsessive attention to details, I work on making the web fast, accessible to all and beautiful.  `,
+    title: "Web Design",
+    subtitle: "Digitizing ideas and prototypes into UI",
+    text: `I am responsible for planning, designing and implementing responsive User Interfaces.`,
+    extraText: `Solving business problems creatively and continuously improving to provide the best solution available.`,
   },
   {
-    title: "What I do",
-    subtitle: `From design to development`,
-    text: `I am responsible for planning, designing and developing frontend user interfaces for websites and web applications`,
-    extraText: `Daily you'll find me using HTML, CSS, JavaScript and PHP to bring design ideas to live.`,
+    title: "Web Development",
+    subtitle: `From idea to deployment`,
+    text: `Building websites and applications from scratch. Updating and installing WordPress sites. Adding new functionalities is all part of the development process.`,
+    extraText: `Technology is always changing. Keeping your website up to date to stay relevant.`,
   },
   {
-    title: "Personal Bits",
-    subtitle: "history & interests",
-    // text: `With experience from working in other industries, I understand the importance of soft skills like communication, teamwork and time management.`,
-    text: `I was Born in Dominican Republic, raised in NYC and now I am living in Philadelphia, PA.`,
-    extraText: `When I'm not in front of a computer, I enjoy outdoor activities, photography, cooking and fitness.`,
+    title: "Support, SEO & Analytics",
+    subtitle: "maintainable and optimized",
+    text: `Experience and perfomance are top priorities to make sure users stay connected and keep coming back back. `,
+    extraText: `Using my obsessive attention to details, I work on making the web fast and accessible to all with search engine optimizations.`,
   },
 ]

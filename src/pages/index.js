@@ -5,7 +5,7 @@ import Work from "../layout/Work"
 import Skills from "../layout/Skills"
 import About from "../layout/About"
 import Head from "components/Head"
-
+import Form from "src/components/form"
 const index = () => {
   return (
     <Layout>
@@ -14,6 +14,7 @@ const index = () => {
       <About />
       <Work />
       <Skills />
+      <Form />
     </Layout>
   )
 }

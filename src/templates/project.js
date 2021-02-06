@@ -102,6 +102,10 @@ const ProjectButton = styled(Button)`
         border: 0.1rem solid rgba(${colors.violet}, 0.5);
       }
     }
+
+    @media ${device.tablet} {
+      margin: 3rem 0 0 0;
+    }
   }
 `
 
@@ -136,49 +140,6 @@ const MockFrame = styled.div`
 
   @media ${device.tablet} {
     grid-column: col-start 2 / col-end 7;
-  }
-`
-const Colors = styled.section`
-  grid-column: col-start 2 / col-end 7;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  grid-gap: 5rem;
-
-  .color {
-    background: brown;
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    margin: 0 auto;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .hexColor {
-    color: white;
-  }
-`
-const Fonts = styled.section`
-  grid-column: col-start 2 / col-end 7;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 3rem;
-
-  .fontOne,
-  .fontTwo {
-    padding: 2rem;
-    background: white;
-    &:hover {
-      // on hover make the images bigger and add a overlay like the project grid.
-    }
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
   }
 `
 
@@ -249,32 +210,6 @@ const ProjectTemplate = props => {
         <MockFrame className="mSec10">
           {/* <img src={projectWire} alt="" /> */}
         </MockFrame>
-        <Colors className="mSec10">
-          <div className="color color-1">
-            <p className="hexColor">Hexcolor1</p>
-          </div>
-          <div className="color color-2">
-            <p className="hexColor">Hexcolor2</p>
-          </div>
-          <div className="color color-3">
-            <p className="hexColor">HexColor3</p>
-          </div>
-          <div className="color color-4">
-            <p className="hexColor">HexColor4</p>
-          </div>
-        </Colors>
-        <Fonts className="mSec10">
-          <div className="fontOne">
-            <a href="https://fonts.google.com/specimen/Oswald?query=osw">
-              {/* <img src={FontOne} alt="" /> */}
-            </a>
-          </div>
-          <div className="fontTwo">
-            <a href="https://fonts.google.com/specimen/Raleway">
-              {/* <img src={FontTwo} alt="" /> */}
-            </a>
-          </div>
-        </Fonts>
       </GridContainer>
     </Layout>
   )

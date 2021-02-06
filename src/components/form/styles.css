@@ -783,9 +783,7 @@ Footer
 Pages
 ===============
 */
-.contact-page {
-  min-height: calc(100vh - 10rem - 9rem);
-}
+
 .error-page {
   display: grid;
   place-items: center;
@@ -870,7 +868,16 @@ Contact Page
   display: grid;
   place-items: center;
   justify-content: center;
+  min-height: calc(100vh - 10rem - 9rem);
 }
+
+@media screen and (max-width: 800px) {
+  .contact-page {
+    min-height: calc(90vh - 10rem - 9rem);
+    place-items: baseline;
+  }
+}
+
 .contact-form {
   border-radius: var(--radius);
   text-align: center;
@@ -878,6 +885,7 @@ Contact Page
   transition: var(--transition);
   width: 90vw;
   max-width: 70rem;
+  margin: 0 auto;
 }
 
 form {
