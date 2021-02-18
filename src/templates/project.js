@@ -4,7 +4,7 @@ import theme from "../utils/theme"
 import Layout from "../layout"
 import { device, Button } from "../utils/variables"
 import { graphql } from "gatsby"
-
+import Img from "gatsby-image"
 const { colors } = theme
 
 const GridContainer = styled.div`
@@ -15,27 +15,25 @@ const GridContainer = styled.div`
     [fullend] 1fr;
 `
 
-const Hero = styled.section`
+const FeaturedImg = styled(Img)`
   grid-column: fullstart/col-end 6;
+  div {
+    padding-bottom: 0% !important;
+  }
+  picture > img {
+    z-index: -1;
+  }
   background-image: linear-gradient(
     to right,
     rgba(255, 255, 255, 0),
     rgb(26, 21, 37)
   );
 
-  img {
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
-    position: sticky;
-    z-index: -1;
-    border-radius: 0.5rem;
-  }
-
   @media ${device.tablet} {
     grid-column: fullstart/fullend;
   }
 `
+
 const Context = styled.div`
   grid-column: col-start 7 / fullend;
 
@@ -148,6 +146,13 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         challenge
         context
         date
@@ -158,34 +163,32 @@ export const query = graphql`
   }
 `
 
-const ProjectTemplate = props => {
+export default function ProjectTemplate({ data }) {
+  let projects = data.markdownRemark
+  let featuredImgFluid =
+    projects.frontmatter.featuredImage.childImageSharp.fluid
+
   return (
     <Layout>
       <GridContainer>
-        <Hero className="mSec10">{/* <img src={LRglasses} alt="" /> */}</Hero>
-        <Context className="mSec10">
+        <FeaturedImg fluid={featuredImgFluid} />
+        <Context>
           <p className="type">
             <span>Context </span>
-            {props.data.markdownRemark.frontmatter.context}
+            {data.markdownRemark.frontmatter.context}
           </p>
           <p className="role">
             <span>Role </span>
-            {props.data.markdownRemark.frontmatter.role}
+            {data.markdownRemark.frontmatter.role}
           </p>
           <p className="date">
             <span>Date </span>
-            {props.data.markdownRemark.frontmatter.date}
+            {data.markdownRemark.frontmatter.date}
           </p>
         </Context>
         <Intro className="mSec10">
-          <h1 className="mbSm">
-            {props.data.markdownRemark.frontmatter.title}
-          </h1>
-          <p className="mbLg">
-            {props.data.markdownRemark.frontmatter.challenge}
-            {props.data.markdownRemark.frontmatter.story}
-            {props.data.markdownRemark.frontmatter.story}
-          </p>
+          <h1 className="mbSm">{data.markdownRemark.frontmatter.title}</h1>
+          <p className="mbLg">{data.markdownRemark.frontmatter.challenge}</p>
           <ProjectButton>
             <a href="/#">View Project</a>
           </ProjectButton>
@@ -196,15 +199,7 @@ const ProjectTemplate = props => {
         <Story className="mSec10">
           <div className="content">
             <h3 className="mbMd">Project Story</h3>
-            <p className="mbSm">
-              {props.data.markdownRemark.frontmatter.story}
-            </p>
-            <p className="mbSm">
-              {props.data.markdownRemark.frontmatter.story}
-            </p>
-            <p className="mbSm">
-              {props.data.markdownRemark.frontmatter.story}
-            </p>
+            <p className="mbSm">{data.markdownRemark.frontmatter.story}</p>
           </div>
         </Story>
         <MockFrame className="mSec10">
@@ -214,4 +209,3 @@ const ProjectTemplate = props => {
     </Layout>
   )
 }
-export default ProjectTemplate

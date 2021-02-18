@@ -95,7 +95,7 @@ const GlobalStyle = createGlobalStyle`
   .mSec10 {margin: 10rem 0}
 
 /* section padding */
-  .sectionPad{padding: 10rem 0;}
+  .sectionPad{padding: 15rem 0;}
   
 `
 

@@ -21,7 +21,7 @@ export default function form() {
           ></textarea>
         </div>
 
-        <button tyoe="submit" className="submit-btn btn">
+        <button type="submit" className="submit-btn btn">
           Submit Here
         </button>
       </form>
