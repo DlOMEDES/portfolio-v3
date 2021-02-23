@@ -153,11 +153,12 @@ export const query = graphql`
             }
           }
         }
-        challenge
+        intro
         context
         date
         story
         role
+        tech
       }
     }
   }
@@ -188,7 +189,7 @@ export default function ProjectTemplate({ data }) {
         </Context>
         <Intro className="mSec10">
           <h1 className="mbSm">{data.markdownRemark.frontmatter.title}</h1>
-          <p className="mbLg">{data.markdownRemark.frontmatter.challenge}</p>
+          <p className="mbLg">{data.markdownRemark.frontmatter.intro}</p>
           <ProjectButton>
             <a href="/#">View Project</a>
           </ProjectButton>
@@ -196,10 +197,11 @@ export default function ProjectTemplate({ data }) {
             <a href="/#">View Code</a>
           </ProjectButton>
         </Intro>
-        <Story className="mSec10">
+        <Story>
           <div className="content">
-            <h3 className="mbMd">Project Story</h3>
+            <h3 className="mbMd">STORY & TECH</h3>
             <p className="mbSm">{data.markdownRemark.frontmatter.story}</p>
+            <p className="mbSm">{data.markdownRemark.frontmatter.tech}</p>
           </div>
         </Story>
         <MockFrame className="mSec10">

@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql, Link } from "gatsby"
 import theme from "../utils/theme"
 import SectionTitle from "../components/SectionTitle"
 import { device } from "../utils/variables"
-import { useStaticQuery } from "gatsby"
-const { colors, shadows } = theme
+import { graphql, Link, useStaticQuery } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 
+const { colors, shadows } = theme
 // styles
 
 const WorkGrid = styled.div`
@@ -82,7 +82,7 @@ const CardOverlay = styled(Link)`
   }
 `
 
-const Card = styled.div`
+const Card = styled(BackgroundImage)`
   position: relative;
   text-align: center;
   transition: all 0.4s ease-in-out;
@@ -154,6 +154,13 @@ const Work = () => {
             frontmatter {
               title
               context
+              featuredImage {
+                childImageSharp {
+                  fluid(maxWidth: 800) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
             fields {
               slug
@@ -174,7 +181,10 @@ const Work = () => {
       <WorkGrid>
         {data.allMarkdownRemark.edges.map(edge => {
           return (
-            <Card key={edge.node.id}>
+            <Card
+              fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid}
+              key={edge.node.id}
+            >
               <CardOverlay to={`/project/${edge.node.fields.slug}`}>
                 <h3>{edge.node.frontmatter.title}</h3>
                 <h5>{edge.node.frontmatter.context}</h5>
