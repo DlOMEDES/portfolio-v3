@@ -41,17 +41,17 @@ module.exports = {
         template: path.join(__dirname, "src/template"),
       },
     },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: "Diomedes Lajara",
-        short_name: "dlomedes",
-        start_url: "/",
-        // background_color: config.darkNavyColor,
-        // theme_color: config.navyColor,
-        // display: "minimal-ui",
-        // icon: "src/images/dlogo.png",
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: "Diomedes Lajara",
+    //     short_name: "dlomedes",
+    //     start_url: "/",
+    //     // background_color: config.darkNavyColor,
+    //     // theme_color: config.navyColor,
+    //     // display: "minimal-ui",
+    //     // icon: "src/images/dlogo.png",
+    //   },
+    // },
   ],
 }
