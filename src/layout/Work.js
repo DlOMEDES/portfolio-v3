@@ -56,7 +56,7 @@ const WorkContainer = styled.section`
 const CardOverlay = styled(Link)`
   width: 100%;
   height: 100%;
-  background: rgba(${colors.midnightPurple}, 0.95);
+  background: rgba(${colors.midnightPurple}, 0.97);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,7 +65,6 @@ const CardOverlay = styled(Link)`
   top: 0;
   left: -100%;
   transition: all 0.4s ease-in-out;
-  /* border: 1px solid rgb(${colors.violet}); */
 
   h3 {
     color: rgb(${colors.white});
@@ -77,7 +76,7 @@ const CardOverlay = styled(Link)`
   }
 
   @media ${device.tablet} {
-    background: rgba(${colors.midnightPurple}, 0.5);
+    background: rgba(${colors.midnightPurple}, 0.7);
     left: 0%;
   }
 `
@@ -94,6 +93,7 @@ const Card = styled(BackgroundImage)`
       left: 0;
     }
   }
+
   &:nth-child(1) {
     background: black;
     background-size: cover;
@@ -101,25 +101,25 @@ const Card = styled(BackgroundImage)`
     grid-row: 1 / 3;
   }
   &:nth-child(2) {
-    background: rgb(29, 160, 137) center center no-repeat;
+    background: aqua;
     grid-column: 3/4;
     grid-row: 1/3;
     background-size: cover;
   }
   &:nth-child(3) {
-    background: gold;
+    background: yellow;
     grid-column: 4/5;
     grid-row: 1/-1;
     background-size: cover;
   }
   &:nth-child(4) {
-    background: #82c785 top center no-repeat;
+    background: purple;
     grid-column: 1/2;
     grid-row: 3/5;
     background-size: cover;
   }
   &:nth-child(5) {
-    background: #604e2d center center no-repeat;
+    background: Brown;
     background-size: 100%;
     grid-column: 2/4;
     grid-row: 3/5;
@@ -135,6 +135,10 @@ const Card = styled(BackgroundImage)`
     @media ${device.tablet} {
       grid-column: auto;
       grid-row: auto;
+
+      &::after {
+        opacity: 0.2 !important;
+      }
     }
   }
 `

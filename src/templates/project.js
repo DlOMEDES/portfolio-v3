@@ -102,7 +102,7 @@ const ProjectButton = styled(Button)`
     }
 
     @media ${device.tablet} {
-      margin: 3rem 0 0 0;
+      margin: 5rem 0 0 0;
     }
   }
 `
@@ -172,7 +172,10 @@ export default function ProjectTemplate({ data }) {
   return (
     <Layout>
       <GridContainer>
-        <FeaturedImg fluid={featuredImgFluid} />
+        <FeaturedImg
+          fluid={featuredImgFluid}
+          placeholderStyle={{ visibility: "hidden" }}
+        />
         <Context>
           <p className="type">
             <span>Context </span>
