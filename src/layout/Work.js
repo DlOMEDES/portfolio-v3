@@ -21,6 +21,10 @@ const WorkGrid = styled.div`
     grid-template-rows: repeat(5, 32rem);
     grid-gap: 8rem;
   }
+
+  @media ${device.phone} {
+    padding-top: 20rem;
+  }
 `
 
 const ShapeContainer = styled.div`
@@ -160,7 +164,7 @@ const Work = () => {
               context
               featuredImage {
                 childImageSharp {
-                  fluid(maxWidth: 800) {
+                  fluid(maxWidth: 800, quality: 100) {
                     ...GatsbyImageSharpFluid
                   }
                 }

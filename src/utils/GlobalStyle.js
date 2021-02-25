@@ -97,6 +97,7 @@ const GlobalStyle = createGlobalStyle`
 /* section padding */
   .sectionPad{padding: 15rem 0;}
   
+  
 `
 
 export default GlobalStyle

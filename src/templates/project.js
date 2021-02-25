@@ -31,6 +31,11 @@ const FeaturedImg = styled(Img)`
 
   @media ${device.tablet} {
     grid-column: fullstart/fullend;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      rgb(26, 21, 37)
+    );
   }
 `
 
@@ -148,7 +153,7 @@ export const query = graphql`
         title
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 800, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -159,6 +164,8 @@ export const query = graphql`
         story
         role
         tech
+        codeBtn
+        viewBtn
       }
     }
   }
@@ -168,6 +175,8 @@ export default function ProjectTemplate({ data }) {
   let projects = data.markdownRemark
   let featuredImgFluid =
     projects.frontmatter.featuredImage.childImageSharp.fluid
+  let codeBtn = data.markdownRemark.frontmatter.codeBtn
+  let viewBtn = data.markdownRemark.frontmatter.viewBtn
 
   return (
     <Layout>
@@ -194,10 +203,14 @@ export default function ProjectTemplate({ data }) {
           <h1 className="mbSm">{data.markdownRemark.frontmatter.title}</h1>
           <p className="mbLg">{data.markdownRemark.frontmatter.intro}</p>
           <ProjectButton>
-            <a href="/#">View Project</a>
+            <a href={viewBtn} target="_blank" rel="noreferrer">
+              View Project
+            </a>
           </ProjectButton>
           <ProjectButton>
-            <a href="/#">View Code</a>
+            <a href={codeBtn} target="_blank" rel="noreferrer">
+              View Code
+            </a>
           </ProjectButton>
         </Intro>
         <Story>

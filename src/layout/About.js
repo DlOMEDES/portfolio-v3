@@ -39,10 +39,7 @@ const Article = styled.article`
   }
 
   @media ${device.tablet} {
-    margin: 3rem 0;
-    &:last-child {
-      margin: 3rem 0;
-    }
+    margin: 0;
   }
 `
 const AboutContent = styled.div`
@@ -60,6 +57,7 @@ const AboutContent = styled.div`
 
   @media ${device.phone} {
     max-width: 100%;
+    padding-top: 15rem;
   }
 `
 const AboutHead = styled.div`
