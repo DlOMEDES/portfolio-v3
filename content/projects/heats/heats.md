@@ -1,7 +1,7 @@
 ---
 title: "Heats"
 featuredImage: heats.png
-date: "2018-01-04"
+date: "June 2017"
 context: "Web Design / Web Development"
 role: "Frontend Developer"
 intro: "A restaurant application involving the community around customers, chefs and restaurant staff."

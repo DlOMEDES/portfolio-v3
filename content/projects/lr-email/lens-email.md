@@ -1,7 +1,7 @@
 ---
 title: "LR Lenses"
 featuredImage: LR-Glasses.png
-date: "2020-01-01"
+date: "August 2019"
 context: "Brand Identity / Email Marketing"
 role: "Email Developer"
 intro: "A promotional email template for online marketing."
