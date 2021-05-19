@@ -4,6 +4,9 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 const path = require("path")
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
@@ -11,6 +14,12 @@ module.exports = {
     author: "Diomedes Lajara",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GA_TRACKING_ID
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

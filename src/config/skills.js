@@ -36,11 +36,11 @@ export default [
     logo: <FaPhp />,
   },
   {
-    text: "mysql",
-    logo: <DiMysql />,
-  },
-  {
     text: "node",
     logo: <FaNodeJs />,
+  },
+  {
+    text: "mysql",
+    logo: <DiMysql />,
   },
 ]

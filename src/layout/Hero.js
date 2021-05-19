@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../utils/theme"
 import config from "../config/index"
-import heroImage from "../images/self-noBG.png"
+
 import { device } from "../utils/variables"
 
 // styles
@@ -38,18 +38,7 @@ const HeroDetails = styled.div`
     font-weight: 300;
   }
 `
-const HeroImage = styled.div`
-  margin: 0 auto;
-  img {
-    width: 20rem;
-    border-radius: 1rem;
-    background: rgb(${colors.ashblueManatee});
-  }
 
-  @media ${device.tablet} {
-    display: none;
-  }
-`
 
 const Hi = styled.h4`
   color: rgb(${colors.violet});
@@ -93,9 +82,7 @@ const Hero = () => {
             <Link to="/contact">contact me</Link>
           </HeroButton> */}
         </HeroDetails>
-        <HeroImage>
-          <img src={heroImage} alt="" />
-        </HeroImage>
+        
       </HeroContainer>
     </>
   )
