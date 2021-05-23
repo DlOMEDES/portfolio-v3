@@ -50,6 +50,10 @@ const AboutContent = styled.div`
 
 const AboutContainer = styled.section`
   position: relative;
+
+  @media ${device.tablet} {
+    margin-top: 5rem;
+  }
 `
 
 const HeroImage = styled.div`
@@ -68,7 +72,7 @@ const HeroImage = styled.div`
 const About = () => {
   return (
     <Layout>
-      <AboutContainer id="about" className="sectionPad">
+      <AboutContainer id="about">
         <AboutContent>
           <Article>
             <h4>who am i?</h4>

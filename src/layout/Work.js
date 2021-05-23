@@ -54,13 +54,13 @@ const WorkHead = styled.div`
 const WorkContainer = styled.section`
   position: relative;
   @media ${device.tablet} {
-    margin: 0 auto;
+    margin: 15rem auto;
   }
 `
 const CardOverlay = styled(Link)`
   width: 100%;
   height: 100%;
-  background: rgba(${colors.midnightPurple}, 0.97);
+  background: rgba(${colors.midnight}, 0.97);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,7 +80,7 @@ const CardOverlay = styled(Link)`
   }
 
   @media ${device.tablet} {
-    background: rgba(${colors.midnightPurple}, 0.7);
+    background: rgba(${colors.midnight}, 0.7);
     left: 0%;
   }
 `
@@ -180,7 +180,7 @@ const Work = () => {
   `)
 
   return (
-    <WorkContainer id="work" className="sectionPad">
+    <WorkContainer id="work" className="secMargin">
       <WorkHead>
         <SectionTitle title="Projects" />
         <ShapeContainer />

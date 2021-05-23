@@ -32,7 +32,7 @@ const Article = styled.article`
   }
 
   &:hover {
-    background-color: rgb(${colors.midnightPurple});
+    background-color: rgb(${colors.midnight});
     /* box-shadow: rgba(2, 12, 27, 0.8) 0px 0px 30px -10px; */
     box-shadow: ${shadows.boxes} rgba(${colors.violet}, 0.3);
     border-bottom: 0.3rem solid rgb(${colors.white});
@@ -89,7 +89,7 @@ const ServiceContainer = styled.section`
 
 const Services = () => {
   return (
-    <ServiceContainer id="Services" className="sectionPad">
+    <ServiceContainer id="Services" className="secMargin">
       <ServiceHead>
         <SectionTitle title="What I do" />
         <ShapeContainer />

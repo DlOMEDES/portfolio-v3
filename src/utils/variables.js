@@ -49,7 +49,7 @@ export const Button = styled.div`
     transition: all 0.4s ease-in-out;
     &:hover {
       background: rgb(${colors.white});
-      color: rgb(${colors.midnightPurple});
+      color: rgb(${colors.midnight});
     }
     @media ${device.tablet} {
       padding: 1rem 6.7rem;

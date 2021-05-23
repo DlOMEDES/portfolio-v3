@@ -10,10 +10,11 @@ const { colors } = theme
 
 const HeroContainer = styled.section`
   display: grid;
-  grid-template-columns: minmax(min-content, 3fr) 1fr;
-  min-height: 80vh;
+  grid-template-columns: minmax(min-content, 1fr);
+  min-height: 67vh;
   grid-gap: 3rem;
   align-items: center;
+  margin-top: 5rem;
 
   @media ${device.tablet} {
     grid-template-columns: 1fr;
@@ -38,7 +39,6 @@ const HeroDetails = styled.div`
     font-weight: 300;
   }
 `
-
 
 const Hi = styled.h4`
   color: rgb(${colors.violet});
@@ -73,7 +73,7 @@ const Subtitle = styled.h4`
 const Hero = () => {
   return (
     <>
-      <HeroContainer id="hero" className="sectionPad">
+      <HeroContainer id="hero">
         <HeroDetails>
           <Hi>Hello, I'm Diomedes Lajara</Hi>
           <Name>{config.freelance}</Name>
@@ -82,7 +82,6 @@ const Hero = () => {
             <Link to="/contact">contact me</Link>
           </HeroButton> */}
         </HeroDetails>
-        
       </HeroContainer>
     </>
   )

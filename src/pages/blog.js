@@ -40,7 +40,7 @@ const ShowCase = styled.section`
       z-index: -1;
 
       h2 {
-        color: rgb(${colors.midnightPurple});
+        color: rgb(${colors.midnight});
       }
 
       @media ${device.minDesk} {
@@ -105,7 +105,7 @@ const ShowCase = styled.section`
       .project_info {
         font-family: rgb(${colors.violet});
         font-weight: 300;
-        color: rgb(${colors.midnightPurple});
+        color: rgb(${colors.midnight});
         margin-bottom: 1em;
         line-height: 1.35;
         font-size: 1em;

@@ -44,7 +44,7 @@ const NavList = styled.ol`
       a {
         font-size: 2.5rem;
         font-weight: 600;
-        color: rgb(${colors.midnightPurple});
+        color: rgb(${colors.midnight});
       }
     }
   }

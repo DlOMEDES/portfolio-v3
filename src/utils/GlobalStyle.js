@@ -37,7 +37,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Poppins', sans-serif;
     color: rgb(${colors.ashblueManatee});
-    background: rgb(${colors.midnightPurple});
+    background: rgb(${colors.midnight});
     line-height: 1.6;
     font-size: 1.8rem;
     font-weight: 400;
@@ -95,7 +95,7 @@ const GlobalStyle = createGlobalStyle`
   .mSec10 {margin: 10rem 0}
 
 /* section padding */
-  .sectionPad{padding: 15rem 0;}
+  .secMargin{margin: 30rem 0;}
   
   
 `

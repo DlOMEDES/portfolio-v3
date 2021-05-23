@@ -11,7 +11,7 @@ const HeaderContainer = styled.header`
   height: 10rem;
   display: flex;
   align-items: center;
-  background: ${colors.midnightPurple};
+  background: ${colors.midnight};
   box-shadow: ${shadows.black};
   z-index: 1;
   position: relative;

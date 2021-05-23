@@ -59,8 +59,8 @@ const ColoredDot = styled.div`
     border: 1px solid rgb(${colors.violet});
   }
   &.midnight {
-    background-color: rgb(${colors.midnightPurple});
-    border: 1px solid rgb(${colors.midnightPurple});
+    background-color: rgb(${colors.midnight});
+    border: 1px solid rgb(${colors.midnight});
   }
 `
 
@@ -89,6 +89,9 @@ const TechHead = styled.div`
 
 const TechContainer = styled.section`
   background-size: cover;
+  @media ${device.tablet} {
+    margin-bottom: 5rem;
+  }
 `
 // const TechBtn = styled(Button)`
 //   text-align: center;
@@ -134,7 +137,7 @@ const Title = styled.h2`
 
 const Tech = () => {
   return (
-    <TechContainer id="tech" className="sectionPad">
+    <TechContainer id="tech" className="secMargin">
       <TechHead>
         <Title>my tools</Title>
       </TechHead>
