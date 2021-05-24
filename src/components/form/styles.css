@@ -76,9 +76,15 @@ Contact Page
   text-align: center;
   box-shadow: var(--dark-shadow);
   transition: var(--transition);
-  width: 100%;
+  width: 90vw;
   max-width: 70rem;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-form {
+    width: 100%;
+  }
 }
 
 form {

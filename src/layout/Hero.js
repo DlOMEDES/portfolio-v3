@@ -13,7 +13,7 @@ const HeroContainer = styled.section`
   min-height: 67vh;
   grid-gap: 3rem;
   align-items: center;
-  margin-top: 15rem;
+  margin-top: 20rem;
 
   @media ${device.tablet} {
     grid-template-columns: 1fr;
