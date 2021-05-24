@@ -19,6 +19,7 @@ const HeaderContainer = styled.header`
   @media ${device.portrait} {
     justify-content: center;
     width: 100vw;
+    padding: 0 1rem;
   }
 `
 
