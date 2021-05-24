@@ -12,30 +12,19 @@ const Article = styled.article`
   padding: 4.5rem 3rem;
   margin: 0 3rem 0 0;
 
-  &:hover {
-    transform: scale(1.1);
-  }
-
   &:last-child {
     margin: 0;
   }
 
   h4 {
-    color: rgb(${colors.white});
+    color: rgb(${colors.violet});
     padding-bottom: 1rem 0;
   }
 
   h5 {
-    color: rgb(${colors.violet});
+    color: rgb(${colors.white});
     font-size: 2rem;
     padding: 1rem 0;
-  }
-
-  &:hover {
-    background-color: rgb(${colors.midnight});
-    /* box-shadow: rgba(2, 12, 27, 0.8) 0px 0px 30px -10px; */
-    box-shadow: ${shadows.boxes} rgba(${colors.violet}, 0.3);
-    border-bottom: 0.3rem solid rgb(${colors.white});
   }
 
   @media ${device.tablet} {

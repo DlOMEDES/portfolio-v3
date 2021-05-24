@@ -76,7 +76,7 @@ Contact Page
   text-align: center;
   box-shadow: var(--dark-shadow);
   transition: var(--transition);
-  width: 90vw;
+  width: 100%;
   max-width: 70rem;
   margin: 0 auto;
 }

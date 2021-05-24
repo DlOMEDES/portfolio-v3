@@ -8,7 +8,7 @@ const theme = {
     ashblueManatee: "136, 146, 176",
     // purples
     violet: "177, 122, 204",
-    midnight: "25, 25, 35",
+    midnight: "25, 25, 30",
   },
   shadows: {
     sections: "0px 15px 25px 0px",

@@ -89,6 +89,8 @@ const TechHead = styled.div`
 
 const TechContainer = styled.section`
   background-size: cover;
+  margin: 20rem 0;
+
   @media ${device.tablet} {
     margin-bottom: 5rem;
   }
@@ -137,7 +139,7 @@ const Title = styled.h2`
 
 const Tech = () => {
   return (
-    <TechContainer id="tech" className="secMargin">
+    <TechContainer id="tech">
       <TechHead>
         <Title>my tools</Title>
       </TechHead>
