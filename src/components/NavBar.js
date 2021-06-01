@@ -18,7 +18,7 @@ const NavContainter = styled.nav`
 `
 
 const Logo = styled.div`
-  z-index: 201;
+
   a {
     img {
       width: 5rem;
