@@ -31,12 +31,12 @@ const HeroContainer = styled.section`
 const HeroDetails = styled.div`
   line-height: 1.3;
   letter-spacing: 0.1rem;
-  max-width: 90rem;
+  // max-width: 90rem;
   position: relative;
 `
 
 const Hi = styled.h4`
-  color: rgba(${colors.violet}, 0.1);
+  color: rgba(${colors.violet}, 0.03);
   margin: 0 0 1rem 0;
   font-size: 45rem;
   font-weight: 700;
@@ -87,10 +87,10 @@ const Hero = () => {
         <HeroDetails>
           <Hi>Hello</Hi>
           <Name>
-            I'm Dio, <br />A Web Developer
+            I'm Diomedes
           </Name>
           <Subtitle>
-            Focusing on user interfaces for websites and apps.
+            A Web Developer focusing on HTML Emails and User Interfaces.
           </Subtitle>
           {/* <HeroButton>
             <Link to="/contact">contact me</Link>

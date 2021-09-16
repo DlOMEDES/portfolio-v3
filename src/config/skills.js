@@ -4,11 +4,10 @@ import {
   FaHtml5,
   FaCss3,
   FaReact,
-  FaPhp,
   FaNodeJs,
 } from "react-icons/fa"
 import { IoLogoJavascript } from "react-icons/io"
-import { DiMysql } from "react-icons/di"
+import { MdEmail } from "react-icons/md"
 
 export default [
   {
@@ -24,6 +23,10 @@ export default [
     logo: <IoLogoJavascript />,
   },
   {
+    text: "Foundation Email",
+    logo: <MdEmail />,
+  },
+  {
     text: "react",
     logo: <FaReact />,
   },
@@ -31,16 +34,5 @@ export default [
     text: "wordpress",
     logo: <FaWordpress />,
   },
-  {
-    text: "php",
-    logo: <FaPhp />,
-  },
-  {
-    text: "node",
-    logo: <FaNodeJs />,
-  },
-  {
-    text: "mysql",
-    logo: <DiMysql />,
-  },
+  
 ]

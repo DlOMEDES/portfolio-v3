@@ -9,7 +9,7 @@ const { colors } = theme
 
 const Article = styled.article`
   transition: all 0.4s ease-in-out;
-  margin-top: 20rem;
+  margin-top: 30rem;
   line-height: 2;
 
   &:last-child {
@@ -19,7 +19,7 @@ const Article = styled.article`
     margin-top: 7rem;
   }
   h4 {
-    color: rgba(${colors.violet}, 0.1);
+    color: rgba(${colors.violet}, 0.05);
     padding-bottom: 1rem 0;
     position: absolute;
     font-size: 21rem;
@@ -94,20 +94,15 @@ const About = () => {
               <span>ME</span>
             </h4>
             <h5>
-              My name is Diomedes Lajara. I'm a Frontend Developer located in
-              Philadelphia.
+              My name is Diomedes Lajara, I build HTML Emails and User Interfaces.
             </h5>
             <p>
-              I taught myself about web design and development to solve problems
-              creatively. Using web technologies I help translate ideas and
-              design concepts into fully functional and useful products.
+              I taught myself web design and development to solve problems
+              creatively. Using web technologies, I translate ideas and
+              design concepts into fully functional products.
             </p>
             <br />
-            <p>
-              Having high attention to details helps me craft intuitive pixel
-              perfect User Interfaces. I'm interested in working on progressive
-              and ambitious frontend projects.
-            </p>
+            
           </Article>
           <HeroImage>
             <img src={heroImage} alt="" />

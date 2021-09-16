@@ -7,6 +7,6 @@ role: "Email Developer"
 intro: "A promotional email template for online marketing."
 codeBtn: "https://github.com/DlOMEDES/lr-html-email"
 viewBtn: "http://dlomedes.github.io/lr-html-email/"
-story: "These type of templates work great for sending out custom promos to attract more customers through emails. I built with mobile devices in mind to make it easy to read."
-tech: "Technologies behind email templates are HTML and inline CSS"
+story: "Promotional email template to attract more customers. I designed and built this from scratch with html tables."
+tech: "Technologies: HTML tables and inline CSS"
 ---
