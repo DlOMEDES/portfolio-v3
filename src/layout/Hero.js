@@ -36,7 +36,7 @@ const HeroDetails = styled.div`
 `
 
 const Hi = styled.h4`
-  color: rgba(${colors.violet}, 0.03);
+  color: rgba(${colors.violet}, 0.1);
   margin: 0 0 1rem 0;
   font-size: 45rem;
   font-weight: 700;
