@@ -19,7 +19,7 @@ const Article = styled.article`
     margin-top: 7rem;
   }
   h4 {
-    color: rgba(${colors.violet}, 0.05);
+    color: rgba(${colors.violet}, 0.1);
     padding-bottom: 1rem 0;
     position: absolute;
     font-size: 21rem;
