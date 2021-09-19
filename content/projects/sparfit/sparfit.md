@@ -9,4 +9,5 @@ codeBtn: "https://github.com/DlOMEDES/spartan-fitness"
 viewBtn: "https://dlomedes.github.io/spartan-fitness/"
 story: "I built the website to be responsive to make it easy for mobile users to view. Also created a custom slider and a image grid to show pictures the gym."
 tech: "Technologies: HTML, CSS (Sass) & JavaScript"
+id: 1
 ---

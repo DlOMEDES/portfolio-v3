@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "gatsby-link"
-import logo from "../images/dlogo.png"
+import logo from "../images/gatsby-icon.png"
 import styled from "styled-components"
 import { device } from "../utils/variables"
 import DrawerMenuBtn from "./DrawerMenuBtn"
@@ -18,7 +18,6 @@ const NavContainter = styled.nav`
 `
 
 const Logo = styled.div`
-
   a {
     img {
       width: 5rem;

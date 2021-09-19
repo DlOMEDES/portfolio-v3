@@ -100,7 +100,7 @@ const Card = styled(BackgroundImage)`
 
   &:nth-child(1) {
     background: black;
-    background-size: cover;
+    background-size: 100%;
     grid-column: 1 / 3;
     grid-row: 1 / 3;
   }
@@ -155,7 +155,7 @@ const Card = styled(BackgroundImage)`
 const Work = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: { fields: frontmatter___id }) {
         edges {
           node {
             id

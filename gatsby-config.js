@@ -10,15 +10,29 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "Web Developer in Philadelphia, PA",
+    title: "HTML Email | UI Developer",
     author: "Diomedes Lajara",
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Diomedes Lajara`,
+
+        start_url: `/`,
+
+        icon: `src/images/gatsby-icon.png`,
+        icon_options: {
+          // For all the options available,
+          // please see the section "Additional Resources" below.
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GA_TRACKING_ID
-      }
+        trackingId: process.env.GA_TRACKING_ID,
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -50,17 +64,5 @@ module.exports = {
         template: path.join(__dirname, "src/template"),
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: "Diomedes Lajara",
-    //     short_name: "dlomedes",
-    //     start_url: "/",
-    //     // background_color: config.darkNavyColor,
-    //     // theme_color: config.navyColor,
-    //     // display: "minimal-ui",
-    //     // icon: "src/images/dlogo.png",
-    //   },
-    // },
   ],
 }

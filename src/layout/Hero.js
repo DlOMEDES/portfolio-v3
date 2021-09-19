@@ -86,9 +86,7 @@ const Hero = () => {
       <HeroContainer id="hero">
         <HeroDetails>
           <Hi>Hello</Hi>
-          <Name>
-            I'm Diomedes
-          </Name>
+          <Name>I'm Diomedes,</Name>
           <Subtitle>
             A Web Developer focusing on HTML Emails and User Interfaces.
           </Subtitle>
