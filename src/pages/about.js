@@ -94,13 +94,12 @@ const About = () => {
               <span>ME</span>
             </h4>
             <h5>
-              My name is Diomedes Lajara, I build HTML Emails and User
-              Interfaces.
+              My name is Diomedes Lajara, I design and develop custom UIs.
             </h5>
             <p>
-              I taught myself web design and development to solve business
-              problems creatively. Using web technologies, I translate ideas and
-              design concepts into fully functional products.
+             I taught myself web design and development to solve business problems creatively. 
+             Using web technologies, I translate ideas and design concepts into fully functional web products. 
+             From Email Templates, WordPress themes and all the way to Frontend ReactJS applications.
             </p>
             <br />
           </Article>
