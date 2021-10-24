@@ -10,7 +10,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "HTML Email | UI Developer",
+    title: "Email | UI Developer",
     author: "Diomedes Lajara",
   },
   plugins: [

@@ -88,7 +88,7 @@ const Hero = () => {
           <Hi>Hello</Hi>
           <Name>I'm Diomedes,</Name>
           <Subtitle>
-            A Web Developer specializing in building User Interfaces.
+            A Web Developer specializing in Email marketing and User Interfaces.
           </Subtitle>
           {/* <HeroButton>
             <Link to="/contact">contact me</Link>
