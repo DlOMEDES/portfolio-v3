@@ -86,9 +86,10 @@ const Hero = () => {
       <HeroContainer id="hero">
         <HeroDetails>
           <Hi>Hello</Hi>
-          <Name>I'm Diomedes,</Name>
+          <Name>I'm Diomedes Lajara,</Name>
           <Subtitle>
-            A Web Developer specializing in Email marketing and User Interfaces.
+            A Web Developer specializing in HTML Email and Frontend User
+            Interfaces.
           </Subtitle>
           {/* <HeroButton>
             <Link to="/contact">contact me</Link>

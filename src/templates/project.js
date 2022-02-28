@@ -16,18 +16,13 @@ const GridContainer = styled.div`
 `
 
 const FeaturedImg = styled(Img)`
-  grid-column: fullstart/col-end 6;
+  grid-column: fullstart/fullend;
   div {
     padding-bottom: 0% !important;
   }
   picture > img {
     z-index: -1;
   }
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0),
-    rgb(26, 21, 37)
-  );
 
   @media ${device.tablet} {
     grid-column: fullstart/fullend;
@@ -40,17 +35,14 @@ const FeaturedImg = styled(Img)`
 `
 
 const Context = styled.div`
-  grid-column: col-start 7 / fullend;
-
+  grid-column: col-start 6 / fullend;
+  grid-row: 2/3;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   p {
-    margin-left: -3rem;
     border-radius: 1rem;
     z-index: 0;
-    box-shadow: 10px 10px 0px 5px rgba(0, 0, 0, 0.4);
-    padding: 3rem 1rem;
 
     span {
       color: rgb(${colors.white});
@@ -78,7 +70,7 @@ const Context = styled.div`
 `
 
 const Intro = styled.section`
-  grid-column: col-start 1 / col-end 7;
+  grid-column: col-start 1 / col-end 4;
   /* text-align: center; */
   h1 {
     color: rgb(${colors.white});
@@ -132,19 +124,6 @@ const Story = styled.section`
     }
   }
 `
-const MockFrame = styled.div`
-  grid-column: col-start 5 / fullend;
-
-  display: grid;
-  align-items: center;
-  img {
-    width: 100%;
-  }
-
-  @media ${device.tablet} {
-    grid-column: col-start 2 / col-end 7;
-  }
-`
 
 export const query = graphql`
   query($slug: String!) {
@@ -160,7 +139,6 @@ export const query = graphql`
         }
         intro
         context
-        date
         story
         role
         tech
@@ -194,10 +172,6 @@ export default function ProjectTemplate({ data }) {
             <span>Role </span>
             {data.markdownRemark.frontmatter.role}
           </p>
-          <p className="date">
-            <span>Date </span>
-            {data.markdownRemark.frontmatter.date}
-          </p>
         </Context>
         <Intro className="mSec10">
           <h1 className="mbSm">{data.markdownRemark.frontmatter.title}</h1>
@@ -220,9 +194,6 @@ export default function ProjectTemplate({ data }) {
             <p className="mbSm">{data.markdownRemark.frontmatter.tech}</p>
           </div>
         </Story>
-        <MockFrame className="mSec10">
-          {/* <img src={projectWire} alt="" /> */}
-        </MockFrame>
       </GridContainer>
     </Layout>
   )

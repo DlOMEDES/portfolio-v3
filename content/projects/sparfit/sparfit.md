@@ -1,13 +1,12 @@
 ---
 title: "Spartan Fitness"
 featuredImage: spartan-fitness.png
-date: "November 2019"
-context: "Web Design / Web Development"
-role: "Web Developer"
-intro: "The goal behind this website was to have a site where members and potential customers can see the place before coming in. The website needed a way to showcase the trainers and the equipment. At first it was a static website then it was converted into a WordPress theme to allow the owners to manage and handle all the content including pictures."
-codeBtn: "https://github.com/DlOMEDES/spartan-fitness"
-viewBtn: "https://dlomedes.github.io/spartan-fitness/"
-story: "I built the website to be responsive to make it easy for mobile users to view. Also created a custom slider and a image grid to show pictures the gym."
-tech: "Technologies: HTML, CSS (Sass) & JavaScript"
-id: 1
+context: "Custom WordPress Theme"
+role: "Web Design / Web Developer"
+intro: "This is a custom WordPress Theme built using my own custom design without using page builders or paid themes."
+codeBtn: "https://github.com/DlOMEDES/spartan-fitness/tree/wp"
+viewBtn: "https://sparfit.club/"
+story: "To further my knowledge of WordPress, I challenged myself to design and code this theme. I put together common website components and designed a rough layout mock-up in Figma. Then I coded everything from scratch to create a responsive html site with basic functionality for a custom slider and a mobile menu. In this project I learned about the WP Template Hiearchy, Queries, Custom Post Types, Advanced Custom Fields and a few other things. Also hosting and migrating a WordPress database from development or staging to production."
+tech: "Technologies: HTML, Sass, JavaScript, PHP, MySql, WordPress"
+id: 5
 ---

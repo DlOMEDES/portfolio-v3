@@ -1,20 +1,17 @@
 export default [
   {
-    title: "Web Design",
+    title: "Responsive HTML Emails",
     subtitle: "Digitizing ideas and into UI",
-    text: `I am responsible for planning, slicing and implementing responsive design assets to created pixel-perfect User Interfaces.`,
-    extraText: `Solving business problems creatively and continuously improving to provide the best solution available.`,
+    text: `I am responsible for planning, slicing and implementing responsive design assets to created pixel-perfect HTML Email templates that will convert into successful marketing campaigns.`,
   },
   {
     title: "Web Development",
     subtitle: `From idea to deployment`,
-    text: `Building Email templates, websites and applications. Updating and installing WordPress sites. Adding new functionalities is all part of the development process.`,
-    extraText: `Technology is always changing, so It is best to to Keep your website up to date to stay relevant in a competitive market.`,
+    text: `Using HTML, Css and JavaScript to building beautiful Emails, websites and applications. Debugging, updating and adding new functionalities are all part of my development process.`,
   },
   {
     title: "Support, SEO & Analytics",
     subtitle: "maintainable and optimized",
-    text: `Experience and perfomance are top priorities to make sure users stay connected and keep coming back. `,
-    extraText: `I work on making the web fast and accessible to all with search engine optimizations.`,
+    text: `User experience and perfomance are top priorities to make sure users stay connected and keep coming back. `,
   },
 ]

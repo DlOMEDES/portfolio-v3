@@ -1,12 +1,12 @@
 ---
 title: "Napoleon Hill's Newsletter"
 featuredImage: np.png
-date: "August 2021"
-context: "Email Newsletter Template"
+context: "Email Newsletter"
 role: "HTML Email Developer"
 codeBtn: "https://github.com/DlOMEDES/np-newsletter"
 viewBtn: "https://dlomedes.github.io/np-newsletter/"
-story: "Responsive Email template for N.Hills foundation."
-tech: "Created using ZURB-Foundation Emails"
-id: 5
+intro: "My goal for this project was to recreate a newsletter email"
+story: "To learn more about Foundation framework, I created this email Newsletter as a demo."
+tech: "Technologies: HTML, CSS, ZURB-Foundation Emails with Sass"
+id: 4
 ---

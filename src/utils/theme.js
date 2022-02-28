@@ -9,6 +9,7 @@ const theme = {
     // purples
     violet: "177, 122, 204",
     midnight: "25, 25, 30",
+    darkPurple: "71, 51, 89",
   },
   shadows: {
     sections: "0px 15px 25px 0px",

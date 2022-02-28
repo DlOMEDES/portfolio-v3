@@ -1,11 +1,5 @@
 import React from "react"
-import {
-  FaWordpress,
-  FaHtml5,
-  FaCss3,
-  FaReact,
-  FaNodeJs,
-} from "react-icons/fa"
+import { FaWordpress, FaHtml5, FaCss3, FaReact } from "react-icons/fa"
 import { IoLogoJavascript } from "react-icons/io"
 import { MdEmail } from "react-icons/md"
 
@@ -34,5 +28,4 @@ export default [
     text: "wordpress",
     logo: <FaWordpress />,
   },
-  
 ]

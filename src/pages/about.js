@@ -97,9 +97,11 @@ const About = () => {
               My name is Diomedes Lajara, I design and develop custom UIs.
             </h5>
             <p>
-             I taught myself web design and development to solve business problems creatively. 
-             Using web technologies, I translate ideas and design concepts into fully functional web products. 
-             From Email Templates, WordPress themes and all the way to Frontend ReactJS applications.
+              I taught myself web design and development to solve business
+              problems creatively. Using web technologies, I translate ideas and
+              design concepts into fully functional web products. From Email
+              Templates to websites including WordPress themes and frontend
+              interfaces for React applications.
             </p>
             <br />
           </Article>

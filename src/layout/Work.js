@@ -60,7 +60,7 @@ const WorkContainer = styled.section`
 const CardOverlay = styled(Link)`
   width: 100%;
   height: 100%;
-  background: rgba(${colors.midnight}, 0.97);
+  background: rgba(${colors.darkPurple}, 0.95);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,7 +80,7 @@ const CardOverlay = styled(Link)`
   }
 
   @media ${device.tablet} {
-    background: rgba(${colors.midnight}, 0.7);
+    background: rgba(${colors.darkPurple}, 0.7);
     left: 0%;
   }
 `
@@ -99,31 +99,31 @@ const Card = styled(BackgroundImage)`
   }
 
   &:nth-child(1) {
-    background: black;
+    // background: orange;
     background-size: 100%;
     grid-column: 1 / 3;
     grid-row: 1 / 3;
   }
   &:nth-child(2) {
-    background: aqua;
+    // background: aqua;
     grid-column: 3/4;
     grid-row: 1/3;
     background-size: cover;
   }
   &:nth-child(3) {
-    background: yellow;
+    // background: gold;
     grid-column: 4/5;
     grid-row: 1/-1;
     background-size: cover;
   }
   &:nth-child(4) {
-    background: purple;
+    // background: purple;
     grid-column: 1/2;
     grid-row: 3/5;
     background-size: cover;
   }
   &:nth-child(5) {
-    background: Brown;
+    // background: red;
     background-size: 100%;
     grid-column: 2/4;
     grid-row: 3/5;
@@ -158,9 +158,9 @@ const Work = () => {
       allMarkdownRemark(sort: { fields: frontmatter___id }) {
         edges {
           node {
-            id
             frontmatter {
               title
+              id
               context
               featuredImage {
                 childImageSharp {
@@ -194,8 +194,8 @@ const Work = () => {
               key={edge.node.id}
             >
               <CardOverlay to={`/project/${edge.node.fields.slug}`}>
-                <h3>{edge.node.frontmatter.title}</h3>
-                <h5>{edge.node.frontmatter.context}</h5>
+                <h3>{edge.node.frontmatter.context}</h3>
+                <h5>{edge.node.frontmatter.title}</h5>
               </CardOverlay>
             </Card>
           )

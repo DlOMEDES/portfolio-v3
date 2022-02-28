@@ -5,7 +5,7 @@ import Link from "gatsby-link"
 const NotFound = () => {
   return (
     <Layout>
-      <h3>Something went wrong!</h3>
+      <h3>Something went wrong</h3>
       <p>
         <Link to="/">Back Home</Link>
       </p>
