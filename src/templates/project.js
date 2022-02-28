@@ -117,7 +117,7 @@ const Story = styled.section`
   }
 
   @media ${device.tablet} {
-    grid-column: col-start 2 / col-end 7;
+    grid-column: col-start 1 / col-end 5;
 
     .content {
       padding: 0;
