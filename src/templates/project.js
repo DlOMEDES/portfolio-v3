@@ -79,7 +79,7 @@ const Intro = styled.section`
 `
 const ProjectButton = styled(Button)`
   display: inline-block;
-  margin: 1rem 1rem 0 0;
+  margin: 1rem 0 0 0;
 
   a {
     font-weight: bold;
