@@ -85,6 +85,10 @@ const ProjectButton = styled(Button)`
     font-weight: bold;
     padding: 1rem 5rem;
     margin: 0 3rem 0 0;
+
+    @media ${device.tablet} {
+      display: inline-block;
+    }
   }
 
   &:last-child {
